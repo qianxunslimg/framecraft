@@ -1,0 +1,12 @@
+{
+  "durationSeconds": 343.46666666666664,
+  "sampleRate": 24000,
+  "channels": 2,
+  "musicPeak": 0.06948736310005188,
+  "voiceGain": 1.5,
+  "masterPeak": 0.9300000071525574,
+  "clippedSamples": 0,
+  "bpm": 82,
+  "key": "D minor",
+  "originalSynthesis": true
+}

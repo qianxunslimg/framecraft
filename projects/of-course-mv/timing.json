@@ -1,0 +1,82 @@
+{
+  "fps": 30,
+  "durationInFrames": 1313,
+  "referenceDurationSeconds": 43.766666667,
+  "source": "https://www.douyin.com/video/7690228850878746107",
+  "method": "Whisper base timestamps; homophones corrected against reference graphics; audio onset energy drives motion details",
+  "scenes": [
+    {
+      "id": "Impact",
+      "fromFrame": 0,
+      "frames": 95,
+      "concept": "符号大爆炸"
+    },
+    {
+      "id": "Machine",
+      "fromFrame": 95,
+      "frames": 70,
+      "concept": "会唱歌的键盘"
+    },
+    {
+      "id": "Portals",
+      "fromFrame": 165,
+      "frames": 78,
+      "concept": "问号传送门"
+    },
+    {
+      "id": "Trampoline",
+      "fromFrame": 243,
+      "frames": 114,
+      "concept": "括号弹床"
+    },
+    {
+      "id": "Particles",
+      "fromFrame": 357,
+      "frames": 129,
+      "concept": "心事是标点拼的"
+    },
+    {
+      "id": "Unfold",
+      "fromFrame": 486,
+      "frames": 114,
+      "concept": "把解释折成纸飞机"
+    },
+    {
+      "id": "Understand",
+      "fromFrame": 600,
+      "frames": 84,
+      "concept": "问号变成两颗心"
+    },
+    {
+      "id": "Letter",
+      "fromFrame": 684,
+      "frames": 93,
+      "concept": "寄出这一刻"
+    },
+    {
+      "id": "Race",
+      "fromFrame": 777,
+      "frames": 104,
+      "concept": "不躲不藏不逃"
+    },
+    {
+      "id": "Gravity",
+      "fromFrame": 881,
+      "frames": 96,
+      "concept": "翻转重力接住你"
+    },
+    {
+      "id": "Reprise",
+      "fromFrame": 977,
+      "frames": 153,
+      "concept": "无限问题游乐场"
+    },
+    {
+      "id": "Universe",
+      "fromFrame": 1130,
+      "frames": 183,
+      "concept": "把世界藏进问号"
+    }
+  ],
+  "revision": "v2 symbol playground"
+}

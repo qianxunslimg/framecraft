@@ -1,0 +1,46 @@
+{
+  "name": "framecraft",
+  "version": "1.0.0",
+  "description": "Personal AI animation workspace with native tools, project assets and versioned exports",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/qianxunslimg/framecraft.git"
+  },
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@react-three/fiber": "^9.8.1",
+    "@remotion/cli": "4.0.534",
+    "@remotion/fonts": "4.0.534",
+    "@remotion/media": "4.0.534",
+    "@remotion/three": "4.0.534",
+    "@remotion/transitions": "4.0.534",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.534",
+    "three": "^0.186.1"
+  },
+  "devDependencies": {
+    "@remotion/eslint-config-flat": "4.0.534",
+    "@types/react": "19.2.7",
+    "@types/three": "^0.186.0",
+    "@types/web": "0.0.166",
+    "eslint": "9.39.5",
+    "prettier": "3.8.1",
+    "typescript": "5.9.3"
+  },
+  "scripts": {
+    "dev": "remotion studio tools/remotion/index.ts",
+    "build": "remotion bundle tools/remotion/index.ts --out-dir=out/bundle",
+    "projects": "node scripts/projects.mjs list",
+    "new": "node scripts/projects.mjs new",
+    "asset:add": "node scripts/assets.mjs add",
+    "assets:restore": "node scripts/assets.mjs restore",
+    "assets:check": "node scripts/assets.mjs check",
+    "render": "node scripts/render.mjs",
+    "lint": "eslint projects tools && tsc && node scripts/check-scripts.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "upgrade": "remotion upgrade",
+    "audio": "node scripts/make-audio.mjs"
+  }
+}

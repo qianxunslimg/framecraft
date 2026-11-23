@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "id": "access-denied",
+  "title": "谁能进入 AI 的未来？",
+  "production": {
+    "tool": "remotion",
+    "options": {
+      "compositionId": "ProjectAccessDenied"
+    }
+  }
+}

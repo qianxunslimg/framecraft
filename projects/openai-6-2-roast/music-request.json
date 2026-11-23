@@ -1,0 +1,20 @@
+{
+  "id": "gummy-bear-stampede",
+  "type": "audio",
+  "role": "soundtrack",
+  "source": {
+    "file": "../../public/openai-6-2-roast/owned/audio/gummy-bear-stampede.mp3"
+  },
+  "origin": {
+    "kind": "ai-generated",
+    "title": "Gummy Bear Stampede",
+    "creator": "Google Gemini (Lyria) — user Pro account",
+    "pageUrl": "https://gemini.google.com/u/2/app/394ee4f13c7153b1"
+  },
+  "usage": {
+    "status": "verified",
+    "scope": "user-requested-local-preview-and-review-export",
+    "evidencePath": "music-source.md",
+    "attribution": "背景音乐由用户 Google AI Pro 账号通过 Gemini（Lyria）生成：Gummy Bear Stampede。"
+  }
+}

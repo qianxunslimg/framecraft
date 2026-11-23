@@ -1,0 +1,15 @@
+node_modules
+dist
+.DS_Store
+.env
+.env.*
+!.env.example
+
+# Ignore the output video from Git but not videos you import into src/.
+out
+
+# Keep provenance in projects; third-party files stay local by default.
+public/*/external/
+*.part
+__pycache__/
+*.pyc

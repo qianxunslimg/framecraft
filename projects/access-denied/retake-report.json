@@ -1,0 +1,16 @@
+[
+  {
+    "audio": "punctuation-01.wav",
+    "text": "一行看似普通的日期，横线可以变成斜线。",
+    "pronunciation": "一行 yi4 hang2",
+    "tempo": 1.0118985108483334,
+    "samples": 95222
+  },
+  {
+    "audio": "punctuation-03.wav",
+    "text": "表面上仍然是一行日期，机器读取时，却多了一层分类信息。",
+    "pronunciation": "一行 yi4 hang2",
+    "tempo": 1.0049434296239006,
+    "samples": 125419
+  }
+]

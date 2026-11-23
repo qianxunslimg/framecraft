@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "assets": [
+    {
+      "id": "greenlight-arcade-song",
+      "type": "audio",
+      "role": "soundtrack",
+      "path": "../../public/greenlight-arcade/external/audio/song.mp3",
+      "origin": {
+        "kind": "ai-generated",
+        "title": "绿灯了，但不代表（海绵音乐 02:51 版）",
+        "creator": "海绵音乐 SeedMusic 1.0（用户账号创作）",
+        "pageUrl": "https://www.haimian.com/create"
+      },
+      "usage": {
+        "status": "verified",
+        "scope": "user-requested-local-preview-and-review-export",
+        "evidencePath": "music-source.md",
+        "attribution": "歌曲由用户通过海绵音乐（SeedMusic 1.0）创作并导出：《绿灯了，但不代表》。"
+      },
+      "acquiredAt": "2026-11-23T08:11:00.013Z",
+      "bytes": 6991705,
+      "sha256": "6880eaeb0af58dbccfc4b8769b9cec35341d3c6f16388de84b74986d67731b29",
+      "media": {
+        "durationSeconds": 174.78525,
+        "streams": [
+          {
+            "type": "audio",
+            "codec": "mp3",
+            "sampleRate": 44100,
+            "channels": 2
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "id": "openai-6-2-roast",
+  "title": "憋了一个月，就这？",
+  "production": {
+    "tool": "remotion",
+    "options": {
+      "compositionId": "ProjectOpenai62Roast"
+    }
+  }
+}

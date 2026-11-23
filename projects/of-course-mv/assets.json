@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "assets": [
+    {
+      "id": "of-course-reference",
+      "type": "audio",
+      "role": "soundtrack",
+      "path": "../../public/of-course-mv/external/audio/of-course-reference.wav",
+      "origin": {
+        "kind": "reference-audio-extract",
+        "title": "当然可以，好问题 · 十元钱钱对比视频所用版本",
+        "creator": "音乐作者未核实；参考视频作者：十元钱钱",
+        "pageUrl": "https://www.douyin.com/video/7690228850878746107",
+        "sourceVideoSha256": "da6ea1c71f44f541b7f9820afa5d71f67f185701f7e04634d62e758c7a5000c4",
+        "extraction": "Remotion FFmpeg: -vn -c:a pcm_s16le -ar 48000; untrimmed audio"
+      },
+      "usage": {
+        "status": "verified",
+        "scope": "user-requested-local-preview-and-review-export",
+        "licenseStatus": "unverified-for-public-redistribution",
+        "evidencePath": "music-source.md",
+        "attribution": "音乐来自十元钱钱《Opus 5.5 vs Astra》对比视频的用户指定版本。原音乐权利归各自权利人。",
+        "notes": "Verified refers to the user-selected source and authorized local creation scope. Public upload / redistribution rights are not verified. No platform publishing performed."
+      },
+      "acquiredAt": "2026-10-10T11:14:49.908Z",
+      "bytes": 8404160,
+      "sha256": "3110fe66f9127d7fb9a9db9a313a42557753ce61278619bd2d2d4f57e2cf1d60",
+      "media": {
+        "durationSeconds": 43.771021,
+        "streams": [
+          {
+            "type": "audio",
+            "codec": "pcm_s16le",
+            "sampleRate": 48000,
+            "channels": 2
+          }
+        ]
+      }
+    }
+  ]
+}

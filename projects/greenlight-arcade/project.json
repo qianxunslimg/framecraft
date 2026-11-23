@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "id": "greenlight-arcade",
+  "title": "绿灯游乐园 · 绿灯了，但不代表",
+  "production": {
+    "tool": "remotion",
+    "options": {
+      "compositionId": "ProjectGreenlightArcade"
+    }
+  }
+}

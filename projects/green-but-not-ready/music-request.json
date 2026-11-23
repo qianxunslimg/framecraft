@@ -1,0 +1,20 @@
+{
+  "id": "green-but-not-ready-song",
+  "type": "audio",
+  "role": "soundtrack",
+  "source": {
+    "file": "../../public/green-but-not-ready/owned/audio/green-but-not-ready.mp3"
+  },
+  "origin": {
+    "kind": "ai-generated",
+    "title": "绿灯了，但不代表（海绵音乐 02:51 版）",
+    "creator": "海绵音乐 SeedMusic 1.0（用户账号创作）",
+    "pageUrl": "https://www.haimian.com/create"
+  },
+  "usage": {
+    "status": "verified",
+    "scope": "user-requested-local-preview-and-review-export",
+    "evidencePath": "music-source.md",
+    "attribution": "歌曲由用户通过海绵音乐（SeedMusic 1.0）创作并导出：《绿灯了，但不代表》。"
+  }
+}

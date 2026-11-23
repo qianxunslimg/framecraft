@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "id": "of-course-mv",
+  "title": "当然可以，好问题 · 接住你的宇宙",
+  "production": {
+    "tool": "remotion",
+    "options": { "compositionId": "ProjectOfCourseMV" }
+  }
+}

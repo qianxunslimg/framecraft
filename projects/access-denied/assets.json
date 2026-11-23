@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "assets": [
+    {
+      "id": "narration-september",
+      "path": "../../public/access-denied/external/audio/narration.wav",
+      "type": "audio",
+      "role": "voiceover",
+      "origin": {
+        "kind": "local-model-generation",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-VoiceDesign + Qwen/Qwen3-TTS-12Hz-0.6B-Base",
+        "reference": "AI-generated from text description; no person cloned",
+        "script": "script.json",
+        "generator": "scripts/voice_designed.py"
+      },
+      "usage": {
+        "status": "verified",
+        "licenseUrl": "https://huggingface.co/Qwen/Qwen3-TTS-12Hz-1.7B-VoiceDesign",
+        "evidencePath": "sources.md",
+        "attribution": "AI 配音：Qwen3-TTS VoiceDesign + Base（Apache-2.0）；纯文字生成合成参考声线，未克隆人物声音。"
+      },
+      "bytes": 16486444,
+      "sha256": "0d7e865ac13d66f8b031e5103f7dd36daa125bdf5f5a05882582e39fb69f15ce"
+    },
+    {
+      "id": "original-score-september",
+      "path": "../../public/access-denied/owned/audio/score.wav",
+      "type": "audio",
+      "role": "soundtrack",
+      "origin": {
+        "kind": "procedural-original",
+        "generator": "scripts/score.py",
+        "seed": 718,
+        "bpm": 82
+      },
+      "usage": {
+        "status": "verified",
+        "scope": "user-owned-creative-project",
+        "evidencePath": "sources.md",
+        "attribution": "配乐与音效为 Framecraft 原创程序合成，不含外部歌曲与采样。"
+      },
+      "bytes": 32972844,
+      "sha256": "116f2ebf8edee7f95ac516aeb5625203ad33f4b8b1d69187f14559ff3c8a8a83"
+    },
+    {
+      "id": "final-mix-september",
+      "path": "../../public/access-denied/owned/audio/master.wav",
+      "type": "audio",
+      "role": "mixed-audio",
+      "origin": {
+        "kind": "local-mix",
+        "inputs": [
+          "narration-september",
+          "original-score-september"
+        ],
+        "generator": "scripts/score.py"
+      },
+      "usage": {
+        "status": "verified",
+        "scope": "local-export-and-user-publication",
+        "evidencePath": "sources.md"
+      },
+      "bytes": 32972844,
+      "sha256": "015a195aac4d00e532158b596febd05017bc897f19e96ec00a161274df037acb"
+    },
+    {
+      "id": "dario-portrait",
+      "path": "../../public/access-denied/external/images/dario.jpg",
+      "type": "image",
+      "role": "editorial-portrait",
+      "origin": {
+        "kind": "web",
+        "creator": "TechCrunch / Kimberly White",
+        "title": "Dario Amodei at TechCrunch Disrupt 2023",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:Dario_Amodei_at_TechCrunch_Disrupt_2023_01.jpg"
+      },
+      "usage": {
+        "status": "verified",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "evidencePath": "sources.md",
+        "attribution": "Dario Amodei 照片：TechCrunch / Kimberly White，2023，CC BY 2.0，来源 Wikimedia Commons，镜头裁切，无代言含义。"
+      },
+      "bytes": 1545886,
+      "sha256": "7491726ca688e37f803008cf0010ec126c8fb4da39ee4a54f13b0cd1c749d822"
+    }
+  ]
+}

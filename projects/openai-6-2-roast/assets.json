@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "assets": [
+    {
+      "id": "gummy-bear-stampede",
+      "type": "audio",
+      "role": "soundtrack",
+      "path": "../../public/openai-6-2-roast/external/audio/gummy-bear-stampede.mp3",
+      "origin": {
+        "kind": "ai-generated",
+        "title": "Gummy Bear Stampede",
+        "creator": "Google Gemini (Lyria) — user Pro account",
+        "pageUrl": "https://gemini.google.com/u/2/app/394ee4f13c7153b1"
+      },
+      "usage": {
+        "status": "verified",
+        "scope": "user-requested-local-preview-and-review-export",
+        "evidencePath": "music-source.md",
+        "attribution": "背景音乐由用户 Google AI Pro 账号通过 Gemini（Lyria）生成：Gummy Bear Stampede。"
+      },
+      "acquiredAt": "2026-11-23T06:24:44.313Z",
+      "bytes": 1724275,
+      "sha256": "a11b2a678b8123c404901d44cbe6a1fc617f000d9114ddc89a3dc4f310e56e7c",
+      "media": {
+        "durationSeconds": 71.523208,
+        "streams": [
+          {
+            "type": "audio",
+            "codec": "mp3",
+            "sampleRate": 44100,
+            "channels": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": "openai-roast-vocal",
+      "type": "audio",
+      "role": "soundtrack",
+      "path": "../../public/openai-6-2-roast/external/audio/openai-roast-vocal.mp3",
+      "origin": {
+        "kind": "ai-generated",
+        "title": "憋了一个月，说句人话吧（Gemini Lyria 女声版）",
+        "creator": "Google Gemini (Lyria) — user Pro account",
+        "pageUrl": "https://gemini.google.com/u/2/app/394ee4f13c7153b1"
+      },
+      "usage": {
+        "status": "verified",
+        "scope": "user-requested-local-preview-and-review-export",
+        "evidencePath": "music-source.md",
+        "attribution": "歌曲由用户 Google AI Pro 账号通过 Gemini（Lyria）生成，自定义吐槽歌词。"
+      },
+      "acquiredAt": "2026-11-23T06:29:44.814Z",
+      "bytes": 2496037,
+      "sha256": "22f8fd5eb32a944e998abee806fa601de746dfb77573bd455752bfe86e110fb5",
+      "media": {
+        "durationSeconds": 103.679958,
+        "streams": [
+          {
+            "type": "audio",
+            "codec": "mp3",
+            "sampleRate": 44100,
+            "channels": 2
+          }
+        ]
+      }
+    }
+  ]
+}

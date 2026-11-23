@@ -1,0 +1,26 @@
+{
+  "method": "Full sentence through the same KPipeline frontend; explicit replacement at final phoneme layer; audio generated with this wrapper",
+  "cases": [
+    {
+      "text": "为什么，用一个写代码的工具，还要担心时区和一行日期里的标点？",
+      "phonemesSentToModel": "为4ㄕㄣ2ㄇㄜ5, 用4/ㄧ2ㄍㄜ5/ㄒㄝ3/ㄉㄞ4ㄇㄚ3/ㄉㄜ5/ㄍ中1ㄐㄩ4, ㄏㄞ2要4/ㄉㄢ1ㄒ阴1/ㄕ十2ㄑㄩ1/ㄏㄜ2/ㄧ4ㄏㄤ2/ㄖ十4ㄑㄧ1/ㄌㄧ3/ㄉㄜ5/ㄅ要1ㄉ言3?",
+      "pronunciation": "yi4 hang2",
+      "audio": "opening-02.wav",
+      "audioSha256": "24f133d763656fc5e5141593eefad30fce03179173549cfc9d933324e56b32c6"
+    },
+    {
+      "text": "一行看似普通的日期，横线可以变成斜线。",
+      "phonemesSentToModel": "ㄧ4ㄏㄤ2/ㄎㄢ4ㄙㄭ4/ㄆㄨ3ㄊ中1/ㄉㄜ5/ㄖ十4ㄑㄧ1, ㄏㄥ2ㄒ言4/ㄎㄜ2ㄧ3/ㄅ言4ㄔㄥ2/ㄒㄝ2ㄒ言4.",
+      "pronunciation": "yi4 hang2",
+      "audio": "punctuation-01.wav",
+      "audioSha256": "d1964fc09b9a7a6b56b8d0d4f34707632eaac3db60eb8b088ac0d245a9ad6560"
+    },
+    {
+      "text": "表面上仍然是一行日期，机器读取时，却多了一层分类信息。",
+      "phonemesSentToModel": "ㄅ要3ㄇ言4/ㄕㄤ4/ㄖㄥ2ㄖㄢ2/ㄕ十4/ㄧ4ㄏㄤ2/ㄖ十4ㄑㄧ1, ㄐㄧ1ㄑㄧ4/ㄉㄨ2ㄑㄩ3/ㄕ十2, ㄑ月4/ㄉ我1/ㄌㄜ5/ㄧ4ㄘㄥ2/ㄈㄣ1ㄌㄟ4/ㄒ阴4ㄒㄧ1.",
+      "pronunciation": "yi4 hang2",
+      "audio": "punctuation-03.wav",
+      "audioSha256": "c0d75f4851fc7fb439db10050b927790a164d89c8443fffe214f7cdf7a752d89"
+    }
+  ]
+}

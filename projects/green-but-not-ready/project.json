@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "id": "green-but-not-ready",
+  "title": "绿灯了，但不代表",
+  "production": {
+    "tool": "remotion",
+    "options": {
+      "compositionId": "ProjectGreenButNotReady"
+    }
+  }
+}
