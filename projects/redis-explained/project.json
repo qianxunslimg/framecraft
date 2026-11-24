@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "id": "redis-explained",
+  "title": "一集搞懂Redis",
+  "production": {
+    "tool": "remotion",
+    "options": {
+      "compositionId": "ProjectRedisExplained"
+    }
+  }
+}

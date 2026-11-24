@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "id": "k8s-explained",
+  "title": "3分钟搞懂K8s",
+  "production": {
+    "tool": "remotion",
+    "options": {
+      "compositionId": "ProjectK8sExplained"
+    }
+  }
+}

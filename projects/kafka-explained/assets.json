@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "assets": [
+    {
+      "id": "kafka-explained-master-audio",
+      "path": "../../public/kafka-explained/owned/audio/master.wav",
+      "type": "audio",
+      "role": "mixed-audio",
+      "origin": {
+        "kind": "local-mix",
+        "voice": "edge-tts zh-CN-YunxiaNeural (+5%, +0Hz, standalone ASR-audited)",
+        "bgm": "procedural-original 128 BPM D-major streaming synth-pop + 14 Kafka SFX",
+        "generators": [
+          "scripts/voice.py",
+          "scripts/bgm.py"
+        ]
+      },
+      "usage": {
+        "status": "verified",
+        "scope": "user-owned-creative-project",
+        "evidencePath": "sources.md",
+        "attribution": "配音由 Edge TTS (zh-CN-YunxiaNeural) 逐短句合成并经 ASR 核验，配乐与音效为 Framecraft 本地原创合成。"
+      },
+      "bytes": 62803244,
+      "sha256": "753847c36cb9c6b964307a829e400dcaf25a4fb1be9c77805aaec49507e99d1f"
+    }
+  ]
+}

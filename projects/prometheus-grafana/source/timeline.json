@@ -1,0 +1,833 @@
+{
+  "fps": 30,
+  "duration": 9735,
+  "voice": {
+    "engine": "edge-tts",
+    "voice": "zh-CN-YunxiaNeural",
+    "rate": "+5%",
+    "pitch": "+0Hz"
+  },
+  "scenes": [
+    {
+      "id": "opening",
+      "badge": "01 · 监控盲区大危机",
+      "title": "为什么必须用 Prometheus + Grafana？",
+      "theme": "night",
+      "from": 0,
+      "duration": 1015,
+      "cues": [
+        {
+          "cue": "blindspot",
+          "from": 12,
+          "duration": 227,
+          "display": "线上业务突然变慢——上百个服务实例到底谁在发烧？",
+          "highlight": "谁在发烧"
+        },
+        {
+          "cue": "introPair",
+          "from": 248,
+          "duration": 359,
+          "display": "请出云原生监控黄金搭档：Prometheus + Grafana！",
+          "highlight": "Prometheus + Grafana"
+        },
+        {
+          "cue": "roles",
+          "from": 616,
+          "duration": 381,
+          "display": "Prometheus 负责采集存储，Grafana 负责炫酷可视化大屏！",
+          "highlight": "采集存储 + 可视化大屏"
+        }
+      ]
+    },
+    {
+      "id": "tsdb",
+      "badge": "02 · 认识时序数据库与四大指标",
+      "title": "Prometheus TSDB · 数据模型 · 4 大指标",
+      "theme": "amber",
+      "from": 1015,
+      "duration": 2056,
+      "cues": [
+        {
+          "cue": "whatIsTsdb",
+          "from": 14,
+          "duration": 332,
+          "display": "Prometheus = 监控系统 + 内置时序数据库（TSDB）",
+          "highlight": "时序数据库（TSDB）"
+        },
+        {
+          "cue": "dataModel",
+          "from": 355,
+          "duration": 428,
+          "display": "时序数据 = 指标名 + 标签键值对 + 时间戳 + 数值",
+          "highlight": "指标名 + 标签 + 时间戳 + 数值"
+        },
+        {
+          "cue": "fourTypes1",
+          "from": 792,
+          "duration": 407,
+          "display": "① Counter（计数器）：只增不减，统计总请求与报错次数",
+          "highlight": "Counter（计数器）"
+        },
+        {
+          "cue": "fourTypes2",
+          "from": 1208,
+          "duration": 275,
+          "display": "② Gauge（仪表盘）：可升可降，记录 CPU、内存等瞬时值",
+          "highlight": "Gauge（仪表盘）"
+        },
+        {
+          "cue": "fourTypes3",
+          "from": 1492,
+          "duration": 546,
+          "display": "③ Histogram（分桶可跨机聚合算 P99） · ④ Summary（客户端算分位）",
+          "highlight": "Histogram 与 Summary"
+        }
+      ]
+    },
+    {
+      "id": "scrape",
+      "badge": "03 · 数据怎么采进来？",
+      "title": "Pull 拉取 · Exporter · 服务发现",
+      "theme": "sky",
+      "from": 3071,
+      "duration": 1422,
+      "cues": [
+        {
+          "cue": "pullModel",
+          "from": 14,
+          "duration": 262,
+          "display": "默认 Pull 主动拉取模式：定时访问 /metrics 抓取指标",
+          "highlight": "Pull 主动拉取"
+        },
+        {
+          "cue": "exporter",
+          "from": 285,
+          "duration": 613,
+          "display": "Exporter = 翻译官（如 node_exporter 把系统状态转为 /metrics）",
+          "highlight": "Exporter = 翻译官"
+        },
+        {
+          "cue": "discoveryPush",
+          "from": 907,
+          "duration": 497,
+          "display": "K8s 自动服务发现动态追踪；短周期批处理任务用 Pushgateway 中转",
+          "highlight": "自动服务发现 + Pushgateway"
+        }
+      ]
+    },
+    {
+      "id": "alerting",
+      "badge": "04 · 查询分析与精准告警",
+      "title": "PromQL · Alertmanager · 长期存储",
+      "theme": "coral",
+      "from": 4493,
+      "duration": 1469,
+      "cues": [
+        {
+          "cue": "promql",
+          "from": 14,
+          "duration": 428,
+          "display": "PromQL：如 rate(http_requests_total[5m]) 轻松算出实时 QPS",
+          "highlight": "PromQL"
+        },
+        {
+          "cue": "alertmanager",
+          "from": 451,
+          "duration": 556,
+          "display": "Alertmanager：分组、去重、抑制、静默，拒绝半夜告警轰炸！",
+          "highlight": "分组、去重、抑制、静默"
+        },
+        {
+          "cue": "longTerm",
+          "from": 1016,
+          "duration": 435,
+          "display": "本地 TSDB 默认存 15 天热数据，长期海量存储配合 Thanos / VictoriaMetrics",
+          "highlight": "Thanos / VictoriaMetrics"
+        }
+      ]
+    },
+    {
+      "id": "grafana",
+      "badge": "05 · 颜值担当与统一驾驶舱",
+      "title": "Grafana 可视化大屏",
+      "theme": "darkDash",
+      "from": 5962,
+      "duration": 1490,
+      "cues": [
+        {
+          "cue": "noStorage",
+          "from": 14,
+          "duration": 359,
+          "display": "划重点：Grafana 自己不存监控数据，它是统一可视化驾驶舱！",
+          "highlight": "不存监控数据"
+        },
+        {
+          "cue": "dashboard",
+          "from": 382,
+          "duration": 471,
+          "display": "接入 Data Source：把枯燥数字变成折线图、仪表盘与热力图！",
+          "highlight": "Data Source 数据源"
+        },
+        {
+          "cue": "templates",
+          "from": 862,
+          "duration": 610,
+          "display": "两大神器：顶部变量下拉切换 + 输入模板 ID（如 1860）一键导入大屏！",
+          "highlight": "模板 ID 1860 一键导入"
+        }
+      ]
+    },
+    {
+      "id": "pillars",
+      "badge": "06 · 进阶彩蛋：可观测性三驾马车",
+      "title": "Metrics · Logs · Traces 全家桶",
+      "theme": "lavender",
+      "from": 7452,
+      "duration": 1252,
+      "cues": [
+        {
+          "cue": "threePillars",
+          "from": 14,
+          "duration": 304,
+          "display": "云原生可观测性三驾马车：指标 + 日志 + 链路追踪",
+          "highlight": "可观测性三驾马车"
+        },
+        {
+          "cue": "correlation",
+          "from": 327,
+          "duration": 503,
+          "display": "Metrics（出事没）→ Logs（报啥错）→ Traces（卡在哪）",
+          "highlight": "Metrics · Logs · Traces"
+        },
+        {
+          "cue": "unified",
+          "from": 839,
+          "duration": 395,
+          "display": "统一汇入 Grafana：曲线飙高 → 一键下钻日志与链路，精准抓虫！",
+          "highlight": "一键下钻排查"
+        }
+      ]
+    },
+    {
+      "id": "finale",
+      "badge": "07 · 一图收尾 · 优雅巡检",
+      "title": "Prometheus + Grafana 全景图谱",
+      "theme": "cream",
+      "from": 8704,
+      "duration": 1031,
+      "cues": [
+        {
+          "cue": "blueprint",
+          "from": 14,
+          "duration": 469,
+          "display": "Exporter → Prometheus(TSDB) → Alertmanager(告警) & Grafana(大屏)",
+          "highlight": "全景监控链路"
+        },
+        {
+          "cue": "quote",
+          "from": 492,
+          "duration": 296,
+          "display": "Prometheus 记心跳 · Alertmanager 准喊你 · Grafana 看全局",
+          "highlight": "一眼看透全局"
+        },
+        {
+          "cue": "signoff",
+          "from": 797,
+          "duration": 196,
+          "display": "点赞收藏，告别黑盒排障，小牛马天天准点下班！",
+          "highlight": "告别黑盒排障"
+        }
+      ]
+    }
+  ],
+  "captions": [
+    {
+      "from": 12,
+      "duration": 116,
+      "text": "线上业务刚跑起来，小牛马正准备安心躺平，",
+      "highlight": ""
+    },
+    {
+      "from": 128,
+      "duration": 111,
+      "text": "客服突然发来消息：用户反馈下单卡爆了！",
+      "highlight": ""
+    },
+    {
+      "from": 248,
+      "duration": 76,
+      "text": "几十台服务器、上百个容器，",
+      "highlight": ""
+    },
+    {
+      "from": 324,
+      "duration": 88,
+      "text": "总不能一台一台登进去手动排查。",
+      "highlight": ""
+    },
+    {
+      "from": 418,
+      "duration": 99,
+      "text": "这时候，就该请出云原生监控界最经典的黄金搭档：",
+      "highlight": ""
+    },
+    {
+      "from": 517,
+      "duration": 90,
+      "text": "Prometheus 和 Grafana。",
+      "highlight": ""
+    },
+    {
+      "from": 616,
+      "duration": 65,
+      "text": "用一句话先分清它俩的职责：",
+      "highlight": ""
+    },
+    {
+      "from": 681,
+      "duration": 160,
+      "text": "Prometheus 负责把系统每时每刻的运行数据采集并存下来，",
+      "highlight": ""
+    },
+    {
+      "from": 841,
+      "duration": 156,
+      "text": "Grafana 负责把冰冷的数字变成一眼看穿全局的可视化大屏。",
+      "highlight": ""
+    },
+    {
+      "from": 1029,
+      "duration": 81,
+      "text": "先看 P 开头的 Prometheus，",
+      "highlight": ""
+    },
+    {
+      "from": 1110,
+      "duration": 36,
+      "text": "中文叫普罗米修斯。",
+      "highlight": ""
+    },
+    {
+      "from": 1152,
+      "duration": 75,
+      "text": "它既是一套完整的监控系统，",
+      "highlight": ""
+    },
+    {
+      "from": 1227,
+      "duration": 134,
+      "text": "内置的核心也是一个时序数据库，简称 TSDB。",
+      "highlight": ""
+    },
+    {
+      "from": 1370,
+      "duration": 78,
+      "text": "它和 MySQL 最大的区别，",
+      "highlight": ""
+    },
+    {
+      "from": 1448,
+      "duration": 94,
+      "text": "是专门记录随时间不断变化的数值曲线，",
+      "highlight": ""
+    },
+    {
+      "from": 1542,
+      "duration": 52,
+      "text": "就像医院里的心电图。",
+      "highlight": ""
+    },
+    {
+      "from": 1600,
+      "duration": 77,
+      "text": "每条数据都由四部分组成：",
+      "highlight": ""
+    },
+    {
+      "from": 1677,
+      "duration": 121,
+      "text": "指标名、标签键值对、时间戳和具体数值。",
+      "highlight": ""
+    },
+    {
+      "from": 1807,
+      "duration": 27,
+      "text": "实际工作中，",
+      "highlight": ""
+    },
+    {
+      "from": 1834,
+      "duration": 114,
+      "text": "Prometheus 把监控指标分成四种经典类型。",
+      "highlight": ""
+    },
+    {
+      "from": 1954,
+      "duration": 122,
+      "text": "第一种叫 Counter，计数器，只增不减，",
+      "highlight": ""
+    },
+    {
+      "from": 2076,
+      "duration": 138,
+      "text": "除非进程重启才会归零，适合统计请求总数和报错次数。",
+      "highlight": ""
+    },
+    {
+      "from": 2223,
+      "duration": 82,
+      "text": "第二种叫 Gauge，仪表盘，",
+      "highlight": ""
+    },
+    {
+      "from": 2305,
+      "duration": 66,
+      "text": "数值可以随时升高或降低，",
+      "highlight": ""
+    },
+    {
+      "from": 2371,
+      "duration": 127,
+      "text": "比如当前 CPU 使用率、内存占用和在线人数。",
+      "highlight": ""
+    },
+    {
+      "from": 2507,
+      "duration": 103,
+      "text": "第三种叫 Histogram，直方图，",
+      "highlight": ""
+    },
+    {
+      "from": 2610,
+      "duration": 81,
+      "text": "把接口耗时装进不同区间的桶里，",
+      "highlight": ""
+    },
+    {
+      "from": 2691,
+      "duration": 130,
+      "text": "方便多台机器汇总算出 P95 和 P99 延迟。",
+      "highlight": ""
+    },
+    {
+      "from": 2827,
+      "duration": 84,
+      "text": "第四种叫 Summary，摘要，",
+      "highlight": ""
+    },
+    {
+      "from": 2911,
+      "duration": 63,
+      "text": "在客户端直接算好分位数，",
+      "highlight": ""
+    },
+    {
+      "from": 2974,
+      "duration": 79,
+      "text": "但无法跨多台机器直接相加汇总。",
+      "highlight": ""
+    },
+    {
+      "from": 3085,
+      "duration": 72,
+      "text": "接下来你可能好奇：这么多机器的指标，",
+      "highlight": ""
+    },
+    {
+      "from": 3157,
+      "duration": 81,
+      "text": "是怎么跑到 Prometheus 里的？",
+      "highlight": ""
+    },
+    {
+      "from": 3244,
+      "duration": 103,
+      "text": "它默认采用主动拉取，也就是 Pull 模式。",
+      "highlight": ""
+    },
+    {
+      "from": 3356,
+      "duration": 119,
+      "text": "Prometheus 会按设定间隔，比如每隔十五秒，",
+      "highlight": ""
+    },
+    {
+      "from": 3475,
+      "duration": 138,
+      "text": "主动发 HTTP 请求访问目标暴露的 metrics 接口。",
+      "highlight": ""
+    },
+    {
+      "from": 3619,
+      "duration": 126,
+      "text": "如果服务器或数据库本身不支持这种格式，就派个翻译官，",
+      "highlight": ""
+    },
+    {
+      "from": 3745,
+      "duration": 58,
+      "text": "叫做 Exporter，",
+      "highlight": ""
+    },
+    {
+      "from": 3803,
+      "duration": 166,
+      "text": "比如 node exporter 专门采集主机 CPU 和磁盘指标。",
+      "highlight": ""
+    },
+    {
+      "from": 3978,
+      "duration": 99,
+      "text": "在 K8s 里 Pod 的 IP 经常变化，",
+      "highlight": ""
+    },
+    {
+      "from": 4077,
+      "duration": 90,
+      "text": "Prometheus 支持自动服务发现，",
+      "highlight": ""
+    },
+    {
+      "from": 4167,
+      "duration": 72,
+      "text": "不用你手动改配置就能跟上新目标。",
+      "highlight": ""
+    },
+    {
+      "from": 4245,
+      "duration": 90,
+      "text": "另外，对于跑完就结束的短周期批处理任务，",
+      "highlight": ""
+    },
+    {
+      "from": 4335,
+      "duration": 36,
+      "text": "来不及等它拉取，",
+      "highlight": ""
+    },
+    {
+      "from": 4371,
+      "duration": 104,
+      "text": "可以先推到 Pushgateway 中转一下。",
+      "highlight": ""
+    },
+    {
+      "from": 4507,
+      "duration": 64,
+      "text": "数据存进来之后，怎么查？",
+      "highlight": ""
+    },
+    {
+      "from": 4577,
+      "duration": 86,
+      "text": "Prometheus 有一套专门的查询语言，",
+      "highlight": ""
+    },
+    {
+      "from": 4663,
+      "duration": 39,
+      "text": "叫做 PromQL。",
+      "highlight": "PromQL"
+    },
+    {
+      "from": 4708,
+      "duration": 103,
+      "text": "比如用 rate 函数配上方括号五分钟，",
+      "highlight": ""
+    },
+    {
+      "from": 4811,
+      "duration": 124,
+      "text": "就能立刻算出最近五分钟的每秒请求速率，非常顺手。",
+      "highlight": ""
+    },
+    {
+      "from": 4944,
+      "duration": 55,
+      "text": "一旦指标异常触发了告警规则，",
+      "highlight": ""
+    },
+    {
+      "from": 4999,
+      "duration": 128,
+      "text": "Prometheus 会把告警交给搭档 Alertmanager。",
+      "highlight": ""
+    },
+    {
+      "from": 5133,
+      "duration": 95,
+      "text": "它可不会半夜给你连炸一百条消息，",
+      "highlight": ""
+    },
+    {
+      "from": 5228,
+      "duration": 118,
+      "text": "而是先做分组、去除重复、抑制和静默处理，",
+      "highlight": ""
+    },
+    {
+      "from": 5346,
+      "duration": 154,
+      "text": "把雪崩告警合并成清晰的一条，再发到钉钉、飞书或邮件。",
+      "highlight": ""
+    },
+    {
+      "from": 5509,
+      "duration": 47,
+      "text": "顺带记住一个小知识：",
+      "highlight": ""
+    },
+    {
+      "from": 5556,
+      "duration": 113,
+      "text": "Prometheus 本地磁盘主要存近期热数据，",
+      "highlight": ""
+    },
+    {
+      "from": 5669,
+      "duration": 38,
+      "text": "默认保留十五天。",
+      "highlight": ""
+    },
+    {
+      "from": 5713,
+      "duration": 73,
+      "text": "如果要存几个月甚至几年的海量数据，",
+      "highlight": ""
+    },
+    {
+      "from": 5786,
+      "duration": 158,
+      "text": "通常会配合 Thanos 或 VictoriaMetrics 做长期存储。",
+      "highlight": ""
+    },
+    {
+      "from": 5976,
+      "duration": 92,
+      "text": "现在终于轮到主角 Grafana 登场了！",
+      "highlight": ""
+    },
+    {
+      "from": 6074,
+      "duration": 65,
+      "text": "先划一个最容易搞混的重点：",
+      "highlight": ""
+    },
+    {
+      "from": 6139,
+      "duration": 115,
+      "text": "Grafana 自己并不存储你的业务监控数据，",
+      "highlight": ""
+    },
+    {
+      "from": 6254,
+      "duration": 81,
+      "text": "它是一个统一的可视化与观测平台。",
+      "highlight": ""
+    },
+    {
+      "from": 6344,
+      "duration": 94,
+      "text": "只要在 Grafana 里添加数据源，",
+      "highlight": ""
+    },
+    {
+      "from": 6438,
+      "duration": 139,
+      "text": "连上 Prometheus、MySQL 或者其他数据库，",
+      "highlight": ""
+    },
+    {
+      "from": 6577,
+      "duration": 69,
+      "text": "它就能把原本枯燥的查询语句，",
+      "highlight": ""
+    },
+    {
+      "from": 6646,
+      "duration": 169,
+      "text": "瞬间变成实时跳动的折线图、CPU 仪表盘、延迟热力图和红绿灯状态卡。",
+      "highlight": ""
+    },
+    {
+      "from": 6824,
+      "duration": 151,
+      "text": "而且它还有两个让小牛马直呼真香的功能：一是模板变量，",
+      "highlight": ""
+    },
+    {
+      "from": 6975,
+      "duration": 134,
+      "text": "顶部加个下拉框就能一键切换不同集群和 Pod；",
+      "highlight": ""
+    },
+    {
+      "from": 7109,
+      "duration": 99,
+      "text": "二是官方社区模板库，直接输入编号，",
+      "highlight": ""
+    },
+    {
+      "from": 7208,
+      "duration": 64,
+      "text": "比如经典的 1860，",
+      "highlight": ""
+    },
+    {
+      "from": 7272,
+      "duration": 110,
+      "text": "三秒就能导入一整套精美服务器监控大屏，",
+      "highlight": ""
+    },
+    {
+      "from": 7382,
+      "duration": 52,
+      "text": "完全不用从零画图！",
+      "highlight": ""
+    },
+    {
+      "from": 7466,
+      "duration": 102,
+      "text": "学会了 Prometheus 和 Grafana，",
+      "highlight": ""
+    },
+    {
+      "from": 7568,
+      "duration": 78,
+      "text": "你其实已经踏进了云原生可观测性的大门。",
+      "highlight": ""
+    },
+    {
+      "from": 7652,
+      "duration": 118,
+      "text": "完整的系统排查，通常要靠三驾马车互相配合。",
+      "highlight": ""
+    },
+    {
+      "from": 7779,
+      "duration": 58,
+      "text": "第一，Metrics 指标，",
+      "highlight": ""
+    },
+    {
+      "from": 7837,
+      "duration": 108,
+      "text": "靠 Prometheus 告诉你系统是不是出问题了；",
+      "highlight": ""
+    },
+    {
+      "from": 7945,
+      "duration": 46,
+      "text": "第二，Logs 日志，",
+      "highlight": ""
+    },
+    {
+      "from": 7991,
+      "duration": 100,
+      "text": "靠 Loki 或 ELK 告诉你具体报了什么错；",
+      "highlight": ""
+    },
+    {
+      "from": 8091,
+      "duration": 62,
+      "text": "第三，Traces 链路追踪，",
+      "highlight": ""
+    },
+    {
+      "from": 8153,
+      "duration": 129,
+      "text": "靠 Tempo 或 Jaeger 定位请求到底卡在哪个微服务。",
+      "highlight": ""
+    },
+    {
+      "from": 8291,
+      "duration": 122,
+      "text": "最爽的是，这三套系统都能统一接入 Grafana。",
+      "highlight": ""
+    },
+    {
+      "from": 8419,
+      "duration": 81,
+      "text": "大屏里看到延迟曲线突然飙高，",
+      "highlight": ""
+    },
+    {
+      "from": 8500,
+      "duration": 128,
+      "text": "顺手一点就能钻进对应时间段的日志和调用链路，",
+      "highlight": ""
+    },
+    {
+      "from": 8628,
+      "duration": 58,
+      "text": "几十秒精准抓出真凶！",
+      "highlight": ""
+    },
+    {
+      "from": 8718,
+      "duration": 86,
+      "text": "把今天的整条链路拼在一起看，清清楚楚：",
+      "highlight": ""
+    },
+    {
+      "from": 8804,
+      "duration": 86,
+      "text": "Exporter 把系统指标暴露出来，",
+      "highlight": ""
+    },
+    {
+      "from": 8890,
+      "duration": 95,
+      "text": "Prometheus 定时拉取存进时序库，",
+      "highlight": ""
+    },
+    {
+      "from": 8985,
+      "duration": 104,
+      "text": "异常交给 Alertmanager 精准通知，",
+      "highlight": ""
+    },
+    {
+      "from": 9089,
+      "duration": 98,
+      "text": "日常巡检全靠 Grafana 大屏一目了然。",
+      "highlight": ""
+    },
+    {
+      "from": 9196,
+      "duration": 62,
+      "text": "记住这句口诀，你就彻底学会了：",
+      "highlight": ""
+    },
+    {
+      "from": 9258,
+      "duration": 82,
+      "text": "Prometheus 记下系统每次心跳，",
+      "highlight": ""
+    },
+    {
+      "from": 9340,
+      "duration": 82,
+      "text": "Alertmanager 有事精准喊你，",
+      "highlight": ""
+    },
+    {
+      "from": 9422,
+      "duration": 70,
+      "text": "Grafana 让你一眼看透全局。",
+      "highlight": "一眼看透全局"
+    },
+    {
+      "from": 9501,
+      "duration": 154,
+      "text": "觉得讲明白了记得点赞收藏，祝小牛马从此告别黑盒排障，",
+      "highlight": "告别黑盒排障"
+    },
+    {
+      "from": 9655,
+      "duration": 42,
+      "text": "天天准点下班！",
+      "highlight": ""
+    }
+  ]
+}

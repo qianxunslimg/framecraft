@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "assets": [
+    {
+      "id": "redis-explained-master-audio",
+      "path": "../../public/redis-explained/owned/audio/master.wav",
+      "type": "audio",
+      "role": "mixed-audio",
+      "origin": {
+        "kind": "local-mix",
+        "voice": "edge-tts zh-CN-YunxiaNeural (+5%, +0Hz, term-auditioned)",
+        "bgm": "procedural-original 130 BPM G-major memory-pop + 15 Redis SFX",
+        "generators": [
+          "scripts/voice.py",
+          "scripts/bgm.py"
+        ]
+      },
+      "usage": {
+        "status": "verified",
+        "scope": "user-owned-creative-project",
+        "evidencePath": "sources.md",
+        "attribution": "配音由 Edge TTS (zh-CN-YunxiaNeural) 逐短句合成并经全部术语实听核验，配乐与音效为 Framecraft 本地原创合成。"
+      },
+      "bytes": 73740844,
+      "sha256": "1610b8b89e34f0fb2cc22310802d017def414c850afbd1ebfcf44a42211e04f0"
+    }
+  ]
+}

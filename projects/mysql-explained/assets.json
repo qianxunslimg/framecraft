@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "assets": [
+    {
+      "id": "mysql-explained-master-audio",
+      "path": "../../public/mysql-explained/owned/audio/master.wav",
+      "type": "audio",
+      "role": "mixed-audio",
+      "origin": {
+        "kind": "local-mix",
+        "voice": "edge-tts zh-CN-YunxiaNeural (+5%, +0Hz, term-auditioned)",
+        "bgm": "procedural-original 124 BPM F-major ocean-tech + 18 MySQL SFX",
+        "generators": [
+          "scripts/voice.py",
+          "scripts/bgm.py"
+        ]
+      },
+      "usage": {
+        "status": "verified",
+        "scope": "user-owned-creative-project",
+        "evidencePath": "sources.md",
+        "attribution": "配音由 Edge TTS (zh-CN-YunxiaNeural) 逐短句合成并经全片专业术语实听核验，配乐与音效为 Framecraft 本地原创合成。"
+      },
+      "bytes": 157644844,
+      "sha256": "2d1c58ba66ab14dfd56ea1da09a99a621eb66830e981a23d9eae3516da2921c7"
+    }
+  ]
+}

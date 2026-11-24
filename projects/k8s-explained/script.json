@@ -1,0 +1,232 @@
+[
+  {
+    "id": "opening",
+    "badge": "01 · 凌晨三点的运维小牛马",
+    "title": "为什么单靠 Docker 撑不住？",
+    "theme": "night",
+    "lines": [
+      {
+        "cue": "alarm",
+        "spoken": "凌晨三点，线上告警又响了。如果你还在顶着黑眼圈爬起来重启服务器，说明该让 Kubernetes，也就是 K8s，来替你值班了。",
+        "display": "凌晨三点告警又响了，该让 K8s 替你值班了！",
+        "highlight": "K8s 替你值班"
+      },
+      {
+        "cue": "dockerChaos",
+        "spoken": "平时用 Docker 跑单个应用很方便，打包就能运行。但业务规模一上来，几十台服务器、上千个容器同时跑。",
+        "display": "业务一变大：几十台服务器、上千个容器同时跑",
+        "highlight": "上千个容器"
+      },
+      {
+        "cue": "dockerChaos2",
+        "spoken": "容器崩溃了谁来拉起？流量暴涨怎么扩容？发新版本怎么做到不中断服务？全靠人工维护，小牛马迟早扛不住。",
+        "display": "崩溃拉起、流量扩容、零中断发版——人工维护根本扛不住",
+        "highlight": "人工维护根本扛不住"
+      }
+    ]
+  },
+  {
+    "id": "stage",
+    "badge": "02 · 舞台、最小单元与隔间",
+    "title": "Node · Pod · Namespace",
+    "theme": "sky",
+    "lines": [
+      {
+        "cue": "nodes",
+        "spoken": "K8s 的核心思路，是把所有服务器整合成一个自动化集群。真正负责运行应用的每一台机器，叫做 Node，也就是工作节点。",
+        "display": "真正运行应用的每台服务器 = Node（工作节点）",
+        "highlight": "Node（工作节点）"
+      },
+      {
+        "cue": "pod",
+        "spoken": "不过 K8s 并不直接调度单个容器，而是给容器套上一层外壳，叫做 Pod。它是 K8s 创建和调度的最小单元。",
+        "display": "Pod = K8s 创建与调度的最小单元",
+        "highlight": "最小单元"
+      },
+      {
+        "cue": "podDetail",
+        "spoken": "同一个 Pod 里的容器，共享同一个网络 IP，可以通过本地回环地址直接通信，也能共享声明好的存储卷，比如主服务配一个采集日志的边车容器。",
+        "display": "同 Pod 容器共享网络 IP（localhost 互通）与存储卷",
+        "highlight": "共享网络 IP 与存储卷"
+      },
+      {
+        "cue": "namespace",
+        "spoken": "如果开发、测试、生产都共用同一个集群，怎么避免重名和误操作？K8s 提供了 Namespace，也就是命名空间，用来做资源分组、名称隔离，以及权限和资源配额管理。",
+        "display": "Namespace = 逻辑隔间（资源分组、名称隔离、权限与配额）",
+        "highlight": "资源分组、名称隔离、权限与配额"
+      },
+      {
+        "cue": "ephemeral",
+        "spoken": "记住一个关键前提：Pod 天生是临时性的，随时可能被销毁和重建，不要把它当成永久不变的服务器。",
+        "display": "铁律：Pod 天生是临时工，随时可能销毁重建！",
+        "highlight": "随时可能销毁重建"
+      }
+    ]
+  },
+  {
+    "id": "deployment",
+    "badge": "03 · 核心灵魂与弹性扩缩",
+    "title": "Deployment · 滚动更新 · HPA",
+    "theme": "mint",
+    "lines": [
+      {
+        "cue": "declarative",
+        "spoken": "既然 Pod 随时会重建，怎么保证线上服务始终稳定？这就靠 Deployment，以及 K8s 最核心的声明式管理。",
+        "display": "Deployment + 声明式管理：保证服务持续稳定",
+        "highlight": "声明式管理"
+      },
+      {
+        "cue": "selfHeal",
+        "spoken": "你不需要写脚本一步步教它怎么修，只需要在 YAML 里声明目标状态：我要三个 v1 版本的 Pod 持续在线。Deployment 会通过底层的 ReplicaSet 盯着副本数。",
+        "display": "YAML 声明目标副本数，Deployment 通过 ReplicaSet 维护",
+        "highlight": "ReplicaSet"
+      },
+      {
+        "cue": "selfHeal2",
+        "spoken": "一旦某个 Pod 崩溃或被误删，控制器几秒内就会拉起一个新的补齐；哪怕整台节点失联，也会把受影响的 Pod 重新调度到健康节点上，这就是自愈能力。",
+        "display": "自愈：Pod 误删秒级补齐，节点失联自动重调度到健康节点",
+        "highlight": "自动重调度"
+      },
+      {
+        "cue": "rolling",
+        "spoken": "升级到 v2 版本时，Deployment 默认采用滚动更新：先启动新 Pod，等就绪探针检查通过、确认能接流量之后，再下线旧 Pod，全程业务不中断，出问题还能一键回滚。",
+        "display": "滚动更新：新 Pod 通过就绪探针再停旧 Pod，支持一键回滚",
+        "highlight": "就绪探针"
+      },
+      {
+        "cue": "hpa",
+        "spoken": "如果大促期间流量暴涨怎么办？可以配上 HPA，水平自动扩缩容。它根据 CPU、内存或自定义指标，自动调高副本数扛住高峰；流量回落后再平稳缩容，既稳又省成本。",
+        "display": "HPA：按 CPU/指标自动调副本数，高峰扩容、低谷平稳缩容",
+        "highlight": "HPA 水平自动扩缩容"
+      }
+    ]
+  },
+  {
+    "id": "network",
+    "badge": "04 · 流量怎么精准找上门？",
+    "title": "Service · Ingress",
+    "theme": "lavender",
+    "lines": [
+      {
+        "cue": "ipChange",
+        "spoken": "紧接着就会遇到一个现实问题：Pod 每次重建，分配到的 IP 都会变，其他服务该怎么稳定找到它？",
+        "display": "难题：Pod 重建 IP 就变，服务间如何稳定访问？",
+        "highlight": "IP 都会变"
+      },
+      {
+        "cue": "service",
+        "spoken": "答案是 Service。它相当于给这组 Pod 提供固定的虚拟 IP 和集群内域名，通过标签选择器持续追踪健康的 Pod，并把请求自动负载均衡转发过去。",
+        "display": "Service = 固定虚拟 IP 与域名 + 标签追踪 + 负载均衡",
+        "highlight": "固定虚拟 IP 与域名"
+      },
+      {
+        "cue": "ingress",
+        "spoken": "那集群外部的用户通过浏览器访问怎么办？可以在入口配置 Ingress，配合 Ingress 控制器，统一管理域名、HTTPS 证书，并按路径精准路由：比如 api 路径转后端，shop 路径转商城。",
+        "display": "Ingress + 控制器：统一管域名、HTTPS 与路径路由分流",
+        "highlight": "Ingress + 控制器"
+      }
+    ]
+  },
+  {
+    "id": "configStorage",
+    "badge": "05 · 配置与持久化数据",
+    "title": "ConfigMap · Secret · PV / PVC",
+    "theme": "peach",
+    "lines": [
+      {
+        "cue": "configSecret",
+        "spoken": "再来解决两个工程痛点。第一，开发和生产环境的配置不同，不能每改一行配置就重新打包镜像。K8s 用 ConfigMap 管普通配置，用 Secret 管密码和密钥，动态挂载进 Pod。",
+        "display": "ConfigMap 管普通配置，Secret 管密钥，动态挂载进 Pod",
+        "highlight": "ConfigMap + Secret"
+      },
+      {
+        "cue": "secretNote",
+        "spoken": "这里顺带提醒一句，Secret 默认只是 Base64 编码，并不是自动加密，在生产环境里还需要开启 etcd 静态加密并配好访问权限。",
+        "display": "避坑提示：Secret 默认仅 Base64 编码，生产需配静态加密与 RBAC！",
+        "highlight": "默认仅 Base64 编码"
+      },
+      {
+        "cue": "pvPvc",
+        "spoken": "第二，Pod 是临时性的，重启后本地数据就会丢失。所以持久化数据要解耦出来：PV 代表底层持久化存储卷，PVC 是 Pod 提交的存储申请单，也可以通过 StorageClass 动态创建。",
+        "display": "PV（持久化存储卷）+ PVC（存储申请单）：计算与存储解耦",
+        "highlight": "计算与存储解耦"
+      },
+      {
+        "cue": "pvSwap",
+        "spoken": "以后哪怕 Pod 换了好几茬，重新绑定同一个 PVC，里面的数据库和文件依然完整保留。",
+        "display": "Pod 换茬重绑同一 PVC，持久化数据完整无损！",
+        "highlight": "数据完整无损"
+      }
+    ]
+  },
+  {
+    "id": "brain",
+    "badge": "06 · 掀开引擎盖看大脑",
+    "title": "Control Plane 核心协作全链路",
+    "theme": "arcade",
+    "lines": [
+      {
+        "cue": "hood",
+        "spoken": "最后，我们掀开 K8s 的引擎盖，看看它的大脑 Control Plane，到底是怎么协调全场的。",
+        "display": "掀开引擎盖：Control Plane 控制平面如何协调全场？",
+        "highlight": "Control Plane"
+      },
+      {
+        "cue": "apply",
+        "spoken": "当你敲下 kubectl apply，提交一份要三个 Pod 的 Deployment 清单，所有组件都会围绕一个核心枢纽协同工作。",
+        "display": "敲下 kubectl apply → 所有组件围绕 API Server 枢纽协同！",
+        "highlight": "API Server 枢纽"
+      },
+      {
+        "cue": "apiEtcd",
+        "spoken": "第一步，请求先发到 API Server。它是整个集群唯一的统一入口，负责鉴权、校验，并把你的期望状态写入集群键值数据库 etcd。记住，只有 API Server 会直接读写 etcd。",
+        "display": "① API Server（唯一入口）校验并写入 ② etcd（唯一直接读写）",
+        "highlight": "只有 API Server 直接读写 etcd"
+      },
+      {
+        "cue": "controller",
+        "spoken": "第二步，Controller Manager 通过 Watch 机制监听 API Server。发现你新建了 Deployment，就先创建 ReplicaSet，再比对期望副本数三和当前零的差距，向 API Server 请求创建三个待调度的 Pod。这就是著名的调谐循环。",
+        "display": "③ Controller Manager 监听 API Server → 调谐循环创建 3 个 Pending Pod",
+        "highlight": "调谐循环"
+      },
+      {
+        "cue": "scheduler",
+        "spoken": "第三步，Scheduler 同样监听 API Server，看到还没分配节点的 Pod，就会综合各节点的 CPU、内存和调度策略选出最佳落点，再把绑定结果写回 API Server。",
+        "display": "④ Scheduler 评估各 Node 算力，把 Pod 绑定结果写回 API Server",
+        "highlight": "Scheduler 评估绑定"
+      },
+      {
+        "cue": "kubelet",
+        "spoken": "第四步，目标节点上的 kubelet 监听到派给自己的任务，调用容器运行时拉起容器，再把最新状态回报给 API Server；同时每个节点上的 kube-proxy 监听服务变化，更新网络转发规则，整套闭环就跑通了。",
+        "display": "⑤ kubelet 拉起容器回传状态 + kube-proxy 更新转发规则 → 闭环！",
+        "highlight": "kubelet + kube-proxy"
+      }
+    ]
+  },
+  {
+    "id": "finale",
+    "badge": "07 · 一图收尾 · 准点下班",
+    "title": "K8s 14 大核心组件全景图",
+    "theme": "cream",
+    "lines": [
+      {
+        "cue": "panorama",
+        "spoken": "现在把今天所有的拼图合起来看，K8s 其实非常清晰：上方控制平面围绕 API Server 负责记账、调谐和调度，下方工作节点由 kubelet 和 kube-proxy 落地执行；再配合命名空间、Deployment、HPA、Service、Ingress、配置和存储卷，整套体系就齐活了。",
+        "display": "控制平面决策 + 节点执行 + 四大核心能力 = 完整 K8s 体系！",
+        "highlight": "完整 K8s 体系"
+      },
+      {
+        "cue": "quote",
+        "spoken": "学习 K8s 不要一上来就死背命令，先记住它的底层灵魂：你只管声明你想要的世界，K8s 永远在帮你把现实追平到理想。",
+        "display": "你只管声明你想要的世界，K8s 永远帮你把现实追平到理想",
+        "highlight": "把现实追平到理想"
+      },
+      {
+        "cue": "signoff",
+        "spoken": "如果这期帮到你了，记得点赞收藏，早日把运维脏活交给 K8s，小牛马准点打卡下班！",
+        "display": "点赞收藏，早日把运维脏活交给 K8s，小牛马准点下班！",
+        "highlight": "小牛马准点下班"
+      }
+    ]
+  }
+]

@@ -61,6 +61,26 @@ import { TestDrive as ArcadeTestDrive } from "../../projects/greenlight-arcade/s
 import { ChorusTwo as ArcadeChorusTwo } from "../../projects/greenlight-arcade/source/acts/Chorus";
 import { OffWork as ArcadeOffWork } from "../../projects/greenlight-arcade/source/acts/OffWork";
 import { Carnival as ArcadeCarnival } from "../../projects/greenlight-arcade/source/acts/Carnival";
+import {
+  K8S_DURATION_FRAMES,
+  ProjectK8sExplained,
+} from "../../projects/k8s-explained/source/Film";
+import {
+  PG_DURATION_FRAMES,
+  ProjectPrometheusGrafana,
+} from "../../projects/prometheus-grafana/source/Film";
+import {
+  KAFKA_DURATION_FRAMES,
+  ProjectKafkaExplained,
+} from "../../projects/kafka-explained/source/Film";
+import {
+  REDIS_DURATION_FRAMES,
+  ProjectRedisExplained,
+} from "../../projects/redis-explained/source/Film";
+import {
+  MYSQL_DURATION_FRAMES,
+  ProjectMysqlExplained,
+} from "../../projects/mysql-explained/source/Film";
 // framecraft:imports
 
 const accessSceneDuration = (id: string) => {
@@ -509,6 +529,46 @@ export const RemotionRoot: React.FC = () => {
           height={1080}
         />
       </Folder>
+      <Composition
+        id="ProjectK8sExplained"
+        component={ProjectK8sExplained}
+        durationInFrames={K8S_DURATION_FRAMES}
+        fps={30}
+        width={1920}
+        height={1080}
+      />
+      <Composition
+        id="ProjectPrometheusGrafana"
+        component={ProjectPrometheusGrafana}
+        durationInFrames={PG_DURATION_FRAMES}
+        fps={30}
+        width={1920}
+        height={1080}
+      />
+      <Composition
+        id="ProjectKafkaExplained"
+        component={ProjectKafkaExplained}
+        durationInFrames={KAFKA_DURATION_FRAMES}
+        fps={30}
+        width={1920}
+        height={1080}
+      />
+      <Composition
+        id="ProjectRedisExplained"
+        component={ProjectRedisExplained}
+        durationInFrames={REDIS_DURATION_FRAMES}
+        fps={30}
+        width={1920}
+        height={1080}
+      />
+      <Composition
+        id="ProjectMysqlExplained"
+        component={ProjectMysqlExplained}
+        durationInFrames={MYSQL_DURATION_FRAMES}
+        fps={30}
+        width={1920}
+        height={1080}
+      />
       {/* framecraft:compositions */}
     </>
   );

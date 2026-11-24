@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "id": "prometheus-grafana",
+  "title": "一集搞懂Prometheus与Grafana",
+  "production": {
+    "tool": "remotion",
+    "options": {
+      "compositionId": "ProjectPrometheusGrafana"
+    }
+  }
+}

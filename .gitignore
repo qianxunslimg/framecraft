@@ -10,6 +10,9 @@ out
 
 # Keep provenance in projects; third-party files stay local by default.
 public/*/external/
+# Reproducible large raw WAV builds (regenerate via scripts/voice.py & scripts/bgm.py)
+public/*/owned/audio/master.wav
+public/*/owned/audio/narration.wav
 *.part
 __pycache__/
 *.pyc

@@ -1,0 +1,897 @@
+{
+  "fps": 30,
+  "duration": 11522,
+  "voice": {
+    "engine": "edge-tts",
+    "voice": "zh-CN-YunxiaNeural",
+    "rate": "+5%",
+    "pitch": "+0Hz"
+  },
+  "scenes": [
+    {
+      "id": "opening",
+      "badge": "01 · 内存极速救场",
+      "title": "为什么高并发系统离不了 Redis？",
+      "theme": "night",
+      "from": 0,
+      "duration": 1254,
+      "cues": [
+        {
+          "cue": "slowDb",
+          "from": 12,
+          "duration": 452,
+          "display": "流量直打 MySQL 磁盘瞬间卡死？请出亚毫秒级内存神器 Redis！",
+          "highlight": "Redis"
+        },
+        {
+          "cue": "cachePower",
+          "from": 473,
+          "duration": 409,
+          "display": "纯内存缓存：亚毫秒极速响应 · 单机 10 万+ QPS，替数据库挡住 95% 流量！",
+          "highlight": "每秒十万次以上查询"
+        },
+        {
+          "cue": "multiUse",
+          "from": 891,
+          "duration": 345,
+          "display": "全能瑞士军刀：热点缓存 · 分布式锁 · 实时排行榜 · 限流 · 会话共享",
+          "highlight": "丰富的数据结构"
+        }
+      ]
+    },
+    {
+      "id": "dataTypes",
+      "badge": "02 · 五大核心数据结构",
+      "title": "String · Hash · List · Set · ZSet",
+      "theme": "sky",
+      "from": 1254,
+      "duration": 1690,
+      "cues": [
+        {
+          "cue": "stringHash",
+          "from": 14,
+          "duration": 641,
+          "display": "String（缓存/锁/INCR 计数） · Hash（用户信息/购物车按字段读写）",
+          "highlight": "String 与 Hash"
+        },
+        {
+          "cue": "listSet",
+          "from": 664,
+          "duration": 524,
+          "display": "List（有序队列/时间线） · Set（天然去除重复/抽奖/共同好友交集）",
+          "highlight": "List 与 Set"
+        },
+        {
+          "cue": "zset",
+          "from": 1197,
+          "duration": 475,
+          "display": "Sorted Set（ZSet）：自带 Score 自动排序，热搜与游戏排行榜王者！",
+          "highlight": "ZSet 有序集合"
+        }
+      ]
+    },
+    {
+      "id": "whyFast",
+      "badge": "03 · 极速底层黑科技",
+      "title": "Redis 为什么快到飞起？",
+      "theme": "arcade",
+      "from": 2944,
+      "duration": 1791,
+      "cues": [
+        {
+          "cue": "inMemory",
+          "from": 14,
+          "duration": 432,
+          "display": "① 纯内存读写（In-Memory）：直接命中 RAM，彻底告别磁盘 I/O 瓶颈！",
+          "highlight": "纯内存读写"
+        },
+        {
+          "cue": "singleThread",
+          "from": 455,
+          "duration": 548,
+          "display": "② 核心单线程无锁竞争（考点：Redis 6.0+ 网络 I/O 多线程，命令执行仍单线程！）",
+          "highlight": "核心命令执行依然稳稳保持单线程"
+        },
+        {
+          "cue": "epoll",
+          "from": 1012,
+          "duration": 397,
+          "display": "③ I/O 多路复用（epoll）：单事件循环同时高效监控上万连接，绝不阻塞傻等！",
+          "highlight": "epoll 模型"
+        },
+        {
+          "cue": "dataStruct",
+          "from": 1418,
+          "duration": 355,
+          "display": "④ 极致底层结构：SDS · 哈希表 · SkipList（跳表），查询复杂度压到极致！",
+          "highlight": "SkipList"
+        }
+      ]
+    },
+    {
+      "id": "persistence",
+      "badge": "04 · 断电不丢的双底牌",
+      "title": "RDB 快照 · AOF 日志 · 混合持久化",
+      "theme": "amber",
+      "from": 4735,
+      "duration": 1733,
+      "cues": [
+        {
+          "cue": "rdb",
+          "from": 14,
+          "duration": 732,
+          "display": "底牌 ① RDB（二进制快照）：fork 后台生成，体积小恢复极快，但有窗口丢数风险",
+          "highlight": "RDB 内存快照"
+        },
+        {
+          "cue": "aof",
+          "from": 755,
+          "duration": 477,
+          "display": "底牌 ② AOF（追加命令日志）：默认 everysec 每秒刷盘，最多丢 1 秒，支持瘦身",
+          "highlight": "AOF 追加日志"
+        },
+        {
+          "cue": "hybrid",
+          "from": 1241,
+          "duration": 474,
+          "display": "王炸组合 · 混合持久化（Redis 4.0+）：RDB 全量头 + AOF 增量尾，快稳兼得！",
+          "highlight": "混合持久化"
+        }
+      ]
+    },
+    {
+      "id": "cacheTraps",
+      "badge": "05 · 缓存三大经典大坑",
+      "title": "穿透 · 击穿 · 雪崩 与 终极解药",
+      "theme": "mint",
+      "from": 6468,
+      "duration": 1892,
+      "cues": [
+        {
+          "cue": "penetration",
+          "from": 14,
+          "duration": 698,
+          "display": "坑 ① 缓存穿透（查不存在数据） → 解药：缓存空对象 / Bloom Filter 布隆过滤器",
+          "highlight": "缓存穿透"
+        },
+        {
+          "cue": "breakdown",
+          "from": 721,
+          "duration": 579,
+          "display": "坑 ② 缓存击穿（单热点 Key 失效） → 解药：Mutex 互斥锁回源 / 逻辑过期刷新",
+          "highlight": "缓存击穿"
+        },
+        {
+          "cue": "avalanche",
+          "from": 1309,
+          "duration": 565,
+          "display": "坑 ③ 缓存雪崩（大批 Key 同秒失效/宕机） → 解药：随机 TTL 抖动 + 集群限流",
+          "highlight": "缓存雪崩"
+        }
+      ]
+    },
+    {
+      "id": "clusterHA",
+      "badge": "06 · 淘汰机制与高可用",
+      "title": "TTL 淘汰 · 主从 · Sentinel · Cluster",
+      "theme": "lavender",
+      "from": 8360,
+      "duration": 1746,
+      "cues": [
+        {
+          "cue": "eviction",
+          "from": 14,
+          "duration": 792,
+          "display": "内存治理：TTL（惰性 + 定期删除） · maxmemory 触发 allkeys-lru / allkeys-lfu 淘汰",
+          "highlight": "allkeys-lru"
+        },
+        {
+          "cue": "sentinelCluster",
+          "from": 815,
+          "duration": 913,
+          "display": "高可用三件套：主从复制 → Sentinel 哨兵故障切换 → Cluster 16384 哈希槽分片！",
+          "highlight": "16384 哈希槽"
+        }
+      ]
+    },
+    {
+      "id": "finale",
+      "badge": "07 · 一图收尾 · 准点下班",
+      "title": "Redis 核心知识全景图",
+      "theme": "cream",
+      "from": 10106,
+      "duration": 1416,
+      "cues": [
+        {
+          "cue": "panorama",
+          "from": 14,
+          "duration": 781,
+          "display": "5 大结构 + 内存/单线程/epoll + 混合持久化 + 防三坑 + Sentinel/16384 槽集群！",
+          "highlight": "Redis 核心全景图"
+        },
+        {
+          "cue": "quote",
+          "from": 804,
+          "duration": 328,
+          "display": "纯内存多结构扛并发 · 快照加日志保不丢 · 防穿防击防雪崩 · 哨兵分片稳如山",
+          "highlight": "防穿防击防雪崩"
+        },
+        {
+          "cue": "signoff",
+          "from": 1141,
+          "duration": 237,
+          "display": "点赞收藏，接口响应 0.5ms，小牛马准点打卡下班！",
+          "highlight": "零点几毫秒"
+        }
+      ]
+    }
+  ],
+  "captions": [
+    {
+      "from": 12,
+      "duration": 137,
+      "text": "活动刚上线，海量查询请求直接涌向 MySQL，",
+      "highlight": ""
+    },
+    {
+      "from": 149,
+      "duration": 113,
+      "text": "磁盘读写瞬间飙满，页面转圈半天打不开！",
+      "highlight": ""
+    },
+    {
+      "from": 268,
+      "duration": 48,
+      "text": "面对高并发读压力，",
+      "highlight": ""
+    },
+    {
+      "from": 316,
+      "duration": 101,
+      "text": "后端系统最常挡在数据库前面的极速救星，",
+      "highlight": ""
+    },
+    {
+      "from": 417,
+      "duration": 47,
+      "text": "就是 Redis。",
+      "highlight": "Redis"
+    },
+    {
+      "from": 473,
+      "duration": 87,
+      "text": "Redis 是一个开源的内存键值数据库。",
+      "highlight": ""
+    },
+    {
+      "from": 566,
+      "duration": 96,
+      "text": "把热点数据放进 Redis 内存里，",
+      "highlight": ""
+    },
+    {
+      "from": 662,
+      "duration": 64,
+      "text": "响应速度能飙到亚毫秒级，",
+      "highlight": ""
+    },
+    {
+      "from": 726,
+      "duration": 86,
+      "text": "单机轻松扛住每秒十万次以上查询，",
+      "highlight": "每秒十万次以上查询"
+    },
+    {
+      "from": 812,
+      "duration": 70,
+      "text": "帮数据库拦掉绝大部分流量。",
+      "highlight": ""
+    },
+    {
+      "from": 891,
+      "duration": 106,
+      "text": "更厉害的是，Redis 不光能当缓存，",
+      "highlight": ""
+    },
+    {
+      "from": 997,
+      "duration": 61,
+      "text": "还自带丰富的数据结构，",
+      "highlight": "丰富的数据结构"
+    },
+    {
+      "from": 1058,
+      "duration": 128,
+      "text": "分布式锁、实时排行榜、接口限流和登录会话共享，",
+      "highlight": ""
+    },
+    {
+      "from": 1186,
+      "duration": 50,
+      "text": "通通都能轻松搞定！",
+      "highlight": ""
+    },
+    {
+      "from": 1268,
+      "duration": 65,
+      "text": "Redis 真正迷人的地方，",
+      "highlight": ""
+    },
+    {
+      "from": 1333,
+      "duration": 69,
+      "text": "在于它提供了五大核心数据结构。",
+      "highlight": ""
+    },
+    {
+      "from": 1408,
+      "duration": 79,
+      "text": "第一是 String 字符串，",
+      "highlight": ""
+    },
+    {
+      "from": 1487,
+      "duration": 84,
+      "text": "最适合存热点缓存、实现分布式锁，",
+      "highlight": ""
+    },
+    {
+      "from": 1571,
+      "duration": 131,
+      "text": "或者用 INCR 命令做文章阅读量和库存原子计数。",
+      "highlight": ""
+    },
+    {
+      "from": 1708,
+      "duration": 129,
+      "text": "第二是 Hash 哈希表，适合存用户信息和购物车，",
+      "highlight": ""
+    },
+    {
+      "from": 1837,
+      "duration": 72,
+      "text": "改里面单个字段不用整条覆盖。",
+      "highlight": ""
+    },
+    {
+      "from": 1918,
+      "duration": 108,
+      "text": "第三是 List 列表，按插入顺序排队，",
+      "highlight": ""
+    },
+    {
+      "from": 2026,
+      "duration": 103,
+      "text": "常用来做最新动态时间线和轻量任务队列。",
+      "highlight": ""
+    },
+    {
+      "from": 2135,
+      "duration": 117,
+      "text": "第四是 Set 集合，天然保证元素不重复，",
+      "highlight": ""
+    },
+    {
+      "from": 2252,
+      "duration": 78,
+      "text": "用来做防重复点赞、随机抽奖，",
+      "highlight": ""
+    },
+    {
+      "from": 2330,
+      "duration": 112,
+      "text": "或者算两个用户的共同好友交集，快到离谱！",
+      "highlight": ""
+    },
+    {
+      "from": 2451,
+      "duration": 80,
+      "text": "第五是明星选手 Sorted Set，",
+      "highlight": ""
+    },
+    {
+      "from": 2531,
+      "duration": 54,
+      "text": "简称 ZSet 有序集合。",
+      "highlight": "ZSet 有序集合"
+    },
+    {
+      "from": 2591,
+      "duration": 105,
+      "text": "每个元素都会绑定一个 Score 分数，",
+      "highlight": ""
+    },
+    {
+      "from": 2696,
+      "duration": 105,
+      "text": "Redis 会自动帮你按分数实时排好序，",
+      "highlight": ""
+    },
+    {
+      "from": 2801,
+      "duration": 125,
+      "text": "游戏战力榜和热搜排行榜，一条命令直接秒查前十名！",
+      "highlight": ""
+    },
+    {
+      "from": 2958,
+      "duration": 37,
+      "text": "同样是存数据，",
+      "highlight": ""
+    },
+    {
+      "from": 2995,
+      "duration": 134,
+      "text": "Redis 凭什么比传统磁盘数据库快出几十上百倍？",
+      "highlight": ""
+    },
+    {
+      "from": 3135,
+      "duration": 53,
+      "text": "背后有四大硬核设计。",
+      "highlight": ""
+    },
+    {
+      "from": 3194,
+      "duration": 121,
+      "text": "第一，纯内存读写，数据直接驻留在内存条里，",
+      "highlight": "纯内存读写"
+    },
+    {
+      "from": 3315,
+      "duration": 75,
+      "text": "省掉了耗时的磁盘寻道开销。",
+      "highlight": ""
+    },
+    {
+      "from": 3399,
+      "duration": 93,
+      "text": "第二，核心命令执行采用单线程，",
+      "highlight": ""
+    },
+    {
+      "from": 3492,
+      "duration": 125,
+      "text": "天然避免多线程切换和加锁竞争带来的内耗。",
+      "highlight": ""
+    },
+    {
+      "from": 3623,
+      "duration": 136,
+      "text": "这里记住一个高频考点：从 Redis 6.0 开始，",
+      "highlight": ""
+    },
+    {
+      "from": 3759,
+      "duration": 99,
+      "text": "网络 I/O 读写已经支持多线程加速，",
+      "highlight": ""
+    },
+    {
+      "from": 3858,
+      "duration": 89,
+      "text": "但核心命令执行依然稳稳保持单线程！",
+      "highlight": "核心命令执行依然稳稳保持单线程"
+    },
+    {
+      "from": 3956,
+      "duration": 71,
+      "text": "第三，I/O 多路复用技术。",
+      "highlight": ""
+    },
+    {
+      "from": 4033,
+      "duration": 101,
+      "text": "依托操作系统底层的 epoll 模型，",
+      "highlight": "epoll 模型"
+    },
+    {
+      "from": 4134,
+      "duration": 133,
+      "text": "单个事件循环就能同时高效盯住成千上万个客户端连接，",
+      "highlight": ""
+    },
+    {
+      "from": 4267,
+      "duration": 86,
+      "text": "谁有消息就立刻处理谁，绝不傻等。",
+      "highlight": ""
+    },
+    {
+      "from": 4362,
+      "duration": 83,
+      "text": "第四，精雕细琢的底层数据结构。",
+      "highlight": ""
+    },
+    {
+      "from": 4451,
+      "duration": 166,
+      "text": "像 SDS 动态字符串、高效哈希表和跳表 SkipList，",
+      "highlight": "SkipList"
+    },
+    {
+      "from": 4617,
+      "duration": 100,
+      "text": "把内存占用和查询耗时都压榨到了极致。",
+      "highlight": ""
+    },
+    {
+      "from": 4749,
+      "duration": 114,
+      "text": "数据全放内存里，万一服务器突然断电宕机，",
+      "highlight": ""
+    },
+    {
+      "from": 4863,
+      "duration": 45,
+      "text": "岂不是全清空了？",
+      "highlight": ""
+    },
+    {
+      "from": 4914,
+      "duration": 95,
+      "text": "别慌，Redis 准备了两大持久化底牌。",
+      "highlight": ""
+    },
+    {
+      "from": 5015,
+      "duration": 80,
+      "text": "第一张是 RDB 内存快照，",
+      "highlight": "RDB 内存快照"
+    },
+    {
+      "from": 5095,
+      "duration": 97,
+      "text": "每隔一段时间 fork 出子进程，",
+      "highlight": ""
+    },
+    {
+      "from": 5192,
+      "duration": 108,
+      "text": "把整份内存打包成紧凑的二进制文件落盘，",
+      "highlight": ""
+    },
+    {
+      "from": 5300,
+      "duration": 63,
+      "text": "体积小、重启恢复极快，",
+      "highlight": ""
+    },
+    {
+      "from": 5363,
+      "duration": 118,
+      "text": "缺点是可能丢失最后一次快照后的几分钟数据。",
+      "highlight": ""
+    },
+    {
+      "from": 5490,
+      "duration": 80,
+      "text": "第二张是 AOF 追加日志，",
+      "highlight": "AOF 追加日志"
+    },
+    {
+      "from": 5570,
+      "duration": 97,
+      "text": "把每一条写命令按顺序记进日志文件。",
+      "highlight": ""
+    },
+    {
+      "from": 5673,
+      "duration": 125,
+      "text": "默认采用 everysec 策略每秒刷一次盘，",
+      "highlight": ""
+    },
+    {
+      "from": 5798,
+      "duration": 82,
+      "text": "最多只丢一秒数据，安全性拉满；",
+      "highlight": ""
+    },
+    {
+      "from": 5880,
+      "duration": 87,
+      "text": "文件太大时还能自动触发重写瘦身。",
+      "highlight": ""
+    },
+    {
+      "from": 5976,
+      "duration": 44,
+      "text": "小孩子才做选择，",
+      "highlight": ""
+    },
+    {
+      "from": 6020,
+      "duration": 154,
+      "text": "生产环境通常开启 Redis 4.0 推出的混合持久化：",
+      "highlight": "混合持久化"
+    },
+    {
+      "from": 6174,
+      "duration": 88,
+      "text": "文件前半段存 RDB 全量快照，",
+      "highlight": ""
+    },
+    {
+      "from": 6262,
+      "duration": 132,
+      "text": "后半段追记 AOF 增量命令，既有秒级恢复速度，",
+      "highlight": ""
+    },
+    {
+      "from": 6394,
+      "duration": 56,
+      "text": "又守住了数据高安全！",
+      "highlight": ""
+    },
+    {
+      "from": 6482,
+      "duration": 124,
+      "text": "用 Redis 做缓存，线上最容易踩三大经典大坑，",
+      "highlight": ""
+    },
+    {
+      "from": 6606,
+      "duration": 40,
+      "text": "面试也几乎必考！",
+      "highlight": ""
+    },
+    {
+      "from": 6652,
+      "duration": 158,
+      "text": "第一坑叫缓存穿透：黑客疯狂查询根本不存在的非法编号，",
+      "highlight": "缓存穿透"
+    },
+    {
+      "from": 6810,
+      "duration": 145,
+      "text": "缓存和数据库全查不到，每次请求都直接打穿数据库。",
+      "highlight": ""
+    },
+    {
+      "from": 6961,
+      "duration": 62,
+      "text": "解药是把空结果也短暂缓存，",
+      "highlight": ""
+    },
+    {
+      "from": 7023,
+      "duration": 157,
+      "text": "或者在最前面架一层 Bloom Filter 布隆过滤器直接拦截！",
+      "highlight": ""
+    },
+    {
+      "from": 7189,
+      "duration": 52,
+      "text": "第二坑叫缓存击穿：",
+      "highlight": "缓存击穿"
+    },
+    {
+      "from": 7241,
+      "duration": 137,
+      "text": "某一个全网爆火的超级热点 Key 恰好过期失效，",
+      "highlight": ""
+    },
+    {
+      "from": 7378,
+      "duration": 103,
+      "text": "这一瞬间成千上万请求同时砸向数据库。",
+      "highlight": ""
+    },
+    {
+      "from": 7487,
+      "duration": 90,
+      "text": "解药是加一道 Mutex 互斥锁，",
+      "highlight": ""
+    },
+    {
+      "from": 7577,
+      "duration": 90,
+      "text": "只放一个线程回数据库重新生成缓存，",
+      "highlight": ""
+    },
+    {
+      "from": 7667,
+      "duration": 101,
+      "text": "或者给热点数据设逻辑过期后台异步刷新。",
+      "highlight": ""
+    },
+    {
+      "from": 7777,
+      "duration": 47,
+      "text": "第三坑叫缓存雪崩：",
+      "highlight": "缓存雪崩"
+    },
+    {
+      "from": 7824,
+      "duration": 127,
+      "text": "成千上万个缓存 Key 设了完全相同的过期时间，",
+      "highlight": ""
+    },
+    {
+      "from": 7951,
+      "duration": 121,
+      "text": "到点集体失效，或者 Redis 节点整体宕机，",
+      "highlight": ""
+    },
+    {
+      "from": 8072,
+      "duration": 48,
+      "text": "流量瞬间压垮后端。",
+      "highlight": ""
+    },
+    {
+      "from": 8126,
+      "duration": 117,
+      "text": "解药是给过期时间加上随机抖动打散高峰，",
+      "highlight": ""
+    },
+    {
+      "from": 8243,
+      "duration": 99,
+      "text": "并配合高可用集群和接口限流降级！",
+      "highlight": ""
+    },
+    {
+      "from": 8374,
+      "duration": 128,
+      "text": "内存毕竟寸土寸金，Redis 内存快撑满时怎么办？",
+      "highlight": ""
+    },
+    {
+      "from": 8508,
+      "duration": 113,
+      "text": "一方面，给 Key 设置 TTL 过期时间后，",
+      "highlight": ""
+    },
+    {
+      "from": 8621,
+      "duration": 113,
+      "text": "Redis 会用惰性删除配合定期删除悄悄清理；",
+      "highlight": ""
+    },
+    {
+      "from": 8734,
+      "duration": 25,
+      "text": "另一方面，",
+      "highlight": ""
+    },
+    {
+      "from": 8759,
+      "duration": 137,
+      "text": "内存触及 maxmemory 上限时会自动触发淘汰策略，",
+      "highlight": ""
+    },
+    {
+      "from": 8896,
+      "duration": 172,
+      "text": "生产中最常用的是 allkeys-lru 或 allkeys-lfu，",
+      "highlight": "allkeys-lru"
+    },
+    {
+      "from": 9068,
+      "duration": 98,
+      "text": "优先把最久没用或访问最少的冷数据请出去。",
+      "highlight": ""
+    },
+    {
+      "from": 9175,
+      "duration": 64,
+      "text": "想要单机不挂还能无限扩容，",
+      "highlight": ""
+    },
+    {
+      "from": 9239,
+      "duration": 118,
+      "text": "Redis 高可用有经典三件套：第一，主从复制，",
+      "highlight": ""
+    },
+    {
+      "from": 9357,
+      "duration": 158,
+      "text": "Master 主节点管写、Replica 从节点同步读并留备份；",
+      "highlight": ""
+    },
+    {
+      "from": 9515,
+      "duration": 123,
+      "text": "第二，Sentinel 哨兵模式，主节点一旦宕机，",
+      "highlight": ""
+    },
+    {
+      "from": 9638,
+      "duration": 99,
+      "text": "哨兵集群自动投票推举新主节点顶上；第三，",
+      "highlight": ""
+    },
+    {
+      "from": 9737,
+      "duration": 94,
+      "text": "Redis Cluster 集群分片，",
+      "highlight": ""
+    },
+    {
+      "from": 9831,
+      "duration": 183,
+      "text": "把数据按一万六千三百八十四个 Hash Slot 哈希槽切分到多台主节点，",
+      "highlight": ""
+    },
+    {
+      "from": 10014,
+      "duration": 74,
+      "text": "彻底突破单机内存和并发天花板！",
+      "highlight": ""
+    },
+    {
+      "from": 10120,
+      "duration": 68,
+      "text": "把今天的核心要点串起来，",
+      "highlight": ""
+    },
+    {
+      "from": 10188,
+      "duration": 91,
+      "text": "整座 Redis 架构一目了然：",
+      "highlight": ""
+    },
+    {
+      "from": 10279,
+      "duration": 74,
+      "text": "五大数据结构覆盖高频业务，",
+      "highlight": ""
+    },
+    {
+      "from": 10353,
+      "duration": 141,
+      "text": "纯内存、单线程核心和 epoll 飙出十万级吞吐，",
+      "highlight": ""
+    },
+    {
+      "from": 10494,
+      "duration": 125,
+      "text": "RDB 与 AOF 混合持久化兜底数据安全，",
+      "highlight": ""
+    },
+    {
+      "from": 10619,
+      "duration": 113,
+      "text": "布隆过滤、互斥锁和随机过期守住缓存防线，",
+      "highlight": ""
+    },
+    {
+      "from": 10732,
+      "duration": 169,
+      "text": "最后用哨兵和一万六千三百八十四个哈希槽实现高可用与水平扩展！",
+      "highlight": ""
+    },
+    {
+      "from": 10910,
+      "duration": 151,
+      "text": "记住这句口诀一辈子忘不掉：纯内存多结构扛高并发，",
+      "highlight": ""
+    },
+    {
+      "from": 11061,
+      "duration": 120,
+      "text": "快照加日志保数据不丢，防穿防击防雪崩，",
+      "highlight": "防穿防击防雪崩"
+    },
+    {
+      "from": 11181,
+      "duration": 57,
+      "text": "哨兵分片稳如泰山！",
+      "highlight": ""
+    },
+    {
+      "from": 11247,
+      "duration": 89,
+      "text": "如果这期讲得透彻记得点赞收藏，",
+      "highlight": ""
+    },
+    {
+      "from": 11336,
+      "duration": 148,
+      "text": "愿你的接口响应全是零点几毫秒，小牛马准点打卡下班！",
+      "highlight": "零点几毫秒"
+    }
+  ]
+}

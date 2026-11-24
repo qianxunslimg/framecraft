@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "assets": [
+    {
+      "id": "k8s-explained-master-audio-v2",
+      "path": "../../public/k8s-explained/owned/audio/master.wav",
+      "type": "audio",
+      "role": "mixed-audio",
+      "origin": {
+        "kind": "local-mix",
+        "voice": "edge-tts zh-CN-YunxiaNeural (+5%, +0Hz, per-sentence natural phrasing)",
+        "bgm": "procedural-original 126 BPM chiptune/electro-pop + 14 cue-synced cartoon SFX",
+        "generators": [
+          "scripts/voice.py",
+          "scripts/bgm.py"
+        ]
+      },
+      "usage": {
+        "status": "verified",
+        "scope": "user-owned-creative-project",
+        "evidencePath": "sources.md",
+        "attribution": "配音由 Edge TTS (zh-CN-YunxiaNeural) 逐句合成，配乐与 14 组卡通卡点音效为 Framecraft 本地程序化原创合成。"
+      },
+      "bytes": 71929644,
+      "sha256": "c2d0b61254eac201f0963d8be9e73253b873bbd09c9d5f59a481c26b3d76f043"
+    }
+  ]
+}

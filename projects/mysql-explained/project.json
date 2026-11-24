@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "id": "mysql-explained",
+  "title": "一集搞懂MySQL",
+  "production": {
+    "tool": "remotion",
+    "options": {
+      "compositionId": "ProjectMysqlExplained"
+    }
+  }
+}

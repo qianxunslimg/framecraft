@@ -1,0 +1,184 @@
+[
+  {
+    "id": "opening",
+    "badge": "01 · 秒杀洪峰大危机",
+    "title": "为什么高并发系统离不开 Kafka？",
+    "theme": "night",
+    "lines": [
+      {
+        "cue": "spike",
+        "spoken": "双十一零点刚到，每秒十万个下单请求瞬间涌进来，数据库当场被压垮！面对这种突发流量洪峰，后端系统最常请出的救星，就是 Apache Kafka。",
+        "display": "每秒 10 万请求涌来，数据库扛不住？请出高并发神器 Kafka！",
+        "highlight": "Apache Kafka"
+      },
+      {
+        "cue": "twoRoles",
+        "spoken": "它本质上是一个分布式消息队列与事件流平台，最擅长干两件大事：第一是削峰填谷，把突如其来的海量请求先稳稳接住，让数据库按自己的节奏慢慢处理。",
+        "display": "绝招 ① 削峰填谷：先把洪峰接进缓冲池，保护下游数据库！",
+        "highlight": "削峰填谷"
+      },
+      {
+        "cue": "decouple",
+        "spoken": "第二是异步解耦。用户下单后，订单服务只要把消息丢进 Kafka 就立刻返回成功，发短信、加积分、通知仓库各自按需读取，谁慢也不会把下单拖死。",
+        "display": "绝招 ② 异步解耦：下单丢进 Kafka 秒返回，下游各自订阅互不拖累！",
+        "highlight": "异步解耦"
+      }
+    ]
+  },
+  {
+    "id": "coreModel",
+    "badge": "02 · 传送带与核心概念",
+    "title": "Broker · Topic · Partition · Offset",
+    "theme": "sky",
+    "lines": [
+      {
+        "cue": "brokerTopic",
+        "spoken": "把 Kafka 想象成一座超级快递分拣中心，核心概念其实非常直观。集群里的每一台服务器，叫做 Broker；按业务划分的消息分类，叫做 Topic，也就是主题，比如订单主题、支付主题。",
+        "display": "Broker = 集群服务器 · Topic = 按业务划分的消息主题",
+        "highlight": "Broker 与 Topic"
+      },
+      {
+        "cue": "partition",
+        "spoken": "但所有快递都挤在一条传送带上肯定堵车，所以 Kafka 把一个 Topic 拆成多条并行的传送带，叫做 Partition，也就是分区，分散存在不同 Broker 上并发读写，这就是它高吞吐的根基。",
+        "display": "Partition（分区）= 并行多车道传送带，分散在不同 Broker 并发读写！",
+        "highlight": "Partition（分区）"
+      },
+      {
+        "cue": "orderOffset",
+        "spoken": "每条分区里的消息都有一个严格递增的编号，叫做 Offset，偏移量。记住一条黄金考点：Kafka 只保证单个分区内严格有序，不保证跨分区全局有序。想让同一笔订单的状态不乱序，把订单号设为消息的 Key，相同 Key 会哈希进同一个分区。",
+        "display": "Offset = 递增书签；单分区严格有序（同 Key 哈希进同一分区）！",
+        "highlight": "单分区严格有序"
+      }
+    ]
+  },
+  {
+    "id": "consumerGroup",
+    "badge": "03 · 消费者组黄金法则",
+    "title": "Consumer Group · 负载均衡 · 回溯回放",
+    "theme": "mint",
+    "lines": [
+      {
+        "cue": "sameGroup",
+        "spoken": "消息写进分区之后，怎么高效消费？这里最核心的概念叫 Consumer Group，消费者组。在同一个消费者组里面，每个分区同一时刻只能被组内一个消费者读取，大家分工分摊压力。",
+        "display": "同组内：1 个分区同一时刻只分配给 1 个消费者（负载均衡）",
+        "highlight": "同一时刻只分配给 1 个"
+      },
+      {
+        "cue": "idleWorker",
+        "spoken": "所以如果一个主题只有三个分区，你却在组里启动了四个消费者，多出来的第四个就只能干坐着摸鱼。想要提升消费并发，分区数量才是上限。",
+        "display": "避坑：同组消费者数 > 分区数时，多余的消费者只能空闲摸鱼！",
+        "highlight": "多余的消费者只能空闲"
+      },
+      {
+        "cue": "multiGroup",
+        "spoken": "而在不同的消费者组之间，各自独立记录自己的 Offset 书签，互不干扰。一份订单消息，可以同时被积分组、风控组和数仓组各自完整读一遍。而且消息读完不会立刻删除，默认在磁盘保留七天，随时可以拨回偏移量再次回放！",
+        "display": "不同组各自独立广播消费；消息默认保留 7 天，可拨回 Offset 回放！",
+        "highlight": "默认保留 7 天可回放"
+      }
+    ]
+  },
+  {
+    "id": "haReplication",
+    "badge": "04 · 宕机不丢的底气",
+    "title": "Leader · Follower · ISR · acks",
+    "theme": "amber",
+    "lines": [
+      {
+        "cue": "replicas",
+        "spoken": "如果某台 Broker 突然断电宕机，里面的消息不就丢了吗？为了高可用，Kafka 可以给每个分区配置多份副本：选出一个 Leader 负责对外读写，其余 Follower 分布在别的机器上，紧跟 Leader 同步拉取备份。",
+        "display": "多副本高可用：Leader 对外读写，Follower 在异机实时同步备份",
+        "highlight": "Leader 与 Follower"
+      },
+      {
+        "cue": "isrFailover",
+        "spoken": "那些能跟上 Leader 同步进度的健康副本，组成一个核心名单，叫做 ISR。一旦 Leader 所在机器宕机，Kafka 立刻从 ISR 名单里选出新 Leader 顶上，服务秒级恢复，数据稳稳不丢。",
+        "display": "ISR（同步副本集合）：Leader 宕机时从 ISR 选举新 Leader 顶上！",
+        "highlight": "ISR 同步副本集合"
+      },
+      {
+        "cue": "acks",
+        "spoken": "生产者发消息时，还能用 acks 参数自己权衡速度与安全：设为零发完不管，最快但可能丢；设为一等 Leader 写完就确认；设为 all 则要等所有 ISR 副本全部同步完成，是金融和核心业务最稳妥的选择。",
+        "display": "acks 权衡：0（最快可能丢）· 1（Leader确认）· all（全ISR同步最稳）",
+        "highlight": "acks=all 最稳妥"
+      }
+    ]
+  },
+  {
+    "id": "whySoFast",
+    "badge": "05 · 百万级吞吐黑科技",
+    "title": "Kafka 为什么快到离谱？",
+    "theme": "arcade",
+    "lines": [
+      {
+        "cue": "seqWrite",
+        "spoken": "很多人听说 Kafka 把消息全存在磁盘里，第一反应是：写磁盘不是很慢吗，它凭什么能扛住每秒百万级吞吐？答案藏在四大硬核设计里。第一，顺序追加写磁盘，只往日志文件末尾写，避开磁盘磁头来回寻道，速度甚至接近内存。",
+        "display": "① 顺序追加写磁盘（Append-Only）：告别随机寻道，快如闪电！",
+        "highlight": "顺序追加写磁盘"
+      },
+      {
+        "cue": "pageCache",
+        "spoken": "第二，重度借用操作系统的 Page Cache 页缓存，读写直接命中内核内存，既快又避开了 JVM 堆内存频繁垃圾回收带来的卡顿。",
+        "display": "② OS Page Cache 页缓存：直接借内核内存加速，绕开 JVM GC 卡顿",
+        "highlight": "Page Cache 页缓存"
+      },
+      {
+        "cue": "zeroCopy",
+        "spoken": "第三，零拷贝技术。发送数据给消费者时，调用内核 sendfile 接口，让数据直接从页缓存经网卡发出去，省掉内核态和用户态之间的多次来回搬运。",
+        "display": "③ 零拷贝（Zero-Copy · sendfile）：内核页缓存直通网卡，零多余搬运！",
+        "highlight": "零拷贝（sendfile）"
+      },
+      {
+        "cue": "batchCompress",
+        "spoken": "第四，批量打包与压缩。生产者把成百上千条小消息打包成一个批次，用 LZ4 或 Zstd 压缩后一次发完，极大摊薄网络传输开销。",
+        "display": "④ 批量发送 + 压缩（Batch + LZ4/Zstd）：一次打包大幅省带宽！",
+        "highlight": "批量打包与压缩"
+      }
+    ]
+  },
+  {
+    "id": "kraft",
+    "badge": "06 · 架构进化避坑彩蛋",
+    "title": "告别 ZooKeeper，拥抱 KRaft！",
+    "theme": "lavender",
+    "lines": [
+      {
+        "cue": "oldZk",
+        "spoken": "这里再补充一个面试和实战都很重要的新版变化。很多老教程还在讲 Kafka 必须外挂 ZooKeeper 来管理集群元数据，既要多维护一套分布式系统，扩展百万分区时还容易遇到性能瓶颈。",
+        "display": "旧架构痛点：强依赖外挂 ZooKeeper，双集群运维复杂且有扩展瓶颈",
+        "highlight": "旧架构依赖 ZooKeeper"
+      },
+      {
+        "cue": "newKraft",
+        "spoken": "现在早就不一样了！从 Kafka 3.3 起内置的 KRaft 模式已经成熟可用，而在 Kafka 4.0 中更是彻底移除了 ZooKeeper。Kafka 用内置 Raft 共识协议自己管元数据，架构更轻、故障切换更快。",
+        "display": "新架构 KRaft：内置 Raft 共识，Kafka 4.0 已彻底移除 ZooKeeper！",
+        "highlight": "KRaft 彻底移除 ZooKeeper"
+      }
+    ]
+  },
+  {
+    "id": "finale",
+    "badge": "07 · 一图收尾 · 准点下班",
+    "title": "Kafka 核心知识全景图",
+    "theme": "cream",
+    "lines": [
+      {
+        "cue": "panorama",
+        "spoken": "把今天的核心知识合在一起看，整座 Kafka 清晰得像一张地铁图：生产者按 Key 写进 Topic 里的不同分区，多副本和 ISR 守住高可用，消费者组并行消费还能随时回放，底层靠顺序写、页缓存、零拷贝和批量压缩飙出百万吞吐。",
+        "display": "Producer → Topic/Partition(ISR) → Consumer Group + 四大极速引擎！",
+        "highlight": "Kafka 核心全景图"
+      },
+      {
+        "cue": "quote",
+        "spoken": "记住这句口诀就能融会贯通：削峰解耦靠分区，高稳不丢靠副本，极速吞吐靠顺序写与零拷贝。",
+        "display": "削峰解耦靠分区 · 高稳不丢靠副本 · 极速靠顺序写与零拷贝",
+        "highlight": "顺序写与零拷贝"
+      },
+      {
+        "cue": "signoff",
+        "spoken": "如果这期讲透了记得点赞收藏，愿你的线上系统稳扛大促洪峰，小牛马准点打卡下班！",
+        "display": "点赞收藏，稳扛大促洪峰，小牛马准点打卡下班！",
+        "highlight": "稳扛大促洪峰"
+      }
+    ]
+  }
+]

@@ -1,0 +1,196 @@
+[
+  {
+    "id": "opening",
+    "badge": "01 · 监控盲区大危机",
+    "title": "为什么必须用 Prometheus + Grafana？",
+    "theme": "night",
+    "lines": [
+      {
+        "cue": "blindspot",
+        "spoken": "线上业务刚跑起来，小牛马正准备安心躺平，客服突然发来消息：用户反馈下单卡爆了！",
+        "display": "线上业务突然变慢——上百个服务实例到底谁在发烧？",
+        "highlight": "谁在发烧"
+      },
+      {
+        "cue": "introPair",
+        "spoken": "几十台服务器、上百个容器，总不能一台一台登进去手动排查。这时候，就该请出云原生监控界最经典的黄金搭档：Prometheus 和 Grafana。",
+        "display": "请出云原生监控黄金搭档：Prometheus + Grafana！",
+        "highlight": "Prometheus + Grafana"
+      },
+      {
+        "cue": "roles",
+        "spoken": "用一句话先分清它俩的职责：Prometheus 负责把系统每时每刻的运行数据采集并存下来，Grafana 负责把冰冷的数字变成一眼看穿全局的可视化大屏。",
+        "display": "Prometheus 负责采集存储，Grafana 负责炫酷可视化大屏！",
+        "highlight": "采集存储 + 可视化大屏"
+      }
+    ]
+  },
+  {
+    "id": "tsdb",
+    "badge": "02 · 认识时序数据库与四大指标",
+    "title": "Prometheus TSDB · 数据模型 · 4 大指标",
+    "theme": "amber",
+    "lines": [
+      {
+        "cue": "whatIsTsdb",
+        "spoken": "先看 P 开头的 Prometheus，中文叫普罗米修斯。它既是一套完整的监控系统，内置的核心也是一个时序数据库，简称 TSDB。",
+        "display": "Prometheus = 监控系统 + 内置时序数据库（TSDB）",
+        "highlight": "时序数据库（TSDB）"
+      },
+      {
+        "cue": "dataModel",
+        "spoken": "它和 MySQL 最大的区别，是专门记录随时间不断变化的数值曲线，就像医院里的心电图。每条数据都由四部分组成：指标名、标签键值对、时间戳和具体数值。",
+        "display": "时序数据 = 指标名 + 标签键值对 + 时间戳 + 数值",
+        "highlight": "指标名 + 标签 + 时间戳 + 数值"
+      },
+      {
+        "cue": "fourTypes1",
+        "spoken": "实际工作中，Prometheus 把监控指标分成四种经典类型。第一种叫 Counter，计数器，只增不减，除非进程重启才会归零，适合统计请求总数和报错次数。",
+        "display": "① Counter（计数器）：只增不减，统计总请求与报错次数",
+        "highlight": "Counter（计数器）"
+      },
+      {
+        "cue": "fourTypes2",
+        "spoken": "第二种叫 Gauge，仪表盘，数值可以随时升高或降低，比如当前 CPU 使用率、内存占用和在线人数。",
+        "display": "② Gauge（仪表盘）：可升可降，记录 CPU、内存等瞬时值",
+        "highlight": "Gauge（仪表盘）"
+      },
+      {
+        "cue": "fourTypes3",
+        "spoken": "第三种叫 Histogram，直方图，把接口耗时装进不同区间的桶里，方便多台机器汇总算出 P95 和 P99 延迟。第四种叫 Summary，摘要，在客户端直接算好分位数，但无法跨多台机器直接相加汇总。",
+        "display": "③ Histogram（分桶可跨机聚合算 P99） · ④ Summary（客户端算分位）",
+        "highlight": "Histogram 与 Summary"
+      }
+    ]
+  },
+  {
+    "id": "scrape",
+    "badge": "03 · 数据怎么采进来？",
+    "title": "Pull 拉取 · Exporter · 服务发现",
+    "theme": "sky",
+    "lines": [
+      {
+        "cue": "pullModel",
+        "spoken": "接下来你可能好奇：这么多机器的指标，是怎么跑到 Prometheus 里的？它默认采用主动拉取，也就是 Pull 模式。",
+        "display": "默认 Pull 主动拉取模式：定时访问 /metrics 抓取指标",
+        "highlight": "Pull 主动拉取"
+      },
+      {
+        "cue": "exporter",
+        "spoken": "Prometheus 会按设定间隔，比如每隔十五秒，主动发 HTTP 请求访问目标暴露的 metrics 接口。如果服务器或数据库本身不支持这种格式，就派个翻译官，叫做 Exporter，比如 node exporter 专门采集主机 CPU 和磁盘指标。",
+        "display": "Exporter = 翻译官（如 node_exporter 把系统状态转为 /metrics）",
+        "highlight": "Exporter = 翻译官"
+      },
+      {
+        "cue": "discoveryPush",
+        "spoken": "在 K8s 里 Pod 的 IP 经常变化，Prometheus 支持自动服务发现，不用你手动改配置就能跟上新目标。另外，对于跑完就结束的短周期批处理任务，来不及等它拉取，可以先推到 Pushgateway 中转一下。",
+        "display": "K8s 自动服务发现动态追踪；短周期批处理任务用 Pushgateway 中转",
+        "highlight": "自动服务发现 + Pushgateway"
+      }
+    ]
+  },
+  {
+    "id": "alerting",
+    "badge": "04 · 查询分析与精准告警",
+    "title": "PromQL · Alertmanager · 长期存储",
+    "theme": "coral",
+    "lines": [
+      {
+        "cue": "promql",
+        "spoken": "数据存进来之后，怎么查？Prometheus 有一套专门的查询语言，叫做 PromQL。比如用 rate 函数配上方括号五分钟，就能立刻算出最近五分钟的每秒请求速率，非常顺手。",
+        "display": "PromQL：如 rate(http_requests_total[5m]) 轻松算出实时 QPS",
+        "highlight": "PromQL"
+      },
+      {
+        "cue": "alertmanager",
+        "spoken": "一旦指标异常触发了告警规则，Prometheus 会把告警交给搭档 Alertmanager。它可不会半夜给你连炸一百条消息，而是先做分组、去除重复、抑制和静默处理，把雪崩告警合并成清晰的一条，再发到钉钉、飞书或邮件。",
+        "display": "Alertmanager：分组、去重、抑制、静默，拒绝半夜告警轰炸！",
+        "highlight": "分组、去重、抑制、静默"
+      },
+      {
+        "cue": "longTerm",
+        "spoken": "顺带记住一个小知识：Prometheus 本地磁盘主要存近期热数据，默认保留十五天。如果要存几个月甚至几年的海量数据，通常会配合 Thanos 或 VictoriaMetrics 做长期存储。",
+        "display": "本地 TSDB 默认存 15 天热数据，长期海量存储配合 Thanos / VictoriaMetrics",
+        "highlight": "Thanos / VictoriaMetrics"
+      }
+    ]
+  },
+  {
+    "id": "grafana",
+    "badge": "05 · 颜值担当与统一驾驶舱",
+    "title": "Grafana 可视化大屏",
+    "theme": "darkDash",
+    "lines": [
+      {
+        "cue": "noStorage",
+        "spoken": "现在终于轮到主角 Grafana 登场了！先划一个最容易搞混的重点：Grafana 自己并不存储你的业务监控数据，它是一个统一的可视化与观测平台。",
+        "display": "划重点：Grafana 自己不存监控数据，它是统一可视化驾驶舱！",
+        "highlight": "不存监控数据"
+      },
+      {
+        "cue": "dashboard",
+        "spoken": "只要在 Grafana 里添加数据源，连上 Prometheus、MySQL 或者其他数据库，它就能把原本枯燥的查询语句，瞬间变成实时跳动的折线图、CPU 仪表盘、延迟热力图和红绿灯状态卡。",
+        "display": "接入 Data Source：把枯燥数字变成折线图、仪表盘与热力图！",
+        "highlight": "Data Source 数据源"
+      },
+      {
+        "cue": "templates",
+        "spoken": "而且它还有两个让小牛马直呼真香的功能：一是模板变量，顶部加个下拉框就能一键切换不同集群和 Pod；二是官方社区模板库，直接输入编号，比如经典的 1860，三秒就能导入一整套精美服务器监控大屏，完全不用从零画图！",
+        "display": "两大神器：顶部变量下拉切换 + 输入模板 ID（如 1860）一键导入大屏！",
+        "highlight": "模板 ID 1860 一键导入"
+      }
+    ]
+  },
+  {
+    "id": "pillars",
+    "badge": "06 · 进阶彩蛋：可观测性三驾马车",
+    "title": "Metrics · Logs · Traces 全家桶",
+    "theme": "lavender",
+    "lines": [
+      {
+        "cue": "threePillars",
+        "spoken": "学会了 Prometheus 和 Grafana，你其实已经踏进了云原生可观测性的大门。完整的系统排查，通常要靠三驾马车互相配合。",
+        "display": "云原生可观测性三驾马车：指标 + 日志 + 链路追踪",
+        "highlight": "可观测性三驾马车"
+      },
+      {
+        "cue": "correlation",
+        "spoken": "第一，Metrics 指标，靠 Prometheus 告诉你系统是不是出问题了；第二，Logs 日志，靠 Loki 或 ELK 告诉你具体报了什么错；第三，Traces 链路追踪，靠 Tempo 或 Jaeger 定位请求到底卡在哪个微服务。",
+        "display": "Metrics（出事没）→ Logs（报啥错）→ Traces（卡在哪）",
+        "highlight": "Metrics · Logs · Traces"
+      },
+      {
+        "cue": "unified",
+        "spoken": "最爽的是，这三套系统都能统一接入 Grafana。大屏里看到延迟曲线突然飙高，顺手一点就能钻进对应时间段的日志和调用链路，几十秒精准抓出真凶！",
+        "display": "统一汇入 Grafana：曲线飙高 → 一键下钻日志与链路，精准抓虫！",
+        "highlight": "一键下钻排查"
+      }
+    ]
+  },
+  {
+    "id": "finale",
+    "badge": "07 · 一图收尾 · 优雅巡检",
+    "title": "Prometheus + Grafana 全景图谱",
+    "theme": "cream",
+    "lines": [
+      {
+        "cue": "blueprint",
+        "spoken": "把今天的整条链路拼在一起看，清清楚楚：Exporter 把系统指标暴露出来，Prometheus 定时拉取存进时序库，异常交给 Alertmanager 精准通知，日常巡检全靠 Grafana 大屏一目了然。",
+        "display": "Exporter → Prometheus(TSDB) → Alertmanager(告警) & Grafana(大屏)",
+        "highlight": "全景监控链路"
+      },
+      {
+        "cue": "quote",
+        "spoken": "记住这句口诀，你就彻底学会了：Prometheus 记下系统每次心跳，Alertmanager 有事精准喊你，Grafana 让你一眼看透全局。",
+        "display": "Prometheus 记心跳 · Alertmanager 准喊你 · Grafana 看全局",
+        "highlight": "一眼看透全局"
+      },
+      {
+        "cue": "signoff",
+        "spoken": "觉得讲明白了记得点赞收藏，祝小牛马从此告别黑盒排障，天天准点下班！",
+        "display": "点赞收藏，告别黑盒排障，小牛马天天准点下班！",
+        "highlight": "告别黑盒排障"
+      }
+    ]
+  }
+]

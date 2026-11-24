@@ -1,0 +1,989 @@
+{
+  "fps": 30,
+  "duration": 11239,
+  "voice": {
+    "engine": "edge-tts",
+    "voice": "zh-CN-YunxiaNeural",
+    "rate": "+5%",
+    "pitch": "+0Hz"
+  },
+  "scenes": [
+    {
+      "id": "opening",
+      "badge": "01 · 凌晨三点的运维小牛马",
+      "title": "为什么单靠 Docker 撑不住？",
+      "theme": "night",
+      "from": 0,
+      "duration": 941,
+      "cues": [
+        {
+          "cue": "alarm",
+          "from": 12,
+          "duration": 319,
+          "display": "凌晨三点告警又响了，该让 K8s 替你值班了！",
+          "highlight": "K8s 替你值班"
+        },
+        {
+          "cue": "dockerChaos",
+          "from": 340,
+          "duration": 269,
+          "display": "业务一变大：几十台服务器、上千个容器同时跑",
+          "highlight": "上千个容器"
+        },
+        {
+          "cue": "dockerChaos2",
+          "from": 618,
+          "duration": 305,
+          "display": "崩溃拉起、流量扩容、零中断发版——人工维护根本扛不住",
+          "highlight": "人工维护根本扛不住"
+        }
+      ]
+    },
+    {
+      "id": "stage",
+      "badge": "02 · 舞台、最小单元与隔间",
+      "title": "Node · Pod · Namespace",
+      "theme": "sky",
+      "from": 941,
+      "duration": 1718,
+      "cues": [
+        {
+          "cue": "nodes",
+          "from": 14,
+          "duration": 302,
+          "display": "真正运行应用的每台服务器 = Node（工作节点）",
+          "highlight": "Node（工作节点）"
+        },
+        {
+          "cue": "pod",
+          "from": 325,
+          "duration": 292,
+          "display": "Pod = K8s 创建与调度的最小单元",
+          "highlight": "最小单元"
+        },
+        {
+          "cue": "podDetail",
+          "from": 626,
+          "duration": 363,
+          "display": "同 Pod 容器共享网络 IP（localhost 互通）与存储卷",
+          "highlight": "共享网络 IP 与存储卷"
+        },
+        {
+          "cue": "namespace",
+          "from": 998,
+          "duration": 444,
+          "display": "Namespace = 逻辑隔间（资源分组、名称隔离、权限与配额）",
+          "highlight": "资源分组、名称隔离、权限与配额"
+        },
+        {
+          "cue": "ephemeral",
+          "from": 1451,
+          "duration": 249,
+          "display": "铁律：Pod 天生是临时工，随时可能销毁重建！",
+          "highlight": "随时可能销毁重建"
+        }
+      ]
+    },
+    {
+      "id": "deployment",
+      "badge": "03 · 核心灵魂与弹性扩缩",
+      "title": "Deployment · 滚动更新 · HPA",
+      "theme": "mint",
+      "from": 2659,
+      "duration": 2022,
+      "cues": [
+        {
+          "cue": "declarative",
+          "from": 14,
+          "duration": 266,
+          "display": "Deployment + 声明式管理：保证服务持续稳定",
+          "highlight": "声明式管理"
+        },
+        {
+          "cue": "selfHeal",
+          "from": 289,
+          "duration": 400,
+          "display": "YAML 声明目标副本数，Deployment 通过 ReplicaSet 维护",
+          "highlight": "ReplicaSet"
+        },
+        {
+          "cue": "selfHeal2",
+          "from": 698,
+          "duration": 386,
+          "display": "自愈：Pod 误删秒级补齐，节点失联自动重调度到健康节点",
+          "highlight": "自动重调度"
+        },
+        {
+          "cue": "rolling",
+          "from": 1093,
+          "duration": 449,
+          "display": "滚动更新：新 Pod 通过就绪探针再停旧 Pod，支持一键回滚",
+          "highlight": "就绪探针"
+        },
+        {
+          "cue": "hpa",
+          "from": 1551,
+          "duration": 453,
+          "display": "HPA：按 CPU/指标自动调副本数，高峰扩容、低谷平稳缩容",
+          "highlight": "HPA 水平自动扩缩容"
+        }
+      ]
+    },
+    {
+      "id": "network",
+      "badge": "04 · 流量怎么精准找上门？",
+      "title": "Service · Ingress",
+      "theme": "lavender",
+      "from": 4681,
+      "duration": 1161,
+      "cues": [
+        {
+          "cue": "ipChange",
+          "from": 14,
+          "duration": 239,
+          "display": "难题：Pod 重建 IP 就变，服务间如何稳定访问？",
+          "highlight": "IP 都会变"
+        },
+        {
+          "cue": "service",
+          "from": 262,
+          "duration": 385,
+          "display": "Service = 固定虚拟 IP 与域名 + 标签追踪 + 负载均衡",
+          "highlight": "固定虚拟 IP 与域名"
+        },
+        {
+          "cue": "ingress",
+          "from": 656,
+          "duration": 487,
+          "display": "Ingress + 控制器：统一管域名、HTTPS 与路径路由分流",
+          "highlight": "Ingress + 控制器"
+        }
+      ]
+    },
+    {
+      "id": "configStorage",
+      "badge": "05 · 配置与持久化数据",
+      "title": "ConfigMap · Secret · PV / PVC",
+      "theme": "peach",
+      "from": 5842,
+      "duration": 1571,
+      "cues": [
+        {
+          "cue": "configSecret",
+          "from": 14,
+          "duration": 445,
+          "display": "ConfigMap 管普通配置，Secret 管密钥，动态挂载进 Pod",
+          "highlight": "ConfigMap + Secret"
+        },
+        {
+          "cue": "secretNote",
+          "from": 468,
+          "duration": 356,
+          "display": "避坑提示：Secret 默认仅 Base64 编码，生产需配静态加密与 RBAC！",
+          "highlight": "默认仅 Base64 编码"
+        },
+        {
+          "cue": "pvPvc",
+          "from": 833,
+          "duration": 491,
+          "display": "PV（持久化存储卷）+ PVC（存储申请单）：计算与存储解耦",
+          "highlight": "计算与存储解耦"
+        },
+        {
+          "cue": "pvSwap",
+          "from": 1333,
+          "duration": 220,
+          "display": "Pod 换茬重绑同一 PVC，持久化数据完整无损！",
+          "highlight": "数据完整无损"
+        }
+      ]
+    },
+    {
+      "id": "brain",
+      "badge": "06 · 掀开引擎盖看大脑",
+      "title": "Control Plane 核心协作全链路",
+      "theme": "arcade",
+      "from": 7413,
+      "duration": 2540,
+      "cues": [
+        {
+          "cue": "hood",
+          "from": 14,
+          "duration": 210,
+          "display": "掀开引擎盖：Control Plane 控制平面如何协调全场？",
+          "highlight": "Control Plane"
+        },
+        {
+          "cue": "apply",
+          "from": 233,
+          "duration": 266,
+          "display": "敲下 kubectl apply → 所有组件围绕 API Server 枢纽协同！",
+          "highlight": "API Server 枢纽"
+        },
+        {
+          "cue": "apiEtcd",
+          "from": 508,
+          "duration": 506,
+          "display": "① API Server（唯一入口）校验并写入 ② etcd（唯一直接读写）",
+          "highlight": "只有 API Server 直接读写 etcd"
+        },
+        {
+          "cue": "controller",
+          "from": 1023,
+          "duration": 553,
+          "display": "③ Controller Manager 监听 API Server → 调谐循环创建 3 个 Pending Pod",
+          "highlight": "调谐循环"
+        },
+        {
+          "cue": "scheduler",
+          "from": 1585,
+          "duration": 415,
+          "display": "④ Scheduler 评估各 Node 算力，把 Pod 绑定结果写回 API Server",
+          "highlight": "Scheduler 评估绑定"
+        },
+        {
+          "cue": "kubelet",
+          "from": 2009,
+          "duration": 513,
+          "display": "⑤ kubelet 拉起容器回传状态 + kube-proxy 更新转发规则 → 闭环！",
+          "highlight": "kubelet + kube-proxy"
+        }
+      ]
+    },
+    {
+      "id": "finale",
+      "badge": "07 · 一图收尾 · 准点下班",
+      "title": "K8s 14 大核心组件全景图",
+      "theme": "cream",
+      "from": 9953,
+      "duration": 1286,
+      "cues": [
+        {
+          "cue": "panorama",
+          "from": 14,
+          "duration": 671,
+          "display": "控制平面决策 + 节点执行 + 四大核心能力 = 完整 K8s 体系！",
+          "highlight": "完整 K8s 体系"
+        },
+        {
+          "cue": "quote",
+          "from": 694,
+          "duration": 324,
+          "display": "你只管声明你想要的世界，K8s 永远帮你把现实追平到理想",
+          "highlight": "把现实追平到理想"
+        },
+        {
+          "cue": "signoff",
+          "from": 1027,
+          "duration": 221,
+          "display": "点赞收藏，早日把运维脏活交给 K8s，小牛马准点下班！",
+          "highlight": "小牛马准点下班"
+        }
+      ]
+    }
+  ],
+  "captions": [
+    {
+      "from": 12,
+      "duration": 78,
+      "text": "凌晨三点，线上告警又响了。",
+      "highlight": ""
+    },
+    {
+      "from": 96,
+      "duration": 89,
+      "text": "如果你还在顶着黑眼圈爬起来重启服务器，",
+      "highlight": ""
+    },
+    {
+      "from": 185,
+      "duration": 113,
+      "text": "说明该让 Kubernetes，也就是 K8s，",
+      "highlight": ""
+    },
+    {
+      "from": 298,
+      "duration": 33,
+      "text": "来替你值班了。",
+      "highlight": ""
+    },
+    {
+      "from": 340,
+      "duration": 89,
+      "text": "平时用 Docker 跑单个应用很方便，",
+      "highlight": ""
+    },
+    {
+      "from": 429,
+      "duration": 31,
+      "text": "打包就能运行。",
+      "highlight": ""
+    },
+    {
+      "from": 466,
+      "duration": 143,
+      "text": "但业务规模一上来，几十台服务器、上千个容器同时跑。",
+      "highlight": "上千个容器"
+    },
+    {
+      "from": 618,
+      "duration": 61,
+      "text": "容器崩溃了谁来拉起？",
+      "highlight": ""
+    },
+    {
+      "from": 685,
+      "duration": 53,
+      "text": "流量暴涨怎么扩容？",
+      "highlight": ""
+    },
+    {
+      "from": 744,
+      "duration": 75,
+      "text": "发新版本怎么做到不中断服务？",
+      "highlight": ""
+    },
+    {
+      "from": 825,
+      "duration": 98,
+      "text": "全靠人工维护，小牛马迟早扛不住。",
+      "highlight": ""
+    },
+    {
+      "from": 955,
+      "duration": 54,
+      "text": "K8s 的核心思路，",
+      "highlight": ""
+    },
+    {
+      "from": 1009,
+      "duration": 97,
+      "text": "是把所有服务器整合成一个自动化集群。",
+      "highlight": ""
+    },
+    {
+      "from": 1112,
+      "duration": 108,
+      "text": "真正负责运行应用的每一台机器，叫做 Node，",
+      "highlight": ""
+    },
+    {
+      "from": 1220,
+      "duration": 37,
+      "text": "也就是工作节点。",
+      "highlight": ""
+    },
+    {
+      "from": 1266,
+      "duration": 94,
+      "text": "不过 K8s 并不直接调度单个容器，",
+      "highlight": ""
+    },
+    {
+      "from": 1360,
+      "duration": 100,
+      "text": "而是给容器套上一层外壳，叫做 Pod。",
+      "highlight": ""
+    },
+    {
+      "from": 1466,
+      "duration": 92,
+      "text": "它是 K8s 创建和调度的最小单元。",
+      "highlight": "最小单元"
+    },
+    {
+      "from": 1567,
+      "duration": 126,
+      "text": "同一个 Pod 里的容器，共享同一个网络 IP，",
+      "highlight": ""
+    },
+    {
+      "from": 1693,
+      "duration": 79,
+      "text": "可以通过本地回环地址直接通信，",
+      "highlight": ""
+    },
+    {
+      "from": 1772,
+      "duration": 63,
+      "text": "也能共享声明好的存储卷，",
+      "highlight": ""
+    },
+    {
+      "from": 1835,
+      "duration": 95,
+      "text": "比如主服务配一个采集日志的边车容器。",
+      "highlight": ""
+    },
+    {
+      "from": 1939,
+      "duration": 113,
+      "text": "如果开发、测试、生产都共用同一个集群，",
+      "highlight": ""
+    },
+    {
+      "from": 2052,
+      "duration": 66,
+      "text": "怎么避免重名和误操作？",
+      "highlight": ""
+    },
+    {
+      "from": 2124,
+      "duration": 132,
+      "text": "K8s 提供了 Namespace，也就是命名空间，",
+      "highlight": ""
+    },
+    {
+      "from": 2256,
+      "duration": 127,
+      "text": "用来做资源分组、名称隔离，以及权限和资源配额管理。",
+      "highlight": ""
+    },
+    {
+      "from": 2392,
+      "duration": 111,
+      "text": "记住一个关键前提：Pod 天生是临时性的，",
+      "highlight": ""
+    },
+    {
+      "from": 2503,
+      "duration": 138,
+      "text": "随时可能被销毁和重建，不要把它当成永久不变的服务器。",
+      "highlight": ""
+    },
+    {
+      "from": 2673,
+      "duration": 126,
+      "text": "既然 Pod 随时会重建，怎么保证线上服务始终稳定？",
+      "highlight": ""
+    },
+    {
+      "from": 2805,
+      "duration": 63,
+      "text": "这就靠 Deployment，",
+      "highlight": ""
+    },
+    {
+      "from": 2868,
+      "duration": 71,
+      "text": "以及 K8s 最核心的声明式管理。",
+      "highlight": "声明式管理"
+    },
+    {
+      "from": 2948,
+      "duration": 80,
+      "text": "你不需要写脚本一步步教它怎么修，",
+      "highlight": ""
+    },
+    {
+      "from": 3028,
+      "duration": 90,
+      "text": "只需要在 YAML 里声明目标状态：",
+      "highlight": ""
+    },
+    {
+      "from": 3118,
+      "duration": 106,
+      "text": "我要三个 v1 版本的 Pod 持续在线。",
+      "highlight": ""
+    },
+    {
+      "from": 3230,
+      "duration": 118,
+      "text": "Deployment 会通过底层的 ReplicaSet 盯着副本数。",
+      "highlight": "ReplicaSet"
+    },
+    {
+      "from": 3357,
+      "duration": 85,
+      "text": "一旦某个 Pod 崩溃或被误删，",
+      "highlight": ""
+    },
+    {
+      "from": 3442,
+      "duration": 137,
+      "text": "控制器几秒内就会拉起一个新的补齐；哪怕整台节点失联，",
+      "highlight": ""
+    },
+    {
+      "from": 3579,
+      "duration": 122,
+      "text": "也会把受影响的 Pod 重新调度到健康节点上，",
+      "highlight": ""
+    },
+    {
+      "from": 3701,
+      "duration": 42,
+      "text": "这就是自愈能力。",
+      "highlight": ""
+    },
+    {
+      "from": 3752,
+      "duration": 57,
+      "text": "升级到 v2 版本时，",
+      "highlight": ""
+    },
+    {
+      "from": 3809,
+      "duration": 104,
+      "text": "Deployment 默认采用滚动更新：",
+      "highlight": ""
+    },
+    {
+      "from": 3913,
+      "duration": 47,
+      "text": "先启动新 Pod，",
+      "highlight": ""
+    },
+    {
+      "from": 3960,
+      "duration": 99,
+      "text": "等就绪探针检查通过、确认能接流量之后，",
+      "highlight": "就绪探针"
+    },
+    {
+      "from": 4059,
+      "duration": 89,
+      "text": "再下线旧 Pod，全程业务不中断，",
+      "highlight": ""
+    },
+    {
+      "from": 4148,
+      "duration": 53,
+      "text": "出问题还能一键回滚。",
+      "highlight": ""
+    },
+    {
+      "from": 4210,
+      "duration": 76,
+      "text": "如果大促期间流量暴涨怎么办？",
+      "highlight": ""
+    },
+    {
+      "from": 4292,
+      "duration": 87,
+      "text": "可以配上 HPA，水平自动扩缩容。",
+      "highlight": ""
+    },
+    {
+      "from": 4385,
+      "duration": 101,
+      "text": "它根据 CPU、内存或自定义指标，",
+      "highlight": ""
+    },
+    {
+      "from": 4486,
+      "duration": 136,
+      "text": "自动调高副本数扛住高峰；流量回落后再平稳缩容，",
+      "highlight": ""
+    },
+    {
+      "from": 4622,
+      "duration": 41,
+      "text": "既稳又省成本。",
+      "highlight": ""
+    },
+    {
+      "from": 4695,
+      "duration": 115,
+      "text": "紧接着就会遇到一个现实问题：Pod 每次重建，",
+      "highlight": ""
+    },
+    {
+      "from": 4810,
+      "duration": 124,
+      "text": "分配到的 IP 都会变，其他服务该怎么稳定找到它？",
+      "highlight": "IP 都会变"
+    },
+    {
+      "from": 4943,
+      "duration": 42,
+      "text": "答案是 Service。",
+      "highlight": ""
+    },
+    {
+      "from": 4991,
+      "duration": 158,
+      "text": "它相当于给这组 Pod 提供固定的虚拟 IP 和集群内域名，",
+      "highlight": ""
+    },
+    {
+      "from": 5149,
+      "duration": 100,
+      "text": "通过标签选择器持续追踪健康的 Pod，",
+      "highlight": ""
+    },
+    {
+      "from": 5249,
+      "duration": 79,
+      "text": "并把请求自动负载均衡转发过去。",
+      "highlight": ""
+    },
+    {
+      "from": 5337,
+      "duration": 100,
+      "text": "那集群外部的用户通过浏览器访问怎么办？",
+      "highlight": ""
+    },
+    {
+      "from": 5443,
+      "duration": 76,
+      "text": "可以在入口配置 Ingress，",
+      "highlight": ""
+    },
+    {
+      "from": 5519,
+      "duration": 71,
+      "text": "配合 Ingress 控制器，",
+      "highlight": ""
+    },
+    {
+      "from": 5590,
+      "duration": 119,
+      "text": "统一管理域名、HTTPS 证书，并按路径精准路由：",
+      "highlight": ""
+    },
+    {
+      "from": 5709,
+      "duration": 115,
+      "text": "比如 api 路径转后端，shop 路径转商城。",
+      "highlight": ""
+    },
+    {
+      "from": 5856,
+      "duration": 54,
+      "text": "再来解决两个工程痛点。",
+      "highlight": ""
+    },
+    {
+      "from": 5916,
+      "duration": 92,
+      "text": "第一，开发和生产环境的配置不同，",
+      "highlight": ""
+    },
+    {
+      "from": 6008,
+      "duration": 93,
+      "text": "不能每改一行配置就重新打包镜像。",
+      "highlight": ""
+    },
+    {
+      "from": 6107,
+      "duration": 89,
+      "text": "K8s 用 ConfigMap 管普通配置，",
+      "highlight": ""
+    },
+    {
+      "from": 6196,
+      "duration": 105,
+      "text": "用 Secret 管密码和密钥，动态挂载进 Pod。",
+      "highlight": ""
+    },
+    {
+      "from": 6310,
+      "duration": 47,
+      "text": "这里顺带提醒一句，",
+      "highlight": ""
+    },
+    {
+      "from": 6357,
+      "duration": 115,
+      "text": "Secret 默认只是 Base64 编码，",
+      "highlight": ""
+    },
+    {
+      "from": 6472,
+      "duration": 42,
+      "text": "并不是自动加密，",
+      "highlight": ""
+    },
+    {
+      "from": 6514,
+      "duration": 152,
+      "text": "在生产环境里还需要开启 etcd 静态加密并配好访问权限。",
+      "highlight": ""
+    },
+    {
+      "from": 6675,
+      "duration": 137,
+      "text": "第二，Pod 是临时性的，重启后本地数据就会丢失。",
+      "highlight": ""
+    },
+    {
+      "from": 6818,
+      "duration": 65,
+      "text": "所以持久化数据要解耦出来：",
+      "highlight": ""
+    },
+    {
+      "from": 6883,
+      "duration": 70,
+      "text": "PV 代表底层持久化存储卷，",
+      "highlight": ""
+    },
+    {
+      "from": 6953,
+      "duration": 94,
+      "text": "PVC 是 Pod 提交的存储申请单，",
+      "highlight": ""
+    },
+    {
+      "from": 7047,
+      "duration": 119,
+      "text": "也可以通过 StorageClass 动态创建。",
+      "highlight": ""
+    },
+    {
+      "from": 7175,
+      "duration": 77,
+      "text": "以后哪怕 Pod 换了好几茬，",
+      "highlight": ""
+    },
+    {
+      "from": 7252,
+      "duration": 61,
+      "text": "重新绑定同一个 PVC，",
+      "highlight": ""
+    },
+    {
+      "from": 7313,
+      "duration": 82,
+      "text": "里面的数据库和文件依然完整保留。",
+      "highlight": ""
+    },
+    {
+      "from": 7427,
+      "duration": 73,
+      "text": "最后，我们掀开 K8s 的引擎盖，",
+      "highlight": ""
+    },
+    {
+      "from": 7500,
+      "duration": 90,
+      "text": "看看它的大脑 Control Plane，",
+      "highlight": "Control Plane"
+    },
+    {
+      "from": 7590,
+      "duration": 47,
+      "text": "到底是怎么协调全场的。",
+      "highlight": ""
+    },
+    {
+      "from": 7646,
+      "duration": 77,
+      "text": "当你敲下 kubectl apply，",
+      "highlight": ""
+    },
+    {
+      "from": 7723,
+      "duration": 113,
+      "text": "提交一份要三个 Pod 的 Deployment 清单，",
+      "highlight": ""
+    },
+    {
+      "from": 7836,
+      "duration": 76,
+      "text": "所有组件都会围绕一个核心枢纽协同工作。",
+      "highlight": ""
+    },
+    {
+      "from": 7921,
+      "duration": 88,
+      "text": "第一步，请求先发到 API Server。",
+      "highlight": ""
+    },
+    {
+      "from": 8015,
+      "duration": 131,
+      "text": "它是整个集群唯一的统一入口，负责鉴权、校验，",
+      "highlight": ""
+    },
+    {
+      "from": 8146,
+      "duration": 137,
+      "text": "并把你的期望状态写入集群键值数据库 etcd。",
+      "highlight": ""
+    },
+    {
+      "from": 8289,
+      "duration": 15,
+      "text": "记住，",
+      "highlight": ""
+    },
+    {
+      "from": 8304,
+      "duration": 123,
+      "text": "只有 API Server 会直接读写 etcd。",
+      "highlight": ""
+    },
+    {
+      "from": 8436,
+      "duration": 12,
+      "text": "第二步，",
+      "highlight": ""
+    },
+    {
+      "from": 8448,
+      "duration": 130,
+      "text": "Controller Manager 通过 Watch 机制监听 API Server。",
+      "highlight": ""
+    },
+    {
+      "from": 8584,
+      "duration": 78,
+      "text": "发现你新建了 Deployment，",
+      "highlight": ""
+    },
+    {
+      "from": 8662,
+      "duration": 69,
+      "text": "就先创建 ReplicaSet，",
+      "highlight": ""
+    },
+    {
+      "from": 8731,
+      "duration": 74,
+      "text": "再比对期望副本数三和当前零的差距，",
+      "highlight": ""
+    },
+    {
+      "from": 8805,
+      "duration": 121,
+      "text": "向 API Server 请求创建三个待调度的 Pod。",
+      "highlight": ""
+    },
+    {
+      "from": 8932,
+      "duration": 57,
+      "text": "这就是著名的调谐循环。",
+      "highlight": "调谐循环"
+    },
+    {
+      "from": 8998,
+      "duration": 18,
+      "text": "第三步，",
+      "highlight": ""
+    },
+    {
+      "from": 9016,
+      "duration": 119,
+      "text": "Scheduler 同样监听 API Server，",
+      "highlight": ""
+    },
+    {
+      "from": 9135,
+      "duration": 64,
+      "text": "看到还没分配节点的 Pod，",
+      "highlight": ""
+    },
+    {
+      "from": 9199,
+      "duration": 123,
+      "text": "就会综合各节点的 CPU、内存和调度策略选出最佳落点，",
+      "highlight": ""
+    },
+    {
+      "from": 9322,
+      "duration": 91,
+      "text": "再把绑定结果写回 API Server。",
+      "highlight": ""
+    },
+    {
+      "from": 9422,
+      "duration": 19,
+      "text": "第四步，",
+      "highlight": ""
+    },
+    {
+      "from": 9441,
+      "duration": 124,
+      "text": "目标节点上的 kubelet 监听到派给自己的任务，",
+      "highlight": ""
+    },
+    {
+      "from": 9565,
+      "duration": 57,
+      "text": "调用容器运行时拉起容器，",
+      "highlight": ""
+    },
+    {
+      "from": 9622,
+      "duration": 100,
+      "text": "再把最新状态回报给 API Server；",
+      "highlight": ""
+    },
+    {
+      "from": 9722,
+      "duration": 128,
+      "text": "同时每个节点上的 kube-proxy 监听服务变化，",
+      "highlight": ""
+    },
+    {
+      "from": 9850,
+      "duration": 85,
+      "text": "更新网络转发规则，整套闭环就跑通了。",
+      "highlight": ""
+    },
+    {
+      "from": 9967,
+      "duration": 119,
+      "text": "现在把今天所有的拼图合起来看，K8s 其实非常清晰：",
+      "highlight": ""
+    },
+    {
+      "from": 10086,
+      "duration": 142,
+      "text": "上方控制平面围绕 API Server 负责记账、调谐和调度，",
+      "highlight": ""
+    },
+    {
+      "from": 10228,
+      "duration": 156,
+      "text": "下方工作节点由 kubelet 和 kube-proxy 落地执行；",
+      "highlight": ""
+    },
+    {
+      "from": 10384,
+      "duration": 211,
+      "text": "再配合命名空间、Deployment、HPA、Service、Ingress、配置和存储卷，",
+      "highlight": ""
+    },
+    {
+      "from": 10595,
+      "duration": 43,
+      "text": "整套体系就齐活了。",
+      "highlight": ""
+    },
+    {
+      "from": 10647,
+      "duration": 101,
+      "text": "学习 K8s 不要一上来就死背命令，",
+      "highlight": ""
+    },
+    {
+      "from": 10748,
+      "duration": 123,
+      "text": "先记住它的底层灵魂：你只管声明你想要的世界，",
+      "highlight": ""
+    },
+    {
+      "from": 10871,
+      "duration": 100,
+      "text": "K8s 永远在帮你把现实追平到理想。",
+      "highlight": "把现实追平到理想"
+    },
+    {
+      "from": 10980,
+      "duration": 88,
+      "text": "如果这期帮到你了，记得点赞收藏，",
+      "highlight": ""
+    },
+    {
+      "from": 11068,
+      "duration": 133,
+      "text": "早日把运维脏活交给 K8s，小牛马准点打卡下班！",
+      "highlight": ""
+    }
+  ]
+}

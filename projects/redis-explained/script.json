@@ -1,0 +1,184 @@
+[
+  {
+    "id": "opening",
+    "badge": "01 · 内存极速救场",
+    "title": "为什么高并发系统离不了 Redis？",
+    "theme": "night",
+    "lines": [
+      {
+        "cue": "slowDb",
+        "spoken": "活动刚上线，海量查询请求直接涌向 MySQL，磁盘读写瞬间飙满，页面转圈半天打不开！面对高并发读压力，后端系统最常挡在数据库前面的极速救星，就是 Redis。",
+        "display": "流量直打 MySQL 磁盘瞬间卡死？请出亚毫秒级内存神器 Redis！",
+        "highlight": "Redis"
+      },
+      {
+        "cue": "cachePower",
+        "spoken": "Redis 是一个开源的内存键值数据库。把热点数据放进 Redis 内存里，响应速度能飙到亚毫秒级，单机轻松扛住每秒十万次以上查询，帮数据库拦掉绝大部分流量。",
+        "display": "纯内存缓存：亚毫秒极速响应 · 单机 10 万+ QPS，替数据库挡住 95% 流量！",
+        "highlight": "每秒十万次以上查询"
+      },
+      {
+        "cue": "multiUse",
+        "spoken": "更厉害的是，Redis 不光能当缓存，还自带丰富的数据结构，分布式锁、实时排行榜、接口限流和登录会话共享，通通都能轻松搞定！",
+        "display": "全能瑞士军刀：热点缓存 · 分布式锁 · 实时排行榜 · 限流 · 会话共享",
+        "highlight": "丰富的数据结构"
+      }
+    ]
+  },
+  {
+    "id": "dataTypes",
+    "badge": "02 · 五大核心数据结构",
+    "title": "String · Hash · List · Set · ZSet",
+    "theme": "sky",
+    "lines": [
+      {
+        "cue": "stringHash",
+        "spoken": "Redis 真正迷人的地方，在于它提供了五大核心数据结构。第一是 String 字符串，最适合存热点缓存、实现分布式锁，或者用 INCR 命令做文章阅读量和库存原子计数。第二是 Hash 哈希表，适合存用户信息和购物车，改里面单个字段不用整条覆盖。",
+        "display": "String（缓存/锁/INCR 计数） · Hash（用户信息/购物车按字段读写）",
+        "highlight": "String 与 Hash"
+      },
+      {
+        "cue": "listSet",
+        "spoken": "第三是 List 列表，按插入顺序排队，常用来做最新动态时间线和轻量任务队列。第四是 Set 集合，天然保证元素不重复，用来做防重复点赞、随机抽奖，或者算两个用户的共同好友交集，快到离谱！",
+        "display": "List（有序队列/时间线） · Set（天然去除重复/抽奖/共同好友交集）",
+        "highlight": "List 与 Set"
+      },
+      {
+        "cue": "zset",
+        "spoken": "第五是明星选手 Sorted Set，简称 ZSet 有序集合。每个元素都会绑定一个 Score 分数，Redis 会自动帮你按分数实时排好序，游戏战力榜和热搜排行榜，一条命令直接秒查前十名！",
+        "display": "Sorted Set（ZSet）：自带 Score 自动排序，热搜与游戏排行榜王者！",
+        "highlight": "ZSet 有序集合"
+      }
+    ]
+  },
+  {
+    "id": "whyFast",
+    "badge": "03 · 极速底层黑科技",
+    "title": "Redis 为什么快到飞起？",
+    "theme": "arcade",
+    "lines": [
+      {
+        "cue": "inMemory",
+        "spoken": "同样是存数据，Redis 凭什么比传统磁盘数据库快出几十上百倍？背后有四大硬核设计。第一，纯内存读写，数据直接驻留在内存条里，省掉了耗时的磁盘寻道开销。",
+        "display": "① 纯内存读写（In-Memory）：直接命中 RAM，彻底告别磁盘 I/O 瓶颈！",
+        "highlight": "纯内存读写"
+      },
+      {
+        "cue": "singleThread",
+        "spoken": "第二，核心命令执行采用单线程，天然避免多线程切换和加锁竞争带来的内耗。这里记住一个高频考点：从 Redis 6.0 开始，网络 I/O 读写已经支持多线程加速，但核心命令执行依然稳稳保持单线程！",
+        "display": "② 核心单线程无锁竞争（考点：Redis 6.0+ 网络 I/O 多线程，命令执行仍单线程！）",
+        "highlight": "核心命令执行依然稳稳保持单线程"
+      },
+      {
+        "cue": "epoll",
+        "spoken": "第三，I/O 多路复用技术。依托操作系统底层的 epoll 模型，单个事件循环就能同时高效盯住成千上万个客户端连接，谁有消息就立刻处理谁，绝不傻等。",
+        "display": "③ I/O 多路复用（epoll）：单事件循环同时高效监控上万连接，绝不阻塞傻等！",
+        "highlight": "epoll 模型"
+      },
+      {
+        "cue": "dataStruct",
+        "spoken": "第四，精雕细琢的底层数据结构。像 SDS 动态字符串、高效哈希表和跳表 SkipList，把内存占用和查询耗时都压榨到了极致。",
+        "display": "④ 极致底层结构：SDS · 哈希表 · SkipList（跳表），查询复杂度压到极致！",
+        "highlight": "SkipList"
+      }
+    ]
+  },
+  {
+    "id": "persistence",
+    "badge": "04 · 断电不丢的双底牌",
+    "title": "RDB 快照 · AOF 日志 · 混合持久化",
+    "theme": "amber",
+    "lines": [
+      {
+        "cue": "rdb",
+        "spoken": "数据全放内存里，万一服务器突然断电宕机，岂不是全清空了？别慌，Redis 准备了两大持久化底牌。第一张是 RDB 内存快照，每隔一段时间 fork 出子进程，把整份内存打包成紧凑的二进制文件落盘，体积小、重启恢复极快，缺点是可能丢失最后一次快照后的几分钟数据。",
+        "display": "底牌 ① RDB（二进制快照）：fork 后台生成，体积小恢复极快，但有窗口丢数风险",
+        "highlight": "RDB 内存快照"
+      },
+      {
+        "cue": "aof",
+        "spoken": "第二张是 AOF 追加日志，把每一条写命令按顺序记进日志文件。默认采用 everysec 策略每秒刷一次盘，最多只丢一秒数据，安全性拉满；文件太大时还能自动触发重写瘦身。",
+        "display": "底牌 ② AOF（追加命令日志）：默认 everysec 每秒刷盘，最多丢 1 秒，支持瘦身",
+        "highlight": "AOF 追加日志"
+      },
+      {
+        "cue": "hybrid",
+        "spoken": "小孩子才做选择，生产环境通常开启 Redis 4.0 推出的混合持久化：文件前半段存 RDB 全量快照，后半段追记 AOF 增量命令，既有秒级恢复速度，又守住了数据高安全！",
+        "display": "王炸组合 · 混合持久化（Redis 4.0+）：RDB 全量头 + AOF 增量尾，快稳兼得！",
+        "highlight": "混合持久化"
+      }
+    ]
+  },
+  {
+    "id": "cacheTraps",
+    "badge": "05 · 缓存三大经典大坑",
+    "title": "穿透 · 击穿 · 雪崩 与 终极解药",
+    "theme": "mint",
+    "lines": [
+      {
+        "cue": "penetration",
+        "spoken": "用 Redis 做缓存，线上最容易踩三大经典大坑，面试也几乎必考！第一坑叫缓存穿透：黑客疯狂查询根本不存在的非法编号，缓存和数据库全查不到，每次请求都直接打穿数据库。解药是把空结果也短暂缓存，或者在最前面架一层 Bloom Filter 布隆过滤器直接拦截！",
+        "display": "坑 ① 缓存穿透（查不存在数据） → 解药：缓存空对象 / Bloom Filter 布隆过滤器",
+        "highlight": "缓存穿透"
+      },
+      {
+        "cue": "breakdown",
+        "spoken": "第二坑叫缓存击穿：某一个全网爆火的超级热点 Key 恰好过期失效，这一瞬间成千上万请求同时砸向数据库。解药是加一道 Mutex 互斥锁，只放一个线程回数据库重新生成缓存，或者给热点数据设逻辑过期后台异步刷新。",
+        "display": "坑 ② 缓存击穿（单热点 Key 失效） → 解药：Mutex 互斥锁回源 / 逻辑过期刷新",
+        "highlight": "缓存击穿"
+      },
+      {
+        "cue": "avalanche",
+        "spoken": "第三坑叫缓存雪崩：成千上万个缓存 Key 设了完全相同的过期时间，到点集体失效，或者 Redis 节点整体宕机，流量瞬间压垮后端。解药是给过期时间加上随机抖动打散高峰，并配合高可用集群和接口限流降级！",
+        "display": "坑 ③ 缓存雪崩（大批 Key 同秒失效/宕机） → 解药：随机 TTL 抖动 + 集群限流",
+        "highlight": "缓存雪崩"
+      }
+    ]
+  },
+  {
+    "id": "clusterHA",
+    "badge": "06 · 淘汰机制与高可用",
+    "title": "TTL 淘汰 · 主从 · Sentinel · Cluster",
+    "theme": "lavender",
+    "lines": [
+      {
+        "cue": "eviction",
+        "spoken": "内存毕竟寸土寸金，Redis 内存快撑满时怎么办？一方面，给 Key 设置 TTL 过期时间后，Redis 会用惰性删除配合定期删除悄悄清理；另一方面，内存触及 maxmemory 上限时会自动触发淘汰策略，生产中最常用的是 allkeys-lru 或 allkeys-lfu，优先把最久没用或访问最少的冷数据请出去。",
+        "display": "内存治理：TTL（惰性 + 定期删除） · maxmemory 触发 allkeys-lru / allkeys-lfu 淘汰",
+        "highlight": "allkeys-lru"
+      },
+      {
+        "cue": "sentinelCluster",
+        "spoken": "想要单机不挂还能无限扩容，Redis 高可用有经典三件套：第一，主从复制，Master 主节点管写、Replica 从节点同步读并留备份；第二，Sentinel 哨兵模式，主节点一旦宕机，哨兵集群自动投票推举新主节点顶上；第三，Redis Cluster 集群分片，把数据按一万六千三百八十四个 Hash Slot 哈希槽切分到多台主节点，彻底突破单机内存和并发天花板！",
+        "display": "高可用三件套：主从复制 → Sentinel 哨兵故障切换 → Cluster 16384 哈希槽分片！",
+        "highlight": "16384 哈希槽"
+      }
+    ]
+  },
+  {
+    "id": "finale",
+    "badge": "07 · 一图收尾 · 准点下班",
+    "title": "Redis 核心知识全景图",
+    "theme": "cream",
+    "lines": [
+      {
+        "cue": "panorama",
+        "spoken": "把今天的核心要点串起来，整座 Redis 架构一目了然：五大数据结构覆盖高频业务，纯内存、单线程核心和 epoll 飙出十万级吞吐，RDB 与 AOF 混合持久化兜底数据安全，布隆过滤、互斥锁和随机过期守住缓存防线，最后用哨兵和一万六千三百八十四个哈希槽实现高可用与水平扩展！",
+        "display": "5 大结构 + 内存/单线程/epoll + 混合持久化 + 防三坑 + Sentinel/16384 槽集群！",
+        "highlight": "Redis 核心全景图"
+      },
+      {
+        "cue": "quote",
+        "spoken": "记住这句口诀一辈子忘不掉：纯内存多结构扛高并发，快照加日志保数据不丢，防穿防击防雪崩，哨兵分片稳如泰山！",
+        "display": "纯内存多结构扛并发 · 快照加日志保不丢 · 防穿防击防雪崩 · 哨兵分片稳如山",
+        "highlight": "防穿防击防雪崩"
+      },
+      {
+        "cue": "signoff",
+        "spoken": "如果这期讲得透彻记得点赞收藏，愿你的接口响应全是零点几毫秒，小牛马准点打卡下班！",
+        "display": "点赞收藏，接口响应 0.5ms，小牛马准点打卡下班！",
+        "highlight": "零点几毫秒"
+      }
+    ]
+  }
+]

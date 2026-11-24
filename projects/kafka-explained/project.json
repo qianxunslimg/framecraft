@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "id": "kafka-explained",
+  "title": "一集搞懂Kafka",
+  "production": {
+    "tool": "remotion",
+    "options": {
+      "compositionId": "ProjectKafkaExplained"
+    }
+  }
+}

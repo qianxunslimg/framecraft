@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "assets": [
+    {
+      "id": "prometheus-grafana-master-audio-v2",
+      "path": "../../public/prometheus-grafana/owned/audio/master.wav",
+      "type": "audio",
+      "role": "mixed-audio",
+      "origin": {
+        "kind": "local-mix",
+        "voice": "edge-tts zh-CN-YunxiaNeural (+5%, +0Hz, standalone cut)",
+        "bgm": "procedural-original 124 BPM synth-pop + 14 observability SFX",
+        "generators": [
+          "scripts/voice.py",
+          "scripts/bgm.py"
+        ]
+      },
+      "usage": {
+        "status": "verified",
+        "scope": "user-owned-creative-project",
+        "evidencePath": "sources.md",
+        "attribution": "配音由 Edge TTS (zh-CN-YunxiaNeural) 逐短句合成，配乐与音效为 Framecraft 本地原创合成。"
+      },
+      "bytes": 62304044,
+      "sha256": "40158055c54ec5974699796fbcda5240e8b1821a8633fbaf418fc51a66d10b93"
+    }
+  ]
+}
