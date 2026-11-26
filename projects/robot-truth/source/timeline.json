@@ -1,0 +1,963 @@
+{
+  "fps": 30,
+  "duration": 11072,
+  "voice": {
+    "engine": "edge-tts",
+    "voice": "zh-CN-YunxiaNeural",
+    "rate": "+17%",
+    "pitch": "+0Hz"
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "badge": "ACT 01 // BEHIND THE CURTAIN",
+      "title": "聚光灯与幕后透视",
+      "theme": "#00f0ff",
+      "from": 0,
+      "duration": 978,
+      "cues": [
+        {
+          "cue": "stageFlash",
+          "from": 12,
+          "duration": 302,
+          "display": "爆火演示：科幻成真了吗？",
+          "highlight": "行云流水"
+        },
+        {
+          "cue": "xrayReveal",
+          "from": 321,
+          "duration": 335,
+          "display": "X 光透视：看不见的无线控制线",
+          "highlight": "无线控制线"
+        },
+        {
+          "cue": "titleSlam",
+          "from": 663,
+          "duration": 305,
+          "display": "揭秘爆火机器人视频真相",
+          "highlight": "四大隐蔽遥控流派"
+        }
+      ]
+    },
+    {
+      "id": "fourMasks",
+      "badge": "ACT 02 // 4 HIDDEN CONTROL RIGS",
+      "title": "幕后操控的四大流派",
+      "theme": "#ff7a18",
+      "from": 978,
+      "duration": 2199,
+      "cues": [
+        {
+          "cue": "gamepadScript",
+          "from": 10,
+          "duration": 516,
+          "display": "流派一：游戏手柄 + 预设动作宏",
+          "highlight": "游戏手柄"
+        },
+        {
+          "cue": "leaderFollower",
+          "from": 533,
+          "duration": 576,
+          "display": "流派二：同构主从机械臂（ALOHA）",
+          "highlight": "同构主从机械臂"
+        },
+        {
+          "cue": "vrRetarget",
+          "from": 1116,
+          "duration": 539,
+          "display": "流派三：VR + 动捕手套逆运动学映射",
+          "highlight": "逆运动学"
+        },
+        {
+          "cue": "sharedAuto",
+          "from": 1662,
+          "duration": 527,
+          "display": "流派四：半自主混合接管（最难察觉）",
+          "highlight": "半自主混合接管"
+        }
+      ]
+    },
+    {
+      "id": "forensic12",
+      "badge": "ACT 03 // FORENSIC LAB PART 1",
+      "title": "工程法医鉴伪 · 铁证 1 & 2",
+      "theme": "#00f0ff",
+      "from": 3177,
+      "duration": 1850,
+      "cues": [
+        {
+          "cue": "speedTrap",
+          "from": 10,
+          "duration": 489,
+          "display": "铁证一：4× 加速魔法与幸存者偏差",
+          "highlight": "四倍甚至八倍加速"
+        },
+        {
+          "cue": "cherryPick",
+          "from": 506,
+          "duration": 438,
+          "display": "拍 50 次翻车 49 次的剪辑魔术",
+          "highlight": "一倍真实原速"
+        },
+        {
+          "cue": "jitterWave",
+          "from": 951,
+          "duration": 456,
+          "display": "铁证二：人类 8–12Hz 生理微颤指纹",
+          "highlight": "生理微颤"
+        },
+        {
+          "cue": "aiChunkWave",
+          "from": 1414,
+          "duration": 426,
+          "display": "真 AI 指纹：平滑曲线与动作分块节拍",
+          "highlight": "动作分块"
+        }
+      ]
+    },
+    {
+      "id": "forensic34",
+      "badge": "ACT 04 // FORENSIC LAB PART 2",
+      "title": "工程法医鉴伪 · 铁证 3 & 4",
+      "theme": "#00ff9d",
+      "from": 5027,
+      "duration": 1488,
+      "cues": [
+        {
+          "cue": "yankBlind",
+          "from": 10,
+          "duration": 547,
+          "display": "铁证三：捣乱测试——开环脚本抓空气",
+          "highlight": "现场随机捣乱"
+        },
+        {
+          "cue": "yankClosedLoop",
+          "from": 564,
+          "duration": 454,
+          "display": "真视觉闭环：半空刹停重规划",
+          "highlight": "视觉闭环"
+        },
+        {
+          "cue": "chaosBench",
+          "from": 1025,
+          "duration": 453,
+          "display": "铁证四：纯白棚死记硬背 vs 真实杂乱泛化",
+          "highlight": "真实厨房"
+        }
+      ]
+    },
+    {
+      "id": "plotTwist",
+      "badge": "ACT 05 // THE BIG PLOT TWIST",
+      "title": "反转：遥操作不是作假",
+      "theme": "#ffb800",
+      "from": 6515,
+      "duration": 1535,
+      "cues": [
+        {
+          "cue": "dataGap",
+          "from": 10,
+          "duration": 443,
+          "display": "反转真相：具身智能卡在「数据荒」",
+          "highlight": "数据荒"
+        },
+        {
+          "cue": "internetZero",
+          "from": 460,
+          "duration": 455,
+          "display": "互联网有千亿网页，却没有关节力矩数据",
+          "highlight": "物理交互数据"
+        },
+        {
+          "cue": "imitationLoop",
+          "from": 922,
+          "duration": 603,
+          "display": "示范数采 → 模仿学习 → 彻底脱离人类",
+          "highlight": "模仿学习"
+        }
+      ]
+    },
+    {
+      "id": "vlaBrain",
+      "badge": "ACT 06 // INSIDE REAL AUTONOMOUS AI",
+      "title": "真自主大脑长什么样",
+      "theme": "#a855f7",
+      "from": 8050,
+      "duration": 1361,
+      "cues": [
+        {
+          "cue": "dualSystem",
+          "from": 10,
+          "duration": 300,
+          "display": "前沿真自主：快慢双系统 VLA",
+          "highlight": "快慢双系统"
+        },
+        {
+          "cue": "sys2Sys1",
+          "from": 317,
+          "duration": 555,
+          "display": "大脑 5Hz 理解 · 小脑 200Hz 扩散去噪控臂",
+          "highlight": "扩散策略"
+        },
+        {
+          "cue": "sim2Real",
+          "from": 879,
+          "duration": 472,
+          "display": "GPU 并行仿真：1 小时试错百万次",
+          "highlight": "从仿真到现实"
+        }
+      ]
+    },
+    {
+      "id": "cheatsheet",
+      "badge": "ACT 07 // 4-STEP VIEWER CHEATSHEET",
+      "title": "三秒防忽悠体检表",
+      "theme": "#00f0ff",
+      "from": 9411,
+      "duration": 667,
+      "cues": [
+        {
+          "cue": "fourChecks",
+          "from": 10,
+          "duration": 647,
+          "display": "观众防忽悠四步体检表",
+          "highlight": "四步体检表"
+        }
+      ]
+    },
+    {
+      "id": "finale",
+      "badge": "ACT 08 // BEYOND THE CURTAIN",
+      "title": "看穿幕后的线，看见真未来",
+      "theme": "#00ff9d",
+      "from": 10078,
+      "duration": 994,
+      "cues": [
+        {
+          "cue": "realProgress",
+          "from": 10,
+          "duration": 439,
+          "display": "剥离营销泡沫，看见真实工程跃迁",
+          "highlight": "真实物理世界"
+        },
+        {
+          "cue": "outroCall",
+          "from": 456,
+          "duration": 493,
+          "display": "看见幕后的线，才看得懂真未来",
+          "highlight": "真未来"
+        }
+      ]
+    }
+  ],
+  "captions": [
+    {
+      "from": 12,
+      "duration": 87,
+      "text": "最近你一定被各种逆天的人形机器人刷屏过。",
+      "highlight": ""
+    },
+    {
+      "from": 104,
+      "duration": 102,
+      "text": "它们在展会上行云流水地倒咖啡、叠衣服、",
+      "highlight": "行云流水"
+    },
+    {
+      "from": 206,
+      "duration": 108,
+      "text": "甚至握手聊天，让人觉得科幻明天就要成真。",
+      "highlight": ""
+    },
+    {
+      "from": 321,
+      "duration": 82,
+      "text": "但如果给镜头加上一层 X 光透视，",
+      "highlight": ""
+    },
+    {
+      "from": 403,
+      "duration": 58,
+      "text": "你会发现不少机器人身上，",
+      "highlight": ""
+    },
+    {
+      "from": 461,
+      "duration": 72,
+      "text": "正连着一条看不见的无线控制线。",
+      "highlight": "无线控制线"
+    },
+    {
+      "from": 538,
+      "duration": 118,
+      "text": "幕布后面，藏着一位狂推手柄或戴着头显的工程师。",
+      "highlight": ""
+    },
+    {
+      "from": 663,
+      "duration": 71,
+      "text": "今天我们化身机器人工程法医，",
+      "highlight": ""
+    },
+    {
+      "from": 734,
+      "duration": 122,
+      "text": "用五分钟彻底扒开爆火演示背后的四大隐蔽遥控流派、",
+      "highlight": "四大隐蔽遥控流派"
+    },
+    {
+      "from": 856,
+      "duration": 112,
+      "text": "四个三秒鉴伪铁证，和一个意想不到的行业反转。",
+      "highlight": ""
+    },
+    {
+      "from": 988,
+      "duration": 101,
+      "text": "很多人以为幕后操控一定得戴酷炫的 VR，",
+      "highlight": ""
+    },
+    {
+      "from": 1089,
+      "duration": 81,
+      "text": "其实展会最常见的第一派朴素得很：",
+      "highlight": ""
+    },
+    {
+      "from": 1170,
+      "duration": 50,
+      "text": "游戏手柄加预设脚本。",
+      "highlight": "游戏手柄"
+    },
+    {
+      "from": 1225,
+      "duration": 97,
+      "text": "工程师躲在柱子后推摇杆控制前后移动，",
+      "highlight": ""
+    },
+    {
+      "from": 1322,
+      "duration": 129,
+      "text": "再按按键触发提前录死的挥手或跳舞宏，零视觉感知，",
+      "highlight": ""
+    },
+    {
+      "from": 1451,
+      "duration": 53,
+      "text": "纯粹是高级遥控玩具。",
+      "highlight": ""
+    },
+    {
+      "from": 1511,
+      "duration": 82,
+      "text": "需要剥虾、炒菜、拧瓶盖这种精细活，",
+      "highlight": ""
+    },
+    {
+      "from": 1593,
+      "duration": 77,
+      "text": "就会上场第二派：同构主从机械臂，",
+      "highlight": "同构主从机械臂"
+    },
+    {
+      "from": 1670,
+      "duration": 112,
+      "text": "比如开源界爆火的 ALOHA 和 GELLO。",
+      "highlight": ""
+    },
+    {
+      "from": 1787,
+      "duration": 82,
+      "text": "操作员双手握住微缩物理机械臂，",
+      "highlight": ""
+    },
+    {
+      "from": 1869,
+      "duration": 158,
+      "text": "编码器以毫秒级延迟把关节角度一比一镜像同步给远端大机器人，",
+      "highlight": ""
+    },
+    {
+      "from": 2027,
+      "duration": 60,
+      "text": "丝滑得像长出第二双手。",
+      "highlight": ""
+    },
+    {
+      "from": 2094,
+      "duration": 113,
+      "text": "第三派才是大家常听的 VR 空间映射加动捕手套。",
+      "highlight": ""
+    },
+    {
+      "from": 2212,
+      "duration": 71,
+      "text": "头显追踪手腕六自由度坐标，",
+      "highlight": ""
+    },
+    {
+      "from": 2283,
+      "duration": 77,
+      "text": "数据手套捕捉二十根指节弯曲，",
+      "highlight": ""
+    },
+    {
+      "from": 2360,
+      "duration": 82,
+      "text": "经逆运动学实时解算成电机转角，",
+      "highlight": "逆运动学"
+    },
+    {
+      "from": 2442,
+      "duration": 77,
+      "text": "同时机器人双目画面回传镜片，",
+      "highlight": ""
+    },
+    {
+      "from": 2519,
+      "duration": 114,
+      "text": "操作员就像坐在驾驶舱里开高达一样附身表演。",
+      "highlight": ""
+    },
+    {
+      "from": 2640,
+      "duration": 84,
+      "text": "最难防的是第四派：半自主混合接管。",
+      "highlight": "半自主混合接管"
+    },
+    {
+      "from": 2729,
+      "duration": 95,
+      "text": "机器人双腿平衡确实是强化学习稳住的，",
+      "highlight": ""
+    },
+    {
+      "from": 2824,
+      "duration": 127,
+      "text": "聊天也确实接了大模型，但一到最容易翻车的抓杯子、",
+      "highlight": ""
+    },
+    {
+      "from": 2951,
+      "duration": 121,
+      "text": "选物体那一秒，后台操作员悄悄按手柄接管三秒钟，",
+      "highlight": ""
+    },
+    {
+      "from": 3072,
+      "duration": 95,
+      "text": "完事再交还系统，外行根本看不出破绽。",
+      "highlight": ""
+    },
+    {
+      "from": 3187,
+      "duration": 68,
+      "text": "普通观众怎么三秒分辨真假？",
+      "highlight": ""
+    },
+    {
+      "from": 3260,
+      "duration": 94,
+      "text": "第一个铁证：盯死背景，拆穿倍速魔法。",
+      "highlight": ""
+    },
+    {
+      "from": 3359,
+      "duration": 148,
+      "text": "很多丝滑叠衣服的爆款视频其实悄悄开了四倍甚至八倍加速，",
+      "highlight": "四倍甚至八倍加速"
+    },
+    {
+      "from": 3507,
+      "duration": 131,
+      "text": "只要看一眼背景行人步速、墙上时钟或物体下落重力，",
+      "highlight": ""
+    },
+    {
+      "from": 3638,
+      "duration": 38,
+      "text": "立刻原形毕露。",
+      "highlight": ""
+    },
+    {
+      "from": 3683,
+      "duration": 51,
+      "text": "还原到一倍真实原速，",
+      "highlight": "一倍真实原速"
+    },
+    {
+      "from": 3734,
+      "duration": 103,
+      "text": "你会发现机械臂正在小心翼翼地慢动作挪动。",
+      "highlight": ""
+    },
+    {
+      "from": 3842,
+      "duration": 104,
+      "text": "再加上剪辑魔术：拍五十条翻车四十九条，",
+      "highlight": ""
+    },
+    {
+      "from": 3946,
+      "duration": 115,
+      "text": "只把唯一成功的那三十秒配上传奇燃曲发上网，",
+      "highlight": ""
+    },
+    {
+      "from": 4061,
+      "duration": 60,
+      "text": "观众就以为它无所不能。",
+      "highlight": ""
+    },
+    {
+      "from": 4128,
+      "duration": 105,
+      "text": "第二个铁证藏在关节微动作里，叫运动学指纹。",
+      "highlight": ""
+    },
+    {
+      "from": 4238,
+      "duration": 108,
+      "text": "人类手指天生带有八到十二赫兹的生理微颤，",
+      "highlight": "生理微颤"
+    },
+    {
+      "from": 4346,
+      "duration": 81,
+      "text": "遥控时大脑看画面再到手部微调，",
+      "highlight": ""
+    },
+    {
+      "from": 4427,
+      "duration": 70,
+      "text": "总会带着约两百毫秒的犹豫、",
+      "highlight": ""
+    },
+    {
+      "from": 4497,
+      "duration": 87,
+      "text": "不对称晃动和下意识的歪头找角度。",
+      "highlight": ""
+    },
+    {
+      "from": 4591,
+      "duration": 71,
+      "text": "反观真正的自主 AI 策略，",
+      "highlight": ""
+    },
+    {
+      "from": 4662,
+      "duration": 96,
+      "text": "轨迹要么呈现出冷峻平滑的数学优化曲线，",
+      "highlight": ""
+    },
+    {
+      "from": 4758,
+      "duration": 81,
+      "text": "要么在执行扩散策略的动作分块时，",
+      "highlight": "动作分块"
+    },
+    {
+      "from": 4839,
+      "duration": 112,
+      "text": "每隔零点五秒出现规整的细微停顿与重规划节拍，",
+      "highlight": ""
+    },
+    {
+      "from": 4951,
+      "duration": 66,
+      "text": "把速度波形拉出来一看便知。",
+      "highlight": ""
+    },
+    {
+      "from": 5037,
+      "duration": 95,
+      "text": "第三个铁证则是照妖镜级别的终极测试：",
+      "highlight": ""
+    },
+    {
+      "from": 5132,
+      "duration": 37,
+      "text": "现场随机捣乱。",
+      "highlight": "现场随机捣乱"
+    },
+    {
+      "from": 5174,
+      "duration": 53,
+      "text": "机械臂正伸手抓杯子，",
+      "highlight": ""
+    },
+    {
+      "from": 5227,
+      "duration": 95,
+      "text": "旁边有人突然把杯子狠狠拖走二十厘米。",
+      "highlight": ""
+    },
+    {
+      "from": 5327,
+      "duration": 67,
+      "text": "如果是提前录死的开环脚本，",
+      "highlight": ""
+    },
+    {
+      "from": 5394,
+      "duration": 118,
+      "text": "机械臂会毫不知情地继续伸向空气，对着空气抓空，",
+      "highlight": ""
+    },
+    {
+      "from": 5512,
+      "duration": 72,
+      "text": "甚至把不存在的咖啡倒在桌上。",
+      "highlight": ""
+    },
+    {
+      "from": 5591,
+      "duration": 99,
+      "text": "而真正跑着视觉闭环模型的自主机器人，",
+      "highlight": "视觉闭环"
+    },
+    {
+      "from": 5690,
+      "duration": 121,
+      "text": "腕部与头部相机在几十毫秒内就能重锁定新坐标，",
+      "highlight": ""
+    },
+    {
+      "from": 5811,
+      "duration": 120,
+      "text": "半空刹停、顺滑拐弯重规划轨迹，精准抓回杯子。",
+      "highlight": ""
+    },
+    {
+      "from": 5936,
+      "duration": 109,
+      "text": "敢不敢让人现场捣乱，就是检验真自主的试金石。",
+      "highlight": ""
+    },
+    {
+      "from": 6052,
+      "duration": 95,
+      "text": "第四个铁证，看它敢不敢走出纯白摄影棚。",
+      "highlight": ""
+    },
+    {
+      "from": 6152,
+      "duration": 89,
+      "text": "桌面一尘不染、永远固定摆一只红杯子，",
+      "highlight": ""
+    },
+    {
+      "from": 6241,
+      "duration": 50,
+      "text": "很可能只是死记硬背。",
+      "highlight": ""
+    },
+    {
+      "from": 6296,
+      "duration": 84,
+      "text": "真正的泛化能力，要放到杂乱厨房、",
+      "highlight": ""
+    },
+    {
+      "from": 6380,
+      "duration": 125,
+      "text": "透明玻璃杯与陌生光影里，依然能一镜到底稳定干活。",
+      "highlight": ""
+    },
+    {
+      "from": 6525,
+      "duration": 84,
+      "text": "听到这你可能会觉得遥操作全是骗局。",
+      "highlight": ""
+    },
+    {
+      "from": 6614,
+      "duration": 113,
+      "text": "但接下来是巨大的行业反转：在真正的实验室里，",
+      "highlight": ""
+    },
+    {
+      "from": 6727,
+      "duration": 108,
+      "text": "手柄、主从臂和 VR 遥操作不仅不是作假，",
+      "highlight": ""
+    },
+    {
+      "from": 6835,
+      "duration": 113,
+      "text": "反而是拯救具身智能的秘密武器，原因就三个字：",
+      "highlight": ""
+    },
+    {
+      "from": 6948,
+      "duration": 20,
+      "text": "数据荒。",
+      "highlight": "数据荒"
+    },
+    {
+      "from": 6975,
+      "duration": 51,
+      "text": "语言大模型突飞猛进，",
+      "highlight": ""
+    },
+    {
+      "from": 7026,
+      "duration": 103,
+      "text": "因为互联网免费躺着十几万亿字文本和视频。",
+      "highlight": ""
+    },
+    {
+      "from": 7134,
+      "duration": 95,
+      "text": "可网上几乎找不到机器人的物理交互数据——",
+      "highlight": "物理交互数据"
+    },
+    {
+      "from": 7229,
+      "duration": 57,
+      "text": "你不可能从百科里下载到，",
+      "highlight": ""
+    },
+    {
+      "from": 7286,
+      "duration": 67,
+      "text": "捏一颗熟番茄该用几牛顿的力，",
+      "highlight": ""
+    },
+    {
+      "from": 7353,
+      "duration": 77,
+      "text": "以及每毫秒二十个关节的力矩变化。",
+      "highlight": ""
+    },
+    {
+      "from": 7437,
+      "duration": 86,
+      "text": "所以全球大厂都在建数采训练场，",
+      "highlight": ""
+    },
+    {
+      "from": 7523,
+      "duration": 114,
+      "text": "雇操作员亲手示范叠衣服、洗碗成千上万遍，",
+      "highlight": ""
+    },
+    {
+      "from": 7637,
+      "duration": 91,
+      "text": "同步录下画面、关节角与触觉力矩，",
+      "highlight": ""
+    },
+    {
+      "from": 7728,
+      "duration": 51,
+      "text": "喂给模仿学习模型，",
+      "highlight": "模仿学习"
+    },
+    {
+      "from": 7779,
+      "duration": 97,
+      "text": "最终让机器人彻底甩掉人类自主泛化。",
+      "highlight": ""
+    },
+    {
+      "from": 7881,
+      "duration": 66,
+      "text": "不光彩的从来不是遥操作，",
+      "highlight": ""
+    },
+    {
+      "from": 7947,
+      "duration": 93,
+      "text": "而是拿遥控演示冒充全自主忽悠大众。",
+      "highlight": ""
+    },
+    {
+      "from": 8060,
+      "duration": 35,
+      "text": "甩掉遥控之后，",
+      "highlight": ""
+    },
+    {
+      "from": 8095,
+      "duration": 105,
+      "text": "一台真正自主的具身机器人脑子里跑的是什么？",
+      "highlight": ""
+    },
+    {
+      "from": 8205,
+      "duration": 53,
+      "text": "目前行业最前沿的答案，",
+      "highlight": ""
+    },
+    {
+      "from": 8258,
+      "duration": 102,
+      "text": "是模仿人类神经的快慢双系统 VLA 架构。",
+      "highlight": "快慢双系统"
+    },
+    {
+      "from": 8367,
+      "duration": 126,
+      "text": "慢思考大脑是视觉语言大模型，每秒思考两到五次，",
+      "highlight": ""
+    },
+    {
+      "from": 8493,
+      "duration": 87,
+      "text": "听懂把脏盘子收进水槽并拆解步骤。",
+      "highlight": ""
+    },
+    {
+      "from": 8585,
+      "duration": 147,
+      "text": "贴近底层的快反射小脑则是五十到两百赫兹的扩散策略网络，",
+      "highlight": "扩散策略"
+    },
+    {
+      "from": 8732,
+      "duration": 152,
+      "text": "每秒几十次把杂乱噪声轨迹瞬间去噪收敛成一条丝滑最优曲线，",
+      "highlight": ""
+    },
+    {
+      "from": 8884,
+      "duration": 38,
+      "text": "直接驱动电机。",
+      "highlight": ""
+    },
+    {
+      "from": 8929,
+      "duration": 81,
+      "text": "同时工程师在显卡物理仿真器里，",
+      "highlight": ""
+    },
+    {
+      "from": 9010,
+      "duration": 119,
+      "text": "放进成千上万个机器人分身，随机修改地面摩擦、",
+      "highlight": ""
+    },
+    {
+      "from": 9129,
+      "duration": 43,
+      "text": "光照和外力撞击，",
+      "highlight": ""
+    },
+    {
+      "from": 9172,
+      "duration": 92,
+      "text": "让它在虚拟世界一小时摔倒一百万次，",
+      "highlight": ""
+    },
+    {
+      "from": 9264,
+      "duration": 71,
+      "text": "把肌肉记忆迁移到真实机身，",
+      "highlight": ""
+    },
+    {
+      "from": 9335,
+      "duration": 66,
+      "text": "完成从仿真到现实的跨越。",
+      "highlight": "从仿真到现实"
+    },
+    {
+      "from": 9421,
+      "duration": 88,
+      "text": "以后再刷到惊掉下巴的机器人爆款，",
+      "highlight": ""
+    },
+    {
+      "from": 9509,
+      "duration": 115,
+      "text": "直接套用四步体检表：第一，盯背景时钟行人，",
+      "highlight": "四步体检表"
+    },
+    {
+      "from": 9624,
+      "duration": 93,
+      "text": "确认是不是一倍原速一镜到底；第二，",
+      "highlight": ""
+    },
+    {
+      "from": 9717,
+      "duration": 121,
+      "text": "扫视幕布边缘与工作人员，留心隐藏手柄和延迟；",
+      "highlight": ""
+    },
+    {
+      "from": 9838,
+      "duration": 121,
+      "text": "第三，看有没有现场随机捣乱的闭环恢复；第四，",
+      "highlight": ""
+    },
+    {
+      "from": 9959,
+      "duration": 109,
+      "text": "看它敢不敢离开纯白摄影棚进真实环境干活。",
+      "highlight": ""
+    },
+    {
+      "from": 10088,
+      "duration": 101,
+      "text": "拆穿幕后遥控，绝不是否定具身智能的未来。",
+      "highlight": ""
+    },
+    {
+      "from": 10194,
+      "duration": 133,
+      "text": "恰恰相反，剥离掉靠手柄和剪辑吹出来的营销泡沫后，",
+      "highlight": ""
+    },
+    {
+      "from": 10327,
+      "duration": 111,
+      "text": "端到端大模型、触觉灵巧手和并行强化学习，",
+      "highlight": ""
+    },
+    {
+      "from": 10438,
+      "duration": 89,
+      "text": "正在肉眼可见地攻克真实物理世界。",
+      "highlight": "真实物理世界"
+    },
+    {
+      "from": 10534,
+      "duration": 66,
+      "text": "看清幕后那根隐形的遥控线，",
+      "highlight": ""
+    },
+    {
+      "from": 10600,
+      "duration": 76,
+      "text": "你才不会被过度吹嘘的演示带偏，",
+      "highlight": ""
+    },
+    {
+      "from": 10676,
+      "duration": 106,
+      "text": "也更能为机器人靠自己迈出的每一步感到震撼。",
+      "highlight": ""
+    },
+    {
+      "from": 10787,
+      "duration": 80,
+      "text": "如果这期硬核拆解让你涨了知识，",
+      "highlight": ""
+    },
+    {
+      "from": 10867,
+      "duration": 123,
+      "text": "别忘了点赞收藏转发，下期想看扒开哪个科技黑盒，",
+      "highlight": ""
+    },
+    {
+      "from": 10990,
+      "duration": 37,
+      "text": "评论区告诉我。",
+      "highlight": ""
+    }
+  ]
+}

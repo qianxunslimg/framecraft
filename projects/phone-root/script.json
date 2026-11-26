@@ -1,0 +1,178 @@
+[
+  {
+    "id": "hook",
+    "badge": "ACT 01 // HIDDEN GOD SWITCH",
+    "title": "藏在手机里的上帝开关",
+    "theme": "#00f0ff",
+    "lines": [
+      {
+        "cue": "phoneHover",
+        "spoken": "你花好几千买回来的手机，其实并不完全属于你。",
+        "display": "你买下的手机，并不完全属于你",
+        "highlight": "并不完全属于你"
+      },
+      {
+        "cue": "deniedPulse",
+        "spoken": "你在自己的手机里，其实只是个权限受限的租客。连系统自带软件都删不掉，更碰不到最底层的核心文件。",
+        "display": "权限受限的「租客」",
+        "highlight": "权限受限"
+      },
+      {
+        "cue": "titleSlam",
+        "spoken": "因为厂商在系统最深处，锁着一把连机主都摸不到的最高密钥。今天我们潜入芯片与内核，彻底看懂什么是手机的 Root。",
+        "display": "手机 ROOT 底层解密",
+        "highlight": "Root"
+      }
+    ]
+  },
+  {
+    "id": "pyramid",
+    "badge": "ACT 02 // LINUX UID=0",
+    "title": "权限金字塔与沙盒结界",
+    "theme": "#00ff9d",
+    "lines": [
+      {
+        "cue": "linuxTree",
+        "spoken": "安卓的骨子里，其实是一台装在口袋里的 Linux 电脑。为了防止流氓软件互相偷窥，系统给每个软件分配独立编号，关进彼此隔离的沙盒。",
+        "display": "Android = 口袋里的 Linux",
+        "highlight": "沙盒"
+      },
+      {
+        "cue": "selinuxWall",
+        "spoken": "哪怕软件越界试探，还有一道叫 SELinux 的强制防火墙，像激光安检一样盯死每一次系统调用。",
+        "display": "SELinux 强制访问防火墙",
+        "highlight": "SELinux"
+      },
+      {
+        "cue": "uidZero",
+        "spoken": "而 Root，就是编号为零的超级管理员。它站在整棵权限树的最顶端，拥有读写任意分区、接管硬件调度的终极权力。",
+        "display": "UID = 0 超级管理员",
+        "highlight": "编号为零"
+      }
+    ]
+  },
+  {
+    "id": "trustChain",
+    "badge": "ACT 03 // VERIFIED BOOT",
+    "title": "开机那一秒的信任链",
+    "theme": "#ffb800",
+    "lines": [
+      {
+        "cue": "bootRom",
+        "spoken": "既然最高权限就在手机里，为什么我们不能直接给自己提权？答案藏在你按下电源键的第一毫秒。",
+        "display": "开机第一毫秒的秘密",
+        "highlight": "第一毫秒"
+      },
+      {
+        "cue": "avbVerify",
+        "spoken": "芯片出厂时就刻死了一段只读程序 BootROM。通电后它像接力安检，用数字签名逐级校验引导程序、内核和系统分区，这就是安全启动信任链。",
+        "display": "安全启动信任链 AVB 2.0",
+        "highlight": "安全启动信任链"
+      },
+      {
+        "cue": "tamperAlert",
+        "spoken": "只要你偷偷改了哪怕一个字节，哈希指纹瞬间对不上，手机就会直接拒绝开机。而锁死这一切的第一道铁门，就是 Bootloader 锁。",
+        "display": "一字节篡改即拒启",
+        "highlight": "Bootloader"
+      }
+    ]
+  },
+  {
+    "id": "unlockMagisk",
+    "badge": "ACT 04 // SYSTEMLESS & KERNELSU",
+    "title": "现代 Root 是如何发生的",
+    "theme": "#00f0ff",
+    "lines": [
+      {
+        "cue": "blUnlock",
+        "spoken": "所以现代手机想要 Root，第一步不是黑客漏洞，而是先解开 Bootloader 锁。代价是自动清空全盘数据，防止手机被盗后被人直接破门而入。",
+        "display": "解锁 Bootloader 铁门",
+        "highlight": "清空全盘数据"
+      },
+      {
+        "cue": "bootPatch",
+        "spoken": "接着，像 Magisk 这样的经典工具并不会粗暴破坏系统分区，而是精准提取启动镜像，把极小的守护程序注入其中再刷回手机。",
+        "display": "精准修补启动镜像",
+        "highlight": "Magisk"
+      },
+      {
+        "cue": "systemless",
+        "spoken": "这就是极具巧思的无系统修改架构：原版系统分区纹丝不动，所有改动都通过开机时的虚拟挂载层动态覆盖，随时可以无痕还原。",
+        "display": "Systemless 虚拟挂载层",
+        "highlight": "无系统修改"
+      },
+      {
+        "cue": "kernelSu",
+        "spoken": "而更新一代的 KernelSU，干脆直接住进了 Linux 内核本身，在最底层按白名单精准放行权限，把隐蔽性直接拉满。",
+        "display": "KernelSU 进驻内核层",
+        "highlight": "KernelSU"
+      }
+    ]
+  },
+  {
+    "id": "powers",
+    "badge": "ACT 05 // GOD MODE",
+    "title": "上帝权限能释放什么",
+    "theme": "#a855f7",
+    "lines": [
+      {
+        "cue": "cpuTune",
+        "spoken": "拿到 Root 后，手机瞬间从精装样板房变成自由实验室。你可以直接改写处理器调频曲线与温控策略，榨干芯片极限性能，或者锁频极致省电。",
+        "display": "直控芯片频率与温控",
+        "highlight": "调频曲线"
+      },
+      {
+        "cue": "deepTools",
+        "spoken": "你还能部署底层全局防火墙彻底拦截追踪广告，做真正完整的全量应用数据备份，甚至通过插件框架重构整个系统界面与交互。",
+        "display": "防火墙 · 全量备份 · 模块生态",
+        "highlight": "全局防火墙"
+      }
+    ]
+  },
+  {
+    "id": "catMouse",
+    "badge": "ACT 06 // TEE & CAT-MOUSE WAR",
+    "title": "代价与底层猫鼠游戏",
+    "theme": "#ff2a5f",
+    "lines": [
+      {
+        "cue": "teeVault",
+        "spoken": "但绝对的自由，往往伴随着沉重的代价。芯片里还藏着一块连内核都进不去的硬件保险箱，叫可信执行环境 TEE。",
+        "display": "芯片级保险箱 TEE",
+        "highlight": "TEE"
+      },
+      {
+        "cue": "integrityWar",
+        "spoken": "一旦硬件状态记录了已解锁，银行支付和硬件密钥校验就会立刻拉响警报。于是极客的隐藏模块与金融风控之间，展开了一场永无止境的猫鼠大战。",
+        "display": "隐藏模块 vs 硬件级风控",
+        "highlight": "猫鼠大战"
+      },
+      {
+        "cue": "dangerZone",
+        "spoken": "更现实的危险在于，一旦你不小心给恶意软件点了允许，沙盒护城河就会瞬间瓦解，轻则隐私裸奔，重则误删底层分区让手机彻底变砖。",
+        "display": "误授权限 = 沙盒崩溃",
+        "highlight": "彻底变砖"
+      }
+    ]
+  },
+  {
+    "id": "finale",
+    "badge": "ACT 07 // THE BOUNDARY",
+    "title": "权力与掌控的边界",
+    "theme": "#00f0ff",
+    "lines": [
+      {
+        "cue": "evoTimeline",
+        "spoken": "十年前大家拼命折腾 Root，是为了救活卡顿的系统、补齐缺失的功能。而今天手机原生体验已经足够成熟，硬件安全锁也越收越紧，普通人早已不必折腾。",
+        "display": "从极客黄金时代到硬件锁时代",
+        "highlight": "不必折腾"
+      },
+      {
+        "cue": "closingKey",
+        "spoken": "但 Root 背后的意义从未消失，它代表你对一台设备最底层的知情权与掌控权。你不需要每天按下这枚上帝开关，但看懂门后的世界，才算真正拥有你手里的机器。",
+        "display": "看懂底层，才算真正拥有",
+        "highlight": "上帝开关"
+      }
+    ]
+  }
+]

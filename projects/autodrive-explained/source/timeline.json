@@ -1,0 +1,1022 @@
+{
+  "fps": 30,
+  "duration": 9695,
+  "voice": {
+    "engine": "edge-tts",
+    "voice": "zh-CN-YunxiaNeural",
+    "rate": "+14%",
+    "pitch": "+0Hz"
+  },
+  "scenes": [
+    {
+      "id": "intro",
+      "badge": "01 // CORE LOOP",
+      "title": "自动驾驶全栈解剖",
+      "theme": "cyan",
+      "from": 0,
+      "duration": 1015,
+      "cues": [
+        {
+          "cue": "chaseOpen",
+          "from": 12,
+          "duration": 206,
+          "display": "高速领航 · 自动泊车 · Robotaxi · 自动重卡",
+          "highlight": "重塑"
+        },
+        {
+          "cue": "titleSlam",
+          "from": 223,
+          "duration": 125,
+          "display": "自动驾驶 · 全栈技术解剖",
+          "highlight": "老司机"
+        },
+        {
+          "cue": "xrayPerception",
+          "from": 353,
+          "duration": 236,
+          "display": "01 PERCEPTION // 感知",
+          "highlight": "四步闭环"
+        },
+        {
+          "cue": "xrayLocalization",
+          "from": 594,
+          "duration": 113,
+          "display": "02 LOCALIZATION // 定位",
+          "highlight": "定位"
+        },
+        {
+          "cue": "xrayPlanning",
+          "from": 712,
+          "duration": 144,
+          "display": "03 PLANNING // 预测规划",
+          "highlight": "预测与规划"
+        },
+        {
+          "cue": "xrayControl",
+          "from": 861,
+          "duration": 144,
+          "display": "04 CONTROL // 线控执行",
+          "highlight": "精准"
+        }
+      ]
+    },
+    {
+      "id": "levels",
+      "badge": "02 // SAE J3016",
+      "title": "L0 到 L5 责任红线",
+      "theme": "crimson",
+      "from": 1015,
+      "duration": 1265,
+      "cues": [
+        {
+          "cue": "lv01",
+          "from": 10,
+          "duration": 317,
+          "display": "SAE L0 / L1 // 单维辅助",
+          "highlight": "SAE"
+        },
+        {
+          "cue": "lv2Warn",
+          "from": 332,
+          "duration": 307,
+          "display": "L2 辅助驾驶 // 责任仍在驾驶员",
+          "highlight": "法律责任"
+        },
+        {
+          "cue": "lv3Laser",
+          "from": 644,
+          "duration": 226,
+          "display": "L3 责任分水岭 // 系统接管",
+          "highlight": "红线在 L3"
+        },
+        {
+          "cue": "lv4Dissolve",
+          "from": 875,
+          "duration": 207,
+          "display": "L4 高度自动 // 限定区全无人",
+          "highlight": "取消方向盘"
+        },
+        {
+          "cue": "lv5Shatter",
+          "from": 1087,
+          "duration": 168,
+          "display": "L5 完全自动 // 终极远景",
+          "highlight": "终极目标"
+        }
+      ]
+    },
+    {
+      "id": "sensors",
+      "badge": "03 // SENSORS",
+      "title": "三大传感器与路线对决",
+      "theme": "teal",
+      "from": 2280,
+      "duration": 1390,
+      "cues": [
+        {
+          "cue": "camScan",
+          "from": 10,
+          "duration": 227,
+          "display": "CAMERA // 高清语义视觉",
+          "highlight": "摄像头"
+        },
+        {
+          "cue": "camGlare",
+          "from": 242,
+          "duration": 153,
+          "display": "CAMERA // 强光暗雾边界",
+          "highlight": "强逆光"
+        },
+        {
+          "cue": "radarRain",
+          "from": 400,
+          "duration": 174,
+          "display": "77GHz RADAR // 穿透雨雾测速",
+          "highlight": "多普勒效应"
+        },
+        {
+          "cue": "radar4d",
+          "from": 579,
+          "duration": 193,
+          "display": "4D RADAR // 补齐高度维度",
+          "highlight": "四维毫米波"
+        },
+        {
+          "cue": "lidarCloud",
+          "from": 777,
+          "duration": 324,
+          "display": "128-CH LiDAR // 厘米级 3D 点云",
+          "highlight": "三维点云"
+        },
+        {
+          "cue": "routeDuel",
+          "from": 1106,
+          "duration": 274,
+          "display": "纯视觉降本 vs 多传感器冗余",
+          "highlight": "异构冗余"
+        }
+      ]
+    },
+    {
+      "id": "localization",
+      "badge": "04 // LOCALIZATION",
+      "title": "厘米级多源定位",
+      "theme": "blue",
+      "from": 3670,
+      "duration": 749,
+      "cues": [
+        {
+          "cue": "gpsDrift",
+          "from": 10,
+          "duration": 185,
+          "display": "普通 GPS // ±5m 跨道漂移",
+          "highlight": "三到十米"
+        },
+        {
+          "cue": "tunnelBlock",
+          "from": 200,
+          "duration": 107,
+          "display": "隧道遮挡 // 卫星信号中断",
+          "highlight": "丢星断连"
+        },
+        {
+          "cue": "rtkImu",
+          "from": 312,
+          "duration": 270,
+          "display": "GNSS+RTK + IMU 惯导接力",
+          "highlight": "惯性测量单元"
+        },
+        {
+          "cue": "slamLock",
+          "from": 587,
+          "duration": 152,
+          "display": "SLAM 特征校验 // ±2cm 锁死",
+          "highlight": "厘米级锁死"
+        }
+      ]
+    },
+    {
+      "id": "pncControl",
+      "badge": "05 // PNC & DBW",
+      "title": "多方博弈与线控底盘",
+      "theme": "emerald",
+      "from": 4419,
+      "duration": 880,
+      "cues": [
+        {
+          "cue": "predictCutin",
+          "from": 10,
+          "duration": 214,
+          "display": "PREDICTION // 意图博弈预测",
+          "highlight": "鬼探头"
+        },
+        {
+          "cue": "planSplines",
+          "from": 229,
+          "duration": 206,
+          "display": "PLANNING // 32 轨实时剪枝",
+          "highlight": "最优轨迹"
+        },
+        {
+          "cue": "dbwXray",
+          "from": 440,
+          "duration": 211,
+          "display": "DRIVE-BY-WIRE // 5ms 线控直驱",
+          "highlight": "线控底盘"
+        },
+        {
+          "cue": "mpcWind",
+          "from": 656,
+          "duration": 214,
+          "display": "MPC 100Hz // 抗风贴线纠偏",
+          "highlight": "模型预测控制"
+        }
+      ]
+    },
+    {
+      "id": "evoMapBev",
+      "badge": "06 // ERA 1.0 → 2.0",
+      "title": "高精地图到无图体素",
+      "theme": "amber",
+      "from": 5299,
+      "duration": 1188,
+      "cues": [
+        {
+          "cue": "hdBlueprint",
+          "from": 10,
+          "duration": 276,
+          "display": "ERA 1.0 // 高精地图 + 白盒规则",
+          "highlight": "高精地图"
+        },
+        {
+          "cue": "hdShatter",
+          "from": 291,
+          "duration": 226,
+          "display": "MAP MISMATCH // 规则天花板",
+          "highlight": "烧钱"
+        },
+        {
+          "cue": "bevStitch",
+          "from": 522,
+          "duration": 281,
+          "display": "ERA 2.0 // BEV+Transformer 在线建图",
+          "highlight": "全国都能开"
+        },
+        {
+          "cue": "occVoxels",
+          "from": 808,
+          "duration": 370,
+          "display": "OCCUPANCY // 3D 体素识别异形障碍",
+          "highlight": "占用网络"
+        }
+      ]
+    },
+    {
+      "id": "evoE2eVla",
+      "badge": "07 // ERA 3.0 → 4.0",
+      "title": "端到端、VLA 与世界模型",
+      "theme": "violet",
+      "from": 6487,
+      "duration": 1636,
+      "cues": [
+        {
+          "cue": "e2eVortex",
+          "from": 10,
+          "duration": 295,
+          "display": "ERA 3.0 // 一段式端到端神经流",
+          "highlight": "端到端大模型"
+        },
+        {
+          "cue": "e2eGuardrail",
+          "from": 310,
+          "duration": 232,
+          "display": "SAFETY GUARDRAIL // 硬性安全护栏",
+          "highlight": "安全护栏"
+        },
+        {
+          "cue": "vlaSignCop",
+          "from": 547,
+          "duration": 278,
+          "display": "ERA 4.0 // VLA 常识推理",
+          "highlight": "VLA"
+        },
+        {
+          "cue": "vlaVoicePark",
+          "from": 830,
+          "duration": 257,
+          "display": "快慢双系统 // 自然语言直控",
+          "highlight": "快慢双系统"
+        },
+        {
+          "cue": "wmFreeze",
+          "from": 1092,
+          "duration": 272,
+          "display": "WORLD MODEL // 物理因果多重推演",
+          "highlight": "世界模型"
+        },
+        {
+          "cue": "wmBranchPick",
+          "from": 1369,
+          "duration": 257,
+          "display": "云端仿真引擎 + 车端轻量化",
+          "highlight": "超级引擎"
+        }
+      ]
+    },
+    {
+      "id": "longTail",
+      "badge": "08 // LAST 1% & FLYWHEEL",
+      "title": "长尾死结与数据飞轮",
+      "theme": "orange",
+      "from": 8123,
+      "duration": 919,
+      "cues": [
+        {
+          "cue": "ratio99",
+          "from": 10,
+          "duration": 288,
+          "display": "99% 常规已稳 // 卡死在最后 1%",
+          "highlight": "百分之一"
+        },
+        {
+          "cue": "caseTire",
+          "from": 303,
+          "duration": 60,
+          "display": "CORNER CASE // 高速滚落轮胎",
+          "highlight": "轮胎"
+        },
+        {
+          "cue": "caseNightBike",
+          "from": 368,
+          "duration": 65,
+          "display": "CORNER CASE // 暗夜逆行三轮",
+          "highlight": "逆行"
+        },
+        {
+          "cue": "caseStorm",
+          "from": 438,
+          "duration": 75,
+          "display": "CORNER CASE // 暴雨临时封路",
+          "highlight": "临时封路"
+        },
+        {
+          "cue": "globeFlywheel",
+          "from": 518,
+          "duration": 391,
+          "display": "DATA FLYWHEEL // 日跑百万公里虚拟路测",
+          "highlight": "数据飞轮"
+        }
+      ]
+    },
+    {
+      "id": "finale",
+      "badge": "09 // FULL STACK",
+      "title": "穿越四代演进星门",
+      "theme": "cyan",
+      "from": 9042,
+      "duration": 653,
+      "cues": [
+        {
+          "cue": "warpPortals",
+          "from": 10,
+          "duration": 330,
+          "display": "1.0 高精图 → 2.0 无图体素 → 3.0 端到端 → 4.0 VLA & 世界模型",
+          "highlight": "一路狂飙"
+        },
+        {
+          "cue": "cinemaEnd",
+          "from": 345,
+          "duration": 270,
+          "display": "L2 辅助莫松手 · 安全永远排第一",
+          "highlight": "安全排第一"
+        }
+      ]
+    }
+  ],
+  "captions": [
+    {
+      "from": 12,
+      "duration": 74,
+      "text": "高速自动变道、手机一键泊车、",
+      "highlight": ""
+    },
+    {
+      "from": 86,
+      "duration": 79,
+      "text": "街头无人出租车与干线自动重卡，",
+      "highlight": ""
+    },
+    {
+      "from": 165,
+      "duration": 53,
+      "text": "正在重塑我们的马路。",
+      "highlight": "重塑"
+    },
+    {
+      "from": 223,
+      "duration": 35,
+      "text": "一辆钢铁机器，",
+      "highlight": ""
+    },
+    {
+      "from": 258,
+      "duration": 90,
+      "text": "到底是怎么像老司机一样自己开起来的？",
+      "highlight": "老司机"
+    },
+    {
+      "from": 353,
+      "duration": 38,
+      "text": "拆开整套系统，",
+      "highlight": ""
+    },
+    {
+      "from": 391,
+      "duration": 129,
+      "text": "核心是一个每秒运转数十次的四步闭环：第一步感知，",
+      "highlight": "四步闭环"
+    },
+    {
+      "from": 520,
+      "duration": 69,
+      "text": "靠传感器充当眼睛看清路况；",
+      "highlight": ""
+    },
+    {
+      "from": 594,
+      "duration": 113,
+      "text": "第二步定位，毫秒锁死自己此刻压在哪条车道；",
+      "highlight": "定位"
+    },
+    {
+      "from": 712,
+      "duration": 48,
+      "text": "第三步预测与规划，",
+      "highlight": "预测与规划"
+    },
+    {
+      "from": 760,
+      "duration": 96,
+      "text": "大脑预判周围车流意图并算出最优路线；",
+      "highlight": ""
+    },
+    {
+      "from": 861,
+      "duration": 109,
+      "text": "第四步控制，手脚把指令精准传给方向盘、",
+      "highlight": "精准"
+    },
+    {
+      "from": 970,
+      "duration": 35,
+      "text": "油门和刹车。",
+      "highlight": ""
+    },
+    {
+      "from": 1025,
+      "duration": 158,
+      "text": "看技术前先分清国际 SAE L0 到 L5 六个等级：",
+      "highlight": "SAE"
+    },
+    {
+      "from": 1183,
+      "duration": 70,
+      "text": "L0 仅预警或紧急制动，",
+      "highlight": ""
+    },
+    {
+      "from": 1253,
+      "duration": 89,
+      "text": "L1 只管方向或车速其中一项；",
+      "highlight": ""
+    },
+    {
+      "from": 1347,
+      "duration": 84,
+      "text": "L2 同时控向控速——划重点，",
+      "highlight": ""
+    },
+    {
+      "from": 1431,
+      "duration": 95,
+      "text": "市面上绝大多数高速和城区领航辅助，",
+      "highlight": ""
+    },
+    {
+      "from": 1526,
+      "duration": 128,
+      "text": "哪怕再丝滑也依然是 L2，法律责任全归驾驶员！",
+      "highlight": "法律责任"
+    },
+    {
+      "from": 1659,
+      "duration": 56,
+      "text": "真正的红线在 L3：",
+      "highlight": "红线在 L3"
+    },
+    {
+      "from": 1715,
+      "duration": 90,
+      "text": "合规场景内由系统主导驾驶并担责，",
+      "highlight": ""
+    },
+    {
+      "from": 1805,
+      "duration": 80,
+      "text": "但系统呼救时人必须及时接管。",
+      "highlight": ""
+    },
+    {
+      "from": 1890,
+      "duration": 71,
+      "text": "到了 L4，在限定示范区、",
+      "highlight": ""
+    },
+    {
+      "from": 1961,
+      "duration": 82,
+      "text": "港口或特定干线内彻底无人接管，",
+      "highlight": ""
+    },
+    {
+      "from": 2043,
+      "duration": 54,
+      "text": "甚至可以取消方向盘。",
+      "highlight": "取消方向盘"
+    },
+    {
+      "from": 2102,
+      "duration": 110,
+      "text": "而 L5 是不限区域天气的全场景完全无人，",
+      "highlight": ""
+    },
+    {
+      "from": 2212,
+      "duration": 58,
+      "text": "仍是全行业的终极目标。",
+      "highlight": "终极目标"
+    },
+    {
+      "from": 2290,
+      "duration": 76,
+      "text": "汽车看清世界靠三大传感器。",
+      "highlight": ""
+    },
+    {
+      "from": 2370,
+      "duration": 107,
+      "text": "第一摄像头，色彩细腻成本低，认红绿灯、",
+      "highlight": "摄像头"
+    },
+    {
+      "from": 2477,
+      "duration": 40,
+      "text": "读路牌全靠它，",
+      "highlight": ""
+    },
+    {
+      "from": 2522,
+      "duration": 79,
+      "text": "但怕无灯黑夜、强逆光和浓雾，",
+      "highlight": "强逆光"
+    },
+    {
+      "from": 2601,
+      "duration": 74,
+      "text": "平面图像也难直接精准测距。",
+      "highlight": ""
+    },
+    {
+      "from": 2680,
+      "duration": 114,
+      "text": "第二毫米波雷达，无线电波轻松穿透雨雪大雾，",
+      "highlight": ""
+    },
+    {
+      "from": 2794,
+      "duration": 60,
+      "text": "靠多普勒效应精准测速；",
+      "highlight": "多普勒效应"
+    },
+    {
+      "from": 2859,
+      "duration": 94,
+      "text": "传统三维毫米波缺高度易误判龙门架，",
+      "highlight": ""
+    },
+    {
+      "from": 2953,
+      "duration": 99,
+      "text": "新一代四维毫米波正加速补齐高度短板。",
+      "highlight": "四维毫米波"
+    },
+    {
+      "from": 3057,
+      "duration": 139,
+      "text": "第三激光雷达，主动发射激光束直绘厘米级三维点云，",
+      "highlight": "三维点云"
+    },
+    {
+      "from": 3196,
+      "duration": 64,
+      "text": "漆黑深夜照样看清轮廓，",
+      "highlight": ""
+    },
+    {
+      "from": 3260,
+      "duration": 121,
+      "text": "只是成本较高且不识文字颜色，暴雨也会衰减。",
+      "highlight": ""
+    },
+    {
+      "from": 3386,
+      "duration": 51,
+      "text": "由此分出两大路线：",
+      "highlight": ""
+    },
+    {
+      "from": 3437,
+      "duration": 103,
+      "text": "纯视觉派用多摄像头加神经网络省成本，",
+      "highlight": ""
+    },
+    {
+      "from": 3540,
+      "duration": 120,
+      "text": "融合派叠加三类传感器靠异构冗余守安全底线！",
+      "highlight": "异构冗余"
+    },
+    {
+      "from": 3680,
+      "duration": 82,
+      "text": "普通手机 GPS 误差三到十米，",
+      "highlight": "三到十米"
+    },
+    {
+      "from": 3762,
+      "duration": 103,
+      "text": "在高速分叉口根本分不清你在主路还是匝道，",
+      "highlight": ""
+    },
+    {
+      "from": 3870,
+      "duration": 107,
+      "text": "一钻进隧道或高楼峡谷还会瞬间丢星断连！",
+      "highlight": "丢星断连"
+    },
+    {
+      "from": 3982,
+      "duration": 69,
+      "text": "自动驾驶靠多源组合定位：",
+      "highlight": ""
+    },
+    {
+      "from": 4051,
+      "duration": 98,
+      "text": "开阔路用高精度卫星差分缩到厘米级，",
+      "highlight": ""
+    },
+    {
+      "from": 4149,
+      "duration": 103,
+      "text": "进隧道立刻切换惯性测量单元无缝推算，",
+      "highlight": "惯性测量单元"
+    },
+    {
+      "from": 4257,
+      "duration": 92,
+      "text": "再结合视觉与点云实时比对路标轮廓，",
+      "highlight": ""
+    },
+    {
+      "from": 4349,
+      "duration": 60,
+      "text": "全天候厘米级锁死车道！",
+      "highlight": "厘米级锁死"
+    },
+    {
+      "from": 4429,
+      "duration": 40,
+      "text": "大脑干活分两步。",
+      "highlight": ""
+    },
+    {
+      "from": 4473,
+      "duration": 82,
+      "text": "预测模块盯紧周围车辆和行人，",
+      "highlight": ""
+    },
+    {
+      "from": 4555,
+      "duration": 88,
+      "text": "提前预判谁会突然加塞或鬼探头；",
+      "highlight": "鬼探头"
+    },
+    {
+      "from": 4648,
+      "duration": 130,
+      "text": "规划模块瞬间评估几十条候选路径，淘汰碰撞与急拐，",
+      "highlight": ""
+    },
+    {
+      "from": 4778,
+      "duration": 76,
+      "text": "选出最丝滑不晕车的最优轨迹。",
+      "highlight": "最优轨迹"
+    },
+    {
+      "from": 4859,
+      "duration": 55,
+      "text": "怎么让几吨车身毫秒听话？",
+      "highlight": ""
+    },
+    {
+      "from": 4918,
+      "duration": 61,
+      "text": "线控底盘把机械转向、",
+      "highlight": "线控底盘"
+    },
+    {
+      "from": 4979,
+      "duration": 91,
+      "text": "油门刹车全部改成纯电信号直驱，",
+      "highlight": ""
+    },
+    {
+      "from": 5075,
+      "duration": 87,
+      "text": "配合模型预测控制每秒百次纠偏，",
+      "highlight": "模型预测控制"
+    },
+    {
+      "from": 5162,
+      "duration": 127,
+      "text": "哪怕湿滑横风或重卡满载，依然稳稳贴线不画龙！",
+      "highlight": ""
+    },
+    {
+      "from": 5309,
+      "duration": 72,
+      "text": "接下来看自动驾驶四代技术演进！",
+      "highlight": ""
+    },
+    {
+      "from": 5385,
+      "duration": 78,
+      "text": "第一代高精地图加模块化规则，",
+      "highlight": "高精地图"
+    },
+    {
+      "from": 5463,
+      "duration": 122,
+      "text": "把车道和路口提前写死在图里，逻辑透明好排查；",
+      "highlight": ""
+    },
+    {
+      "from": 5590,
+      "duration": 121,
+      "text": "但测绘维护极度烧钱，一遇临时修路改道就失效，",
+      "highlight": "烧钱"
+    },
+    {
+      "from": 5711,
+      "duration": 105,
+      "text": "换座城市更开不了，人工规则永远写不完。",
+      "highlight": ""
+    },
+    {
+      "from": 5821,
+      "duration": 60,
+      "text": "于是进化到第二代无图时代：",
+      "highlight": ""
+    },
+    {
+      "from": 5881,
+      "duration": 157,
+      "text": "BEV 借助 Transformer 把车周多摄拼成上帝视角俯视图，",
+      "highlight": ""
+    },
+    {
+      "from": 6038,
+      "duration": 64,
+      "text": "边开边建图，实现全国都能开！",
+      "highlight": "全国都能开"
+    },
+    {
+      "from": 6107,
+      "duration": 112,
+      "text": "占用网络更把三维空间切成立体体素网格，",
+      "highlight": "占用网络"
+    },
+    {
+      "from": 6219,
+      "duration": 141,
+      "text": "不认固定类别，只要格子被占就绕开，专治侧翻货车、",
+      "highlight": ""
+    },
+    {
+      "from": 6360,
+      "duration": 117,
+      "text": "掉落纸箱等异形障碍，代价是极吃车端算力。",
+      "highlight": ""
+    },
+    {
+      "from": 6497,
+      "duration": 55,
+      "text": "第三代端到端大模型，",
+      "highlight": "端到端大模型"
+    },
+    {
+      "from": 6552,
+      "duration": 104,
+      "text": "把割裂的感知预测规划融成统一神经网络，",
+      "highlight": ""
+    },
+    {
+      "from": 6656,
+      "duration": 38,
+      "text": "消除信息损耗，",
+      "highlight": ""
+    },
+    {
+      "from": 6694,
+      "duration": 98,
+      "text": "用海量人类驾驶数据练出丝滑拟人车技；",
+      "highlight": ""
+    },
+    {
+      "from": 6797,
+      "duration": 119,
+      "text": "但神经网络黑盒难排查，没法给出数学级保证，",
+      "highlight": ""
+    },
+    {
+      "from": 6916,
+      "duration": 113,
+      "text": "所以量产车必配外层硬性规则安全护栏兜底！",
+      "highlight": "安全护栏"
+    },
+    {
+      "from": 7034,
+      "duration": 57,
+      "text": "最前沿是第四代双子星。",
+      "highlight": ""
+    },
+    {
+      "from": 7095,
+      "duration": 89,
+      "text": "先看 VLA 视觉语言动作模型：",
+      "highlight": "VLA"
+    },
+    {
+      "from": 7184,
+      "duration": 128,
+      "text": "把大模型常识装进车里，读懂文字路牌和交警手势，",
+      "highlight": ""
+    },
+    {
+      "from": 7317,
+      "duration": 122,
+      "text": "甚至听懂你说前面便利店门口靠边停直接执行！",
+      "highlight": ""
+    },
+    {
+      "from": 7443,
+      "duration": 131,
+      "text": "为防推理延迟和幻觉，业内正用快慢双系统化解难题。",
+      "highlight": "快慢双系统"
+    },
+    {
+      "from": 7579,
+      "duration": 98,
+      "text": "而世界模型教人工智能理解物理因果——",
+      "highlight": "世界模型"
+    },
+    {
+      "from": 7677,
+      "duration": 120,
+      "text": "时间定格的一瞬，它能在脑海同时推演多条未来：",
+      "highlight": ""
+    },
+    {
+      "from": 7797,
+      "duration": 54,
+      "text": "变道货车会不会加速？",
+      "highlight": ""
+    },
+    {
+      "from": 7856,
+      "duration": 74,
+      "text": "虽然算力消耗处于金字塔尖，",
+      "highlight": ""
+    },
+    {
+      "from": 7930,
+      "duration": 109,
+      "text": "它既是云端生成海量极端路况的超级引擎，",
+      "highlight": "超级引擎"
+    },
+    {
+      "from": 8039,
+      "duration": 74,
+      "text": "也正加速向车端轻量化落地！",
+      "highlight": ""
+    },
+    {
+      "from": 8133,
+      "duration": 107,
+      "text": "技术这么强，为什么全场景完全无人还没普及？",
+      "highlight": ""
+    },
+    {
+      "from": 8244,
+      "duration": 83,
+      "text": "因为百分之九十九的日常路已很稳，",
+      "highlight": ""
+    },
+    {
+      "from": 8327,
+      "duration": 94,
+      "text": "真正卡脖子的是最后百分之一极端长尾！",
+      "highlight": "百分之一"
+    },
+    {
+      "from": 8426,
+      "duration": 60,
+      "text": "比如高速突然滚落的轮胎、",
+      "highlight": "轮胎"
+    },
+    {
+      "from": 8491,
+      "duration": 65,
+      "text": "夜里没开灯的逆行三轮车、",
+      "highlight": "逆行"
+    },
+    {
+      "from": 8561,
+      "duration": 75,
+      "text": "或是特大暴雨中突发的临时封路。",
+      "highlight": "临时封路"
+    },
+    {
+      "from": 8641,
+      "duration": 98,
+      "text": "破局靠全行业终极护城河——数据飞轮：",
+      "highlight": "数据飞轮"
+    },
+    {
+      "from": 8739,
+      "duration": 81,
+      "text": "量产车队采集罕见案例上传云端，",
+      "highlight": ""
+    },
+    {
+      "from": 8820,
+      "duration": 119,
+      "text": "世界模型合成万千变体一天虚拟路测数百万公里，",
+      "highlight": ""
+    },
+    {
+      "from": 8939,
+      "duration": 93,
+      "text": "练成绝技再 OTA 推送回全车队！",
+      "highlight": ""
+    },
+    {
+      "from": 9052,
+      "duration": 97,
+      "text": "回头看全景：底层四步闭环稳如磐石，",
+      "highlight": ""
+    },
+    {
+      "from": 9149,
+      "duration": 97,
+      "text": "技术从高精地图、BEV 占用网络、",
+      "highlight": ""
+    },
+    {
+      "from": 9246,
+      "duration": 136,
+      "text": "端到端安全护栏，一路狂飙向 VLA 与世界模型！",
+      "highlight": "一路狂飙"
+    },
+    {
+      "from": 9387,
+      "duration": 128,
+      "text": "记住核心一句：感知定位看清路，规控线控开得稳，",
+      "highlight": ""
+    },
+    {
+      "from": 9515,
+      "duration": 73,
+      "text": "L2 莫松手，安全排第一！",
+      "highlight": "安全排第一"
+    },
+    {
+      "from": 9592,
+      "duration": 65,
+      "text": "愿你每次出行都丝滑平安！",
+      "highlight": ""
+    }
+  ]
+}

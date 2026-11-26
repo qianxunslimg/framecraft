@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "assets": [
+    {
+      "id": "autodrive-explained-master-audio",
+      "path": "../../public/autodrive-explained/owned/audio/master.wav",
+      "type": "audio",
+      "role": "mixed-audio",
+      "origin": {
+        "kind": "local-mix",
+        "voice": "edge-tts zh-CN-YunxiaNeural (+14%, +0Hz, fast cinema tempo)",
+        "bgm": "procedural-original 126 BPM C-minor cyber-cinema synthwave + synced drop/whoosh/laser SFX",
+        "generators": [
+          "scripts/voice.py",
+          "scripts/bgm.py"
+        ]
+      },
+      "usage": {
+        "status": "verified",
+        "scope": "user-owned-creative-project",
+        "evidencePath": "sources.md",
+        "attribution": "配音由 Edge TTS (zh-CN-YunxiaNeural) 逐短句合成并全篇实听核验，未来感电子配乐与科幻音效为本地原创合成。"
+      },
+      "bytes": 62048044,
+      "sha256": "82f3166d6e82b0d1eabe8614d280ae04dadb5355364ca5db0cafd38f844d6ce0"
+    }
+  ]
+}

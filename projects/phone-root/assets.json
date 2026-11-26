@@ -1,0 +1,288 @@
+{
+  "schemaVersion": 1,
+  "assets": [
+    {
+      "id": "phone-root-master-audio",
+      "path": "../../public/phone-root/owned/audio/master.wav",
+      "type": "audio",
+      "role": "mixed-audio",
+      "origin": {
+        "kind": "local-mix",
+        "voice": "edge-tts zh-CN-YunxiaNeural (+14%, +0Hz, fast cyber-doc tempo)",
+        "bgm": "procedural-original 128 BPM D-minor cyber-tech synth score + synced unlock/alarm/drop SFX",
+        "generators": [
+          "scripts/voice.py",
+          "scripts/bgm.py"
+        ]
+      },
+      "usage": {
+        "status": "verified",
+        "scope": "user-owned-creative-project",
+        "evidencePath": "sources.md",
+        "attribution": "配音由 Edge TTS (zh-CN-YunxiaNeural) 逐短句合成并全篇实听核验，128 BPM 暗黑赛博电子配乐与科技音效为本地原创合成。"
+      },
+      "bytes": 38880044,
+      "sha256": "ea59334601cd388353a1f0c62a5f6af08b06f4da4cba53d402e6d288f79e779f"
+    },
+    {
+      "id": "phone-root-plate-shot01-desk-phone",
+      "path": "../../public/phone-root/owned/plates/shot01_desk_phone.jpg",
+      "type": "image",
+      "role": "cinema-cgi-plate",
+      "origin": {
+        "kind": "ai-generated",
+        "generator": "image-generator",
+        "aspectRatio": "16:9",
+        "textFreeVerified": true
+      },
+      "usage": {
+        "status": "verified",
+        "scope": "user-owned-creative-project",
+        "evidencePath": "sources.md",
+        "attribution": "内置 image-generator 原创生成的 16:9 无文字电影级 3D CGI 镜头母图。"
+      },
+      "bytes": 595473,
+      "sha256": "e311405045a0f6bf9015a9c33bbe5d1332f3fe72b3321fde07bd8734b458db19"
+    },
+    {
+      "id": "phone-root-plate-shot02-pixel-dive",
+      "path": "../../public/phone-root/owned/plates/shot02_pixel_dive.jpg",
+      "type": "image",
+      "role": "cinema-cgi-plate",
+      "origin": {
+        "kind": "ai-generated",
+        "generator": "image-generator",
+        "aspectRatio": "16:9",
+        "textFreeVerified": true
+      },
+      "usage": {
+        "status": "verified",
+        "scope": "user-owned-creative-project",
+        "evidencePath": "sources.md",
+        "attribution": "内置 image-generator 原创生成的 16:9 无文字电影级 3D CGI 镜头母图。"
+      },
+      "bytes": 788585,
+      "sha256": "922a6182bf16cb4f2402edfb3fb9a88b829e2ef02be9bf32d6762b1b6af6929f"
+    },
+    {
+      "id": "phone-root-plate-shot03-sandbox-city",
+      "path": "../../public/phone-root/owned/plates/shot03_sandbox_city.jpg",
+      "type": "image",
+      "role": "cinema-cgi-plate",
+      "origin": {
+        "kind": "ai-generated",
+        "generator": "image-generator",
+        "aspectRatio": "16:9",
+        "textFreeVerified": true
+      },
+      "usage": {
+        "status": "verified",
+        "scope": "user-owned-creative-project",
+        "evidencePath": "sources.md",
+        "attribution": "内置 image-generator 原创生成的 16:9 无文字电影级 3D CGI 镜头母图。"
+      },
+      "bytes": 911604,
+      "sha256": "85b59f6f6fcbcc0d607edce645d6ce059125f04a9b378b1dc013226634d619bf"
+    },
+    {
+      "id": "phone-root-plate-shot04-firewall-zap",
+      "path": "../../public/phone-root/owned/plates/shot04_firewall_zap.jpg",
+      "type": "image",
+      "role": "cinema-cgi-plate",
+      "origin": {
+        "kind": "ai-generated",
+        "generator": "image-generator",
+        "aspectRatio": "16:9",
+        "textFreeVerified": true
+      },
+      "usage": {
+        "status": "verified",
+        "scope": "user-owned-creative-project",
+        "evidencePath": "sources.md",
+        "attribution": "内置 image-generator 原创生成的 16:9 无文字电影级 3D CGI 镜头母图。"
+      },
+      "bytes": 911679,
+      "sha256": "8d7c247a2c6c2daa1dc64457532f271d76cbf634e41c468587bbcc57a27e6d07"
+    },
+    {
+      "id": "phone-root-plate-shot05-root-throne",
+      "path": "../../public/phone-root/owned/plates/shot05_root_throne.jpg",
+      "type": "image",
+      "role": "cinema-cgi-plate",
+      "origin": {
+        "kind": "ai-generated",
+        "generator": "image-generator",
+        "aspectRatio": "16:9",
+        "textFreeVerified": true
+      },
+      "usage": {
+        "status": "verified",
+        "scope": "user-owned-creative-project",
+        "evidencePath": "sources.md",
+        "attribution": "内置 image-generator 原创生成的 16:9 无文字电影级 3D CGI 镜头母图。"
+      },
+      "bytes": 910514,
+      "sha256": "ce0f31354f7452f422ae02858bf4a6ffcbc255e938fac7b2ebf4c2fabc49f0fb"
+    },
+    {
+      "id": "phone-root-plate-shot06-bootrom-vault",
+      "path": "../../public/phone-root/owned/plates/shot06_bootrom_vault.jpg",
+      "type": "image",
+      "role": "cinema-cgi-plate",
+      "origin": {
+        "kind": "ai-generated",
+        "generator": "image-generator",
+        "aspectRatio": "16:9",
+        "textFreeVerified": true
+      },
+      "usage": {
+        "status": "verified",
+        "scope": "user-owned-creative-project",
+        "evidencePath": "sources.md",
+        "attribution": "内置 image-generator 原创生成的 16:9 无文字电影级 3D CGI 镜头母图。"
+      },
+      "bytes": 729614,
+      "sha256": "8b2bbb5fa84ed63de5d4ac70870b07c2395fdae5b7b065f395fd4687d5fc1f5a"
+    },
+    {
+      "id": "phone-root-plate-shot07-tamper-lockdown",
+      "path": "../../public/phone-root/owned/plates/shot07_tamper_lockdown.jpg",
+      "type": "image",
+      "role": "cinema-cgi-plate",
+      "origin": {
+        "kind": "ai-generated",
+        "generator": "image-generator",
+        "aspectRatio": "16:9",
+        "textFreeVerified": true
+      },
+      "usage": {
+        "status": "verified",
+        "scope": "user-owned-creative-project",
+        "evidencePath": "sources.md",
+        "attribution": "内置 image-generator 原创生成的 16:9 无文字电影级 3D CGI 镜头母图。"
+      },
+      "bytes": 866135,
+      "sha256": "169d2c7de3198a9800e7cd3da00d35e2eeb630c9c574c21503309d0c33c8e1dc"
+    },
+    {
+      "id": "phone-root-plate-shot09-boot-surgery",
+      "path": "../../public/phone-root/owned/plates/shot09_boot_surgery.jpg",
+      "type": "image",
+      "role": "cinema-cgi-plate",
+      "origin": {
+        "kind": "ai-generated",
+        "generator": "image-generator",
+        "aspectRatio": "16:9",
+        "textFreeVerified": true
+      },
+      "usage": {
+        "status": "verified",
+        "scope": "user-owned-creative-project",
+        "evidencePath": "sources.md",
+        "attribution": "内置 image-generator 原创生成的 16:9 无文字电影级 3D CGI 镜头母图。"
+      },
+      "bytes": 684220,
+      "sha256": "5a522faa7d7fd3f09fd97abbaf681facaef48f3e541ec659ec4aaafc2dd46595"
+    },
+    {
+      "id": "phone-root-plate-shot10-overlay-glass",
+      "path": "../../public/phone-root/owned/plates/shot10_overlay_glass.jpg",
+      "type": "image",
+      "role": "cinema-cgi-plate",
+      "origin": {
+        "kind": "ai-generated",
+        "generator": "image-generator",
+        "aspectRatio": "16:9",
+        "textFreeVerified": true
+      },
+      "usage": {
+        "status": "verified",
+        "scope": "user-owned-creative-project",
+        "evidencePath": "sources.md",
+        "attribution": "内置 image-generator 原创生成的 16:9 无文字电影级 3D CGI 镜头母图。"
+      },
+      "bytes": 647326,
+      "sha256": "61ce72432e0f7994d3dce4a464db68d141cdcaa0770895997aae9d18930084c6"
+    },
+    {
+      "id": "phone-root-plate-shot11-kernel-veins",
+      "path": "../../public/phone-root/owned/plates/shot11_kernel_veins.jpg",
+      "type": "image",
+      "role": "cinema-cgi-plate",
+      "origin": {
+        "kind": "ai-generated",
+        "generator": "image-generator",
+        "aspectRatio": "16:9",
+        "textFreeVerified": true
+      },
+      "usage": {
+        "status": "verified",
+        "scope": "user-owned-creative-project",
+        "evidencePath": "sources.md",
+        "attribution": "内置 image-generator 原创生成的 16:9 无文字电影级 3D CGI 镜头母图。"
+      },
+      "bytes": 855363,
+      "sha256": "541f02109786b6419c409e206c57e413fbfa7874a9ea32a7a0f2b0ea19560133"
+    },
+    {
+      "id": "phone-root-plate-shot13-tee-bunker",
+      "path": "../../public/phone-root/owned/plates/shot13_tee_bunker.jpg",
+      "type": "image",
+      "role": "cinema-cgi-plate",
+      "origin": {
+        "kind": "ai-generated",
+        "generator": "image-generator",
+        "aspectRatio": "16:9",
+        "textFreeVerified": true
+      },
+      "usage": {
+        "status": "verified",
+        "scope": "user-owned-creative-project",
+        "evidencePath": "sources.md",
+        "attribution": "内置 image-generator 原创生成的 16:9 无文字电影级 3D CGI 镜头母图。"
+      },
+      "bytes": 872685,
+      "sha256": "ff1cd98c6579efd14f0f580eb00ce77725f3ac2994436d1d14957c6891c65aa2"
+    },
+    {
+      "id": "phone-root-plate-shot14-cat-mouse-clash",
+      "path": "../../public/phone-root/owned/plates/shot14_cat_mouse_clash.jpg",
+      "type": "image",
+      "role": "cinema-cgi-plate",
+      "origin": {
+        "kind": "ai-generated",
+        "generator": "image-generator",
+        "aspectRatio": "16:9",
+        "textFreeVerified": true
+      },
+      "usage": {
+        "status": "verified",
+        "scope": "user-owned-creative-project",
+        "evidencePath": "sources.md",
+        "attribution": "内置 image-generator 原创生成的 16:9 无文字电影级 3D CGI 镜头母图。"
+      },
+      "bytes": 868118,
+      "sha256": "f8c8433fa35ad7169ef66c5ca78bbb61d726dee521d1c0f22382fac2cfbae0a9"
+    },
+    {
+      "id": "phone-root-plate-shot15-sandbox-shatter",
+      "path": "../../public/phone-root/owned/plates/shot15_sandbox_shatter.jpg",
+      "type": "image",
+      "role": "cinema-cgi-plate",
+      "origin": {
+        "kind": "ai-generated",
+        "generator": "image-generator",
+        "aspectRatio": "16:9",
+        "textFreeVerified": true
+      },
+      "usage": {
+        "status": "verified",
+        "scope": "user-owned-creative-project",
+        "evidencePath": "sources.md",
+        "attribution": "内置 image-generator 原创生成的 16:9 无文字电影级 3D CGI 镜头母图。"
+      },
+      "bytes": 1024582,
+      "sha256": "c59fce27cd450c7d88dedc3a9e0464589e4b90a0927240663aee2f0886d66445"
+    }
+  ]
+}

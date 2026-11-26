@@ -81,6 +81,18 @@ import {
   MYSQL_DURATION_FRAMES,
   ProjectMysqlExplained,
 } from "../../projects/mysql-explained/source/Film";
+import {
+  AUTODRIVE_DURATION_FRAMES,
+  ProjectAutodriveExplained,
+} from "../../projects/autodrive-explained/source/Film";
+import {
+  PHONE_ROOT_DURATION_FRAMES,
+  ProjectPhoneRoot,
+} from "../../projects/phone-root/source/Film";
+import {
+  ROBOT_TRUTH_DURATION_FRAMES,
+  ProjectRobotTruth,
+} from "../../projects/robot-truth/source/Film";
 // framecraft:imports
 
 const accessSceneDuration = (id: string) => {
@@ -565,6 +577,30 @@ export const RemotionRoot: React.FC = () => {
         id="ProjectMysqlExplained"
         component={ProjectMysqlExplained}
         durationInFrames={MYSQL_DURATION_FRAMES}
+        fps={30}
+        width={1920}
+        height={1080}
+      />
+      <Composition
+        id="ProjectAutodriveExplained"
+        component={ProjectAutodriveExplained}
+        durationInFrames={AUTODRIVE_DURATION_FRAMES}
+        fps={30}
+        width={1920}
+        height={1080}
+      />
+      <Composition
+        id="ProjectPhoneRoot"
+        component={ProjectPhoneRoot}
+        durationInFrames={PHONE_ROOT_DURATION_FRAMES}
+        fps={30}
+        width={1920}
+        height={1080}
+      />
+      <Composition
+        id="ProjectRobotTruth"
+        component={ProjectRobotTruth}
+        durationInFrames={ROBOT_TRUTH_DURATION_FRAMES}
         fps={30}
         width={1920}
         height={1080}

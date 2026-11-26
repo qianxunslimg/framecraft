@@ -1,0 +1,638 @@
+{
+  "fps": 30,
+  "duration": 6075,
+  "voice": {
+    "engine": "edge-tts",
+    "voice": "zh-CN-YunxiaNeural",
+    "rate": "+14%",
+    "pitch": "+0Hz"
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "badge": "ACT 01 // HIDDEN GOD SWITCH",
+      "title": "藏在手机里的上帝开关",
+      "theme": "#00f0ff",
+      "from": 0,
+      "duration": 652,
+      "cues": [
+        {
+          "cue": "phoneHover",
+          "from": 12,
+          "duration": 105,
+          "display": "你买下的手机，并不完全属于你",
+          "highlight": "并不完全属于你"
+        },
+        {
+          "cue": "deniedPulse",
+          "from": 123,
+          "duration": 244,
+          "display": "权限受限的「租客」",
+          "highlight": "权限受限"
+        },
+        {
+          "cue": "titleSlam",
+          "from": 373,
+          "duration": 269,
+          "display": "手机 ROOT 底层解密",
+          "highlight": "Root"
+        }
+      ]
+    },
+    {
+      "id": "pyramid",
+      "badge": "ACT 02 // LINUX UID=0",
+      "title": "权限金字塔与沙盒结界",
+      "theme": "#00ff9d",
+      "from": 652,
+      "duration": 844,
+      "cues": [
+        {
+          "cue": "linuxTree",
+          "from": 10,
+          "duration": 324,
+          "display": "Android = 口袋里的 Linux",
+          "highlight": "沙盒"
+        },
+        {
+          "cue": "selinuxWall",
+          "from": 340,
+          "duration": 229,
+          "display": "SELinux 强制访问防火墙",
+          "highlight": "SELinux"
+        },
+        {
+          "cue": "uidZero",
+          "from": 575,
+          "duration": 259,
+          "display": "UID = 0 超级管理员",
+          "highlight": "编号为零"
+        }
+      ]
+    },
+    {
+      "id": "trustChain",
+      "badge": "ACT 03 // VERIFIED BOOT",
+      "title": "开机那一秒的信任链",
+      "theme": "#ffb800",
+      "from": 1496,
+      "duration": 881,
+      "cues": [
+        {
+          "cue": "bootRom",
+          "from": 10,
+          "duration": 205,
+          "display": "开机第一毫秒的秘密",
+          "highlight": "第一毫秒"
+        },
+        {
+          "cue": "avbVerify",
+          "from": 221,
+          "duration": 354,
+          "display": "安全启动信任链 AVB 2.0",
+          "highlight": "安全启动信任链"
+        },
+        {
+          "cue": "tamperAlert",
+          "from": 581,
+          "duration": 290,
+          "display": "一字节篡改即拒启",
+          "highlight": "Bootloader"
+        }
+      ]
+    },
+    {
+      "id": "unlockMagisk",
+      "badge": "ACT 04 // SYSTEMLESS & KERNELSU",
+      "title": "现代 Root 是如何发生的",
+      "theme": "#00f0ff",
+      "from": 2377,
+      "duration": 1225,
+      "cues": [
+        {
+          "cue": "blUnlock",
+          "from": 10,
+          "duration": 332,
+          "display": "解锁 Bootloader 铁门",
+          "highlight": "清空全盘数据"
+        },
+        {
+          "cue": "bootPatch",
+          "from": 348,
+          "duration": 289,
+          "display": "精准修补启动镜像",
+          "highlight": "Magisk"
+        },
+        {
+          "cue": "systemless",
+          "from": 643,
+          "duration": 295,
+          "display": "Systemless 虚拟挂载层",
+          "highlight": "无系统修改"
+        },
+        {
+          "cue": "kernelSu",
+          "from": 944,
+          "duration": 271,
+          "display": "KernelSU 进驻内核层",
+          "highlight": "KernelSU"
+        }
+      ]
+    },
+    {
+      "id": "powers",
+      "badge": "ACT 05 // GOD MODE",
+      "title": "上帝权限能释放什么",
+      "theme": "#a855f7",
+      "from": 3602,
+      "duration": 677,
+      "cues": [
+        {
+          "cue": "cpuTune",
+          "from": 10,
+          "duration": 348,
+          "display": "直控芯片频率与温控",
+          "highlight": "调频曲线"
+        },
+        {
+          "cue": "deepTools",
+          "from": 364,
+          "duration": 303,
+          "display": "防火墙 · 全量备份 · 模块生态",
+          "highlight": "全局防火墙"
+        }
+      ]
+    },
+    {
+      "id": "catMouse",
+      "badge": "ACT 06 // TEE & CAT-MOUSE WAR",
+      "title": "代价与底层猫鼠游戏",
+      "theme": "#ff2a5f",
+      "from": 4279,
+      "duration": 1007,
+      "cues": [
+        {
+          "cue": "teeVault",
+          "from": 10,
+          "duration": 283,
+          "display": "芯片级保险箱 TEE",
+          "highlight": "TEE"
+        },
+        {
+          "cue": "integrityWar",
+          "from": 299,
+          "duration": 351,
+          "display": "隐藏模块 vs 硬件级风控",
+          "highlight": "猫鼠大战"
+        },
+        {
+          "cue": "dangerZone",
+          "from": 656,
+          "duration": 341,
+          "display": "误授权限 = 沙盒崩溃",
+          "highlight": "彻底变砖"
+        }
+      ]
+    },
+    {
+      "id": "finale",
+      "badge": "ACT 07 // THE BOUNDARY",
+      "title": "权力与掌控的边界",
+      "theme": "#00f0ff",
+      "from": 5286,
+      "duration": 789,
+      "cues": [
+        {
+          "cue": "evoTimeline",
+          "from": 10,
+          "duration": 372,
+          "display": "从极客黄金时代到硬件锁时代",
+          "highlight": "不必折腾"
+        },
+        {
+          "cue": "closingKey",
+          "from": 388,
+          "duration": 359,
+          "display": "看懂底层，才算真正拥有",
+          "highlight": "上帝开关"
+        }
+      ]
+    }
+  ],
+  "captions": [
+    {
+      "from": 12,
+      "duration": 105,
+      "text": "你花好几千买回来的手机，其实并不完全属于你。",
+      "highlight": "并不完全属于你"
+    },
+    {
+      "from": 123,
+      "duration": 105,
+      "text": "你在自己的手机里，其实只是个权限受限的租客。",
+      "highlight": "权限受限"
+    },
+    {
+      "from": 232,
+      "duration": 65,
+      "text": "连系统自带软件都删不掉，",
+      "highlight": ""
+    },
+    {
+      "from": 297,
+      "duration": 70,
+      "text": "更碰不到最底层的核心文件。",
+      "highlight": ""
+    },
+    {
+      "from": 373,
+      "duration": 56,
+      "text": "因为厂商在系统最深处，",
+      "highlight": ""
+    },
+    {
+      "from": 429,
+      "duration": 87,
+      "text": "锁着一把连机主都摸不到的最高密钥。",
+      "highlight": ""
+    },
+    {
+      "from": 520,
+      "duration": 52,
+      "text": "今天我们潜入芯片与内核，",
+      "highlight": ""
+    },
+    {
+      "from": 572,
+      "duration": 70,
+      "text": "彻底看懂什么是手机的 Root。",
+      "highlight": "Root"
+    },
+    {
+      "from": 662,
+      "duration": 29,
+      "text": "安卓的骨子里，",
+      "highlight": ""
+    },
+    {
+      "from": 691,
+      "duration": 88,
+      "text": "其实是一台装在口袋里的 Linux 电脑。",
+      "highlight": ""
+    },
+    {
+      "from": 783,
+      "duration": 71,
+      "text": "为了防止流氓软件互相偷窥，",
+      "highlight": ""
+    },
+    {
+      "from": 854,
+      "duration": 132,
+      "text": "系统给每个软件分配独立编号，关进彼此隔离的沙盒。",
+      "highlight": "沙盒"
+    },
+    {
+      "from": 992,
+      "duration": 44,
+      "text": "哪怕软件越界试探，",
+      "highlight": ""
+    },
+    {
+      "from": 1036,
+      "duration": 102,
+      "text": "还有一道叫 SELinux 的强制防火墙，",
+      "highlight": "SELinux"
+    },
+    {
+      "from": 1138,
+      "duration": 83,
+      "text": "像激光安检一样盯死每一次系统调用。",
+      "highlight": ""
+    },
+    {
+      "from": 1227,
+      "duration": 79,
+      "text": "而 Root，就是编号为零的超级管理员。",
+      "highlight": "编号为零"
+    },
+    {
+      "from": 1310,
+      "duration": 114,
+      "text": "它站在整棵权限树的最顶端，拥有读写任意分区、",
+      "highlight": ""
+    },
+    {
+      "from": 1424,
+      "duration": 62,
+      "text": "接管硬件调度的终极权力。",
+      "highlight": ""
+    },
+    {
+      "from": 1506,
+      "duration": 56,
+      "text": "既然最高权限就在手机里，",
+      "highlight": ""
+    },
+    {
+      "from": 1562,
+      "duration": 70,
+      "text": "为什么我们不能直接给自己提权？",
+      "highlight": ""
+    },
+    {
+      "from": 1636,
+      "duration": 75,
+      "text": "答案藏在你按下电源键的第一毫秒。",
+      "highlight": "第一毫秒"
+    },
+    {
+      "from": 1717,
+      "duration": 111,
+      "text": "芯片出厂时就刻死了一段只读程序 BootROM。",
+      "highlight": ""
+    },
+    {
+      "from": 1832,
+      "duration": 133,
+      "text": "通电后它像接力安检，用数字签名逐级校验引导程序、",
+      "highlight": ""
+    },
+    {
+      "from": 1965,
+      "duration": 106,
+      "text": "内核和系统分区，这就是安全启动信任链。",
+      "highlight": "安全启动信任链"
+    },
+    {
+      "from": 2077,
+      "duration": 125,
+      "text": "只要你偷偷改了哪怕一个字节，哈希指纹瞬间对不上，",
+      "highlight": ""
+    },
+    {
+      "from": 2202,
+      "duration": 58,
+      "text": "手机就会直接拒绝开机。",
+      "highlight": ""
+    },
+    {
+      "from": 2264,
+      "duration": 46,
+      "text": "而锁死这一切的第一道铁门，",
+      "highlight": ""
+    },
+    {
+      "from": 2310,
+      "duration": 57,
+      "text": "就是 Bootloader 锁。",
+      "highlight": "Bootloader"
+    },
+    {
+      "from": 2387,
+      "duration": 94,
+      "text": "所以现代手机想要 Root，第一步不是黑客漏洞，",
+      "highlight": ""
+    },
+    {
+      "from": 2481,
+      "duration": 74,
+      "text": "而是先解开 Bootloader 锁。",
+      "highlight": ""
+    },
+    {
+      "from": 2559,
+      "duration": 69,
+      "text": "代价是自动清空全盘数据，",
+      "highlight": "清空全盘数据"
+    },
+    {
+      "from": 2628,
+      "duration": 91,
+      "text": "防止手机被盗后被人直接破门而入。",
+      "highlight": ""
+    },
+    {
+      "from": 2725,
+      "duration": 14,
+      "text": "接着，",
+      "highlight": ""
+    },
+    {
+      "from": 2739,
+      "duration": 135,
+      "text": "像 Magisk 这样的经典工具并不会粗暴破坏系统分区，",
+      "highlight": "Magisk"
+    },
+    {
+      "from": 2874,
+      "duration": 53,
+      "text": "而是精准提取启动镜像，",
+      "highlight": ""
+    },
+    {
+      "from": 2927,
+      "duration": 87,
+      "text": "把极小的守护程序注入其中再刷回手机。",
+      "highlight": ""
+    },
+    {
+      "from": 3020,
+      "duration": 83,
+      "text": "这就是极具巧思的无系统修改架构：",
+      "highlight": "无系统修改"
+    },
+    {
+      "from": 3103,
+      "duration": 57,
+      "text": "原版系统分区纹丝不动，",
+      "highlight": ""
+    },
+    {
+      "from": 3160,
+      "duration": 109,
+      "text": "所有改动都通过开机时的虚拟挂载层动态覆盖，",
+      "highlight": ""
+    },
+    {
+      "from": 3269,
+      "duration": 46,
+      "text": "随时可以无痕还原。",
+      "highlight": ""
+    },
+    {
+      "from": 3321,
+      "duration": 73,
+      "text": "而更新一代的 KernelSU，",
+      "highlight": "KernelSU"
+    },
+    {
+      "from": 3394,
+      "duration": 87,
+      "text": "干脆直接住进了 Linux 内核本身，",
+      "highlight": ""
+    },
+    {
+      "from": 3481,
+      "duration": 111,
+      "text": "在最底层按白名单精准放行权限，把隐蔽性直接拉满。",
+      "highlight": ""
+    },
+    {
+      "from": 3612,
+      "duration": 46,
+      "text": "拿到 Root 后，",
+      "highlight": ""
+    },
+    {
+      "from": 3658,
+      "duration": 82,
+      "text": "手机瞬间从精装样板房变成自由实验室。",
+      "highlight": ""
+    },
+    {
+      "from": 3744,
+      "duration": 114,
+      "text": "你可以直接改写处理器调频曲线与温控策略，",
+      "highlight": "调频曲线"
+    },
+    {
+      "from": 3858,
+      "duration": 102,
+      "text": "榨干芯片极限性能，或者锁频极致省电。",
+      "highlight": ""
+    },
+    {
+      "from": 3966,
+      "duration": 114,
+      "text": "你还能部署底层全局防火墙彻底拦截追踪广告，",
+      "highlight": "全局防火墙"
+    },
+    {
+      "from": 4080,
+      "duration": 81,
+      "text": "做真正完整的全量应用数据备份，",
+      "highlight": ""
+    },
+    {
+      "from": 4161,
+      "duration": 108,
+      "text": "甚至通过插件框架重构整个系统界面与交互。",
+      "highlight": ""
+    },
+    {
+      "from": 4289,
+      "duration": 92,
+      "text": "但绝对的自由，往往伴随着沉重的代价。",
+      "highlight": ""
+    },
+    {
+      "from": 4385,
+      "duration": 121,
+      "text": "芯片里还藏着一块连内核都进不去的硬件保险箱，",
+      "highlight": ""
+    },
+    {
+      "from": 4506,
+      "duration": 66,
+      "text": "叫可信执行环境 TEE。",
+      "highlight": "TEE"
+    },
+    {
+      "from": 4578,
+      "duration": 67,
+      "text": "一旦硬件状态记录了已解锁，",
+      "highlight": ""
+    },
+    {
+      "from": 4645,
+      "duration": 104,
+      "text": "银行支付和硬件密钥校验就会立刻拉响警报。",
+      "highlight": ""
+    },
+    {
+      "from": 4753,
+      "duration": 94,
+      "text": "于是极客的隐藏模块与金融风控之间，",
+      "highlight": ""
+    },
+    {
+      "from": 4847,
+      "duration": 82,
+      "text": "展开了一场永无止境的猫鼠大战。",
+      "highlight": "猫鼠大战"
+    },
+    {
+      "from": 4935,
+      "duration": 51,
+      "text": "更现实的危险在于，",
+      "highlight": ""
+    },
+    {
+      "from": 4986,
+      "duration": 91,
+      "text": "一旦你不小心给恶意软件点了允许，",
+      "highlight": ""
+    },
+    {
+      "from": 5077,
+      "duration": 108,
+      "text": "沙盒护城河就会瞬间瓦解，轻则隐私裸奔，",
+      "highlight": ""
+    },
+    {
+      "from": 5185,
+      "duration": 91,
+      "text": "重则误删底层分区让手机彻底变砖。",
+      "highlight": "彻底变砖"
+    },
+    {
+      "from": 5296,
+      "duration": 69,
+      "text": "十年前大家拼命折腾 Root，",
+      "highlight": ""
+    },
+    {
+      "from": 5365,
+      "duration": 87,
+      "text": "是为了救活卡顿的系统、补齐缺失的功能。",
+      "highlight": ""
+    },
+    {
+      "from": 5456,
+      "duration": 92,
+      "text": "而今天手机原生体验已经足够成熟，",
+      "highlight": ""
+    },
+    {
+      "from": 5548,
+      "duration": 120,
+      "text": "硬件安全锁也越收越紧，普通人早已不必折腾。",
+      "highlight": "不必折腾"
+    },
+    {
+      "from": 5674,
+      "duration": 77,
+      "text": "但 Root 背后的意义从未消失，",
+      "highlight": ""
+    },
+    {
+      "from": 5751,
+      "duration": 96,
+      "text": "它代表你对一台设备最底层的知情权与掌控权。",
+      "highlight": ""
+    },
+    {
+      "from": 5851,
+      "duration": 118,
+      "text": "你不需要每天按下这枚上帝开关，但看懂门后的世界，",
+      "highlight": "上帝开关"
+    },
+    {
+      "from": 5969,
+      "duration": 64,
+      "text": "才算真正拥有你手里的机器。",
+      "highlight": ""
+    }
+  ]
+}

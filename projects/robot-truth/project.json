@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "id": "robot-truth",
+  "title": "揭秘爆火机器人视频真相",
+  "production": {
+    "tool": "remotion",
+    "options": {
+      "compositionId": "ProjectRobotTruth"
+    }
+  }
+}

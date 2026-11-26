@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "id": "phone-root",
+  "title": "手机 Root 底层解密",
+  "production": {
+    "tool": "remotion",
+    "options": {
+      "compositionId": "ProjectPhoneRoot"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "id": "autodrive-explained",
+  "title": "一集搞懂自动驾驶",
+  "production": {
+    "tool": "remotion",
+    "options": {
+      "compositionId": "ProjectAutodriveExplained"
+    }
+  }
+}

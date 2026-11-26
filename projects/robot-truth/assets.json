@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "assets": [
+    {
+      "id": "robot-truth-master-audio",
+      "path": "../../public/robot-truth/owned/audio/master.wav",
+      "type": "audio",
+      "role": "mixed-audio",
+      "origin": {
+        "kind": "local-mix",
+        "voice": "edge-tts zh-CN-YunxiaNeural (+17%, +0Hz, crisp investigative tempo)",
+        "bgm": "procedural-original 124 BPM C#-minor forensic cyber-tech score + synced X-ray/drop/chime SFX",
+        "generators": [
+          "scripts/voice.py",
+          "scripts/bgm.py"
+        ]
+      },
+      "usage": {
+        "status": "verified",
+        "scope": "user-owned-creative-project",
+        "evidencePath": "sources.md",
+        "attribution": "配音由 Edge TTS (zh-CN-YunxiaNeural) 逐短句合成并全篇实听核验，124 BPM 悬疑科技电子配乐与音效为本地原创合成。"
+      },
+      "bytes": 70860844,
+      "sha256": "d2b957c6793fdc63bfa2e6b7b0af0737e9be77ce0fdf951113a7036bfd431c32"
+    }
+  ]
+}
